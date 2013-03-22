@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "981C62C816FCD84A004E9A93"
-               BuildableName = "libConventionalC-Mac.a"
+               BlueprintIdentifier = "981C634A16FCDED8004E9A93"
+               BuildableName = "ConventionalC-Mac.framework"
                BlueprintName = "ConventionalC-Mac"
                ReferencedContainer = "container:ConventionalC.xcodeproj">
             </BuildableReference>
