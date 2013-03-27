@@ -5,8 +5,8 @@ Pod::Spec.new do |s|
   s.homepage     = "http://github.com/ConventionalC/ConventionalC"
   s.license      = 'MIT'
   s.author       = { "Peter DeWeese" => "peter@dewee.se" }
-  #s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :tag => "0.0.1" }
-  s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :branch => "develop" }
+  s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :tag => "0.0.1" }
+  #s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :branch => "develop" }
   s.requires_arc = true
 
   s.ios.source_files = 'ConventionalC-iOS', 'ConventionalC-Shared'
