@@ -87,6 +87,7 @@
 		981C639116FCDF4E004E9A93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		981C639316FCDF4E004E9A93 /* ConventionalC_MacTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConventionalC_MacTests.h; sourceTree = "<group>"; };
 		981C639416FCDF4E004E9A93 /* ConventionalC_MacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConventionalC_MacTests.m; sourceTree = "<group>"; };
+		986BB025170241A100248441 /* ConventionalC.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConventionalC.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 				981C631E16FCD896004E9A93 /* ConventionalC-Shared */,
 				981C627116FCD04F004E9A93 /* Frameworks */,
 				981C627016FCD04F004E9A93 /* Products */,
+				986BB025170241A100248441 /* ConventionalC.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -729,6 +731,7 @@
 				981C631416FCD859004E9A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		981C631516FCD859004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -737,6 +740,7 @@
 				981C631716FCD859004E9A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		981C639616FCDF4E004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-Mac" */ = {
 			isa = XCConfigurationList;
@@ -745,6 +749,7 @@
 				981C639816FCDF4E004E9A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		981C639916FCDF4E004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +758,7 @@
 				981C639B16FCDF4E004E9A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
