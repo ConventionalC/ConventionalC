@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.source_files = 'ConventionalC-iOS', 'ConventionalC-Shared'
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '5.1'
   s.ios.frameworks = 'Foundation'
 
   s.osx.source_files = 'ConventionalC-Mac', 'ConventionalC-Shared'
