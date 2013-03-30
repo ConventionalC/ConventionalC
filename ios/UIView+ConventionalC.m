@@ -1,4 +1,5 @@
 #import "UIView+ConventionalC.h"
+#import "ConventionalC.h"
 
 @implementation UIView(ConventionalC)
 
