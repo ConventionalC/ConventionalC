@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		981C62F516FCD858004E9A93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
-		981C62FA16FCD858004E9A93 /* ConventionalC_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 981C62F916FCD858004E9A93 /* ConventionalC_iOS.h */; };
-		981C62FC16FCD858004E9A93 /* ConventionalC_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 981C62FB16FCD858004E9A93 /* ConventionalC_iOS.m */; };
 		981C630316FCD859004E9A93 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628116FCD04F004E9A93 /* SenTestingKit.framework */; };
 		981C630416FCD859004E9A93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628316FCD04F004E9A93 /* UIKit.framework */; };
 		981C630516FCD859004E9A93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
 		981C630816FCD859004E9A93 /* libConventionalC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */; };
-		981C630E16FCD859004E9A93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981C630C16FCD859004E9A93 /* InfoPlist.strings */; };
 		981C637716FCDF4E004E9A93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62CA16FCD84A004E9A93 /* Cocoa.framework */; };
 		981C637D16FCDF4E004E9A93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981C637B16FCDF4E004E9A93 /* InfoPlist.strings */; };
 		981C638116FCDF4E004E9A93 /* ConventionalC_Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 981C638016FCDF4E004E9A93 /* ConventionalC_Mac.m */; };
@@ -22,6 +19,12 @@
 		981C638916FCDF4E004E9A93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62CA16FCD84A004E9A93 /* Cocoa.framework */; };
 		981C638C16FCDF4E004E9A93 /* ConventionalC-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C637616FCDF4E004E9A93 /* ConventionalC-Mac.framework */; };
 		981C639216FCDF4E004E9A93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981C639016FCDF4E004E9A93 /* InfoPlist.strings */; };
+		9852F85917067BF2007823DD /* ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F84817067BF2007823DD /* ConventionalC.m */; };
+		9852F85A17067BF2007823DD /* UIBarButtonItem+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85217067BF2007823DD /* UIBarButtonItem+ConventionalC.m */; };
+		9852F85B17067BF2007823DD /* UIDevice+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */; };
+		9852F85C17067BF2007823DD /* UIToolbar+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */; };
+		9852F85D17067BF2007823DD /* UIView+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85817067BF2007823DD /* UIView+ConventionalC.m */; };
+		9852F85E17067C2D007823DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9852F84F17067BF2007823DD /* InfoPlist.strings */; };
 		986BB0321703E34A00248441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
 		986BB0371703E34A00248441 /* ConventionalC_Shared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 986BB0361703E34A00248441 /* ConventionalC_Shared.h */; };
 		986BB0391703E34A00248441 /* ConventionalC_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0381703E34A00248441 /* ConventionalC_Shared.m */; };
@@ -84,7 +87,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				981C62FA16FCD858004E9A93 /* ConventionalC_iOS.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,12 +111,7 @@
 		981C62CE16FCD84A004E9A93 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		981C62CF16FCD84A004E9A93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libConventionalC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		981C62F816FCD858004E9A93 /* ConventionalC-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConventionalC-iOS-Prefix.pch"; sourceTree = "<group>"; };
-		981C62F916FCD858004E9A93 /* ConventionalC_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConventionalC_iOS.h; sourceTree = "<group>"; };
-		981C62FB16FCD858004E9A93 /* ConventionalC_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConventionalC_iOS.m; sourceTree = "<group>"; };
 		981C630216FCD858004E9A93 /* ConventionalC-iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		981C630B16FCD859004E9A93 /* ConventionalC-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConventionalC-iOSTests-Info.plist"; sourceTree = "<group>"; };
-		981C630D16FCD859004E9A93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		981C637616FCDF4E004E9A93 /* ConventionalC-Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "ConventionalC-Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981C637A16FCDF4E004E9A93 /* ConventionalC-Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConventionalC-Mac-Info.plist"; sourceTree = "<group>"; };
 		981C637C16FCDF4E004E9A93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -124,6 +121,18 @@
 		981C638716FCDF4E004E9A93 /* ConventionalC-MacTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-MacTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981C638F16FCDF4E004E9A93 /* ConventionalC-MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConventionalC-MacTests-Info.plist"; sourceTree = "<group>"; };
 		981C639116FCDF4E004E9A93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9852F84717067BF2007823DD /* ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventionalC.h; sourceTree = "<group>"; };
+		9852F84817067BF2007823DD /* ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventionalC.m; sourceTree = "<group>"; };
+		9852F84E17067BF2007823DD /* ConventionalC-iOSTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConventionalC-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		9852F85017067BF2007823DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9852F85117067BF2007823DD /* UIBarButtonItem+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F85217067BF2007823DD /* UIBarButtonItem+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F85317067BF2007823DD /* UIDevice+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F85517067BF2007823DD /* UIToolbar+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F85717067BF2007823DD /* UIView+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F85817067BF2007823DD /* UIView+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConventionalC.m"; sourceTree = "<group>"; };
 		986BB025170241A100248441 /* ConventionalC.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConventionalC.podspec; sourceTree = "<group>"; };
 		986BB0311703E34A00248441 /* libConventionalC-Shared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libConventionalC-Shared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BB0351703E34A00248441 /* ConventionalC-Shared-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConventionalC-Shared-Prefix.pch"; sourceTree = "<group>"; };
@@ -206,8 +215,7 @@
 		981C626616FCD04F004E9A93 = {
 			isa = PBXGroup;
 			children = (
-				981C62F616FCD858004E9A93 /* ConventionalC-iOS */,
-				981C630916FCD859004E9A93 /* ConventionalC-iOSTests */,
+				9852F84517067BF2007823DD /* ios */,
 				981C637816FCDF4E004E9A93 /* ConventionalC-Mac */,
 				981C638D16FCDF4E004E9A93 /* ConventionalC-MacTests */,
 				986BB0331703E34A00248441 /* ConventionalC-Shared */,
@@ -253,41 +261,6 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		981C62F616FCD858004E9A93 /* ConventionalC-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				981C62F916FCD858004E9A93 /* ConventionalC_iOS.h */,
-				981C62FB16FCD858004E9A93 /* ConventionalC_iOS.m */,
-				981C62F716FCD858004E9A93 /* Supporting Files */,
-			);
-			path = "ConventionalC-iOS";
-			sourceTree = "<group>";
-		};
-		981C62F716FCD858004E9A93 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				981C62F816FCD858004E9A93 /* ConventionalC-iOS-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		981C630916FCD859004E9A93 /* ConventionalC-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				981C630A16FCD859004E9A93 /* Supporting Files */,
-			);
-			path = "ConventionalC-iOSTests";
-			sourceTree = "<group>";
-		};
-		981C630A16FCD859004E9A93 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				981C630B16FCD859004E9A93 /* ConventionalC-iOSTests-Info.plist */,
-				981C630C16FCD859004E9A93 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		981C637816FCDF4E004E9A93 /* ConventionalC-Mac */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +296,41 @@
 				981C639016FCDF4E004E9A93 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9852F84517067BF2007823DD /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				9852F84717067BF2007823DD /* ConventionalC.h */,
+				9852F84817067BF2007823DD /* ConventionalC.m */,
+				9852F85117067BF2007823DD /* UIBarButtonItem+ConventionalC.h */,
+				9852F85217067BF2007823DD /* UIBarButtonItem+ConventionalC.m */,
+				9852F85317067BF2007823DD /* UIDevice+ConventionalC.h */,
+				9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */,
+				9852F85517067BF2007823DD /* UIToolbar+ConventionalC.h */,
+				9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */,
+				9852F85717067BF2007823DD /* UIView+ConventionalC.h */,
+				9852F85817067BF2007823DD /* UIView+ConventionalC.m */,
+				9852F84917067BF2007823DD /* test */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		9852F84917067BF2007823DD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				9852F84D17067BF2007823DD /* etc */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		9852F84D17067BF2007823DD /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				9852F84E17067BF2007823DD /* ConventionalC-iOSTests-Info.plist */,
+				9852F84F17067BF2007823DD /* InfoPlist.strings */,
+			);
+			path = etc;
 			sourceTree = "<group>";
 		};
 		986BB0331703E34A00248441 /* ConventionalC-Shared */ = {
@@ -530,7 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981C630E16FCD859004E9A93 /* InfoPlist.strings in Resources */,
+				9852F85E17067C2D007823DD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,10 +615,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981C62FC16FCD858004E9A93 /* ConventionalC_iOS.m in Sources */,
 				986BB0641703E62E00248441 /* NSArray+ConventionalC.m in Sources */,
 				986BB0681703E62E00248441 /* NSBundle+ConventionalC.m in Sources */,
 				986BB06C1703E62E00248441 /* NSDate+ConventionalC.m in Sources */,
+				9852F85917067BF2007823DD /* ConventionalC.m in Sources */,
+				9852F85A17067BF2007823DD /* UIBarButtonItem+ConventionalC.m in Sources */,
+				9852F85B17067BF2007823DD /* UIDevice+ConventionalC.m in Sources */,
+				9852F85C17067BF2007823DD /* UIToolbar+ConventionalC.m in Sources */,
+				9852F85D17067BF2007823DD /* UIView+ConventionalC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,14 +699,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		981C630C16FCD859004E9A93 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				981C630D16FCD859004E9A93 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		981C637B16FCDF4E004E9A93 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -707,6 +711,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				981C639116FCDF4E004E9A93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9852F84F17067BF2007823DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9852F85017067BF2007823DD /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -780,7 +792,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ConventionalC_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-iOS/ConventionalC-iOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -792,7 +804,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ConventionalC_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-iOS/ConventionalC-iOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -807,8 +819,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-iOS/ConventionalC-iOS-Prefix.pch";
-				INFOPLIST_FILE = "ConventionalC-iOSTests/ConventionalC-iOSTests-Info.plist";
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "ios/test/etc/ConventionalC-iOSTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -823,8 +835,8 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-iOS/ConventionalC-iOS-Prefix.pch";
-				INFOPLIST_FILE = "ConventionalC-iOSTests/ConventionalC-iOSTests-Info.plist";
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "ios/test/etc/ConventionalC-iOSTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -1032,6 +1044,7 @@
 				986BB0501703E34A00248441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		986BB0541703E34A00248441 /* Build configuration list for PBXNativeTarget "ConventionalC-SharedTests" */ = {
 			isa = XCConfigurationList;
@@ -1040,6 +1053,7 @@
 				986BB0521703E34A00248441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

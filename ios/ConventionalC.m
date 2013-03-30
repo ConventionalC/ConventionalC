@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 ConventionalC. All rights reserved.
 //
 
-#import "ConventionalC_iOS.h"
+#import "ConventionalC.h"
 
 @implementation ConventionalC_iOS
 
