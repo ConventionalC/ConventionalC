@@ -348,10 +348,10 @@
 		9852F896170686AE007823DD /* test */ = {
 			isa = PBXGroup;
 			children = (
-				9852F897170686AE007823DD /* etc */,
 				9852F89B170686AE007823DD /* NSArray_ConventionalC_SharedTests.m */,
 				9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */,
 				9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */,
+				9852F897170686AE007823DD /* etc */,
 			);
 			path = test;
 			sourceTree = "<group>";
