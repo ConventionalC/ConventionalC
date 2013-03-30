@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ConventionalC"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Cocoapod and static library to provide defaults and convenience methods for terser Objective-C."
   s.homepage     = "http://github.com/ConventionalC/ConventionalC"
   s.license      = 'MIT'
