@@ -8,11 +8,11 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :tag => s.version }
   s.requires_arc = true
 
-  s.ios.source_files = 'ios/*.{m,h}', 'ConventionalC-Shared'
+  s.ios.source_files = 'ios/*.{m,h}', 'shared/*.{m,h}'
   s.ios.deployment_target = '5.1'
   s.ios.frameworks = 'Foundation'
 
-  s.osx.source_files = 'ConventionalC-Mac', 'ConventionalC-Shared'
+  s.osx.source_files = 'ConventionalC-Mac', 'shared/*.{m,h}'
   s.osx.deployment_target = '10.7'
   s.osx.frameworks = 'Cocoa'
 end
