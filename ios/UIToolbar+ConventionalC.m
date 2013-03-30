@@ -5,7 +5,6 @@
 
 +(UIToolbar*)toolbarWithItems:(NSArray*)items
 {
-#warning UIToolbar* bar = [[UIToolbar alloc] initWithFrame:$rect(0, 0, 0, 44.)];
     UIToolbar* bar = UIToolbar.new;
     bar.items = items;
     
