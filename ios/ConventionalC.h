@@ -1,5 +1,3 @@
-#import <Foundation/Foundation.h>
-
 #import "ConventionalC_Shared.h"
 #import "UIBarButtonItem+ConventionalC.h"
 #import "UIDevice+ConventionalC.h"

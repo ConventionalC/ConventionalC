@@ -1,4 +1,5 @@
 #import "UIDevice+ConventionalC.h"
+#import "ConventionalC.h"
 
 @implementation UIDevice(ConventionalC)
 

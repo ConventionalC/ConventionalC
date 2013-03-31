@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9852F8D91707928E007823DD"
-               BuildableName = "libConventionalC-Mac.a"
-               BlueprintName = "ConventionalC-Mac"
+               BlueprintIdentifier = "986BB0301703E34A00248441"
+               BuildableName = "libConventionalC-Shared.a"
+               BlueprintName = "ConventionalC-Shared"
                ReferencedContainer = "container:ConventionalC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9852F8E61707928E007823DD"
-               BuildableName = "ConventionalC-MacTests.octest"
-               BlueprintName = "ConventionalC-MacTests"
+               BlueprintIdentifier = "986BB03E1703E34A00248441"
+               BuildableName = "ConventionalC-SharedTests.octest"
+               BlueprintName = "ConventionalC-SharedTests"
                ReferencedContainer = "container:ConventionalC.xcodeproj">
             </BuildableReference>
          </TestableReference>

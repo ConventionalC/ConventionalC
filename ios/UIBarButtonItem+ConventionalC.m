@@ -1,4 +1,5 @@
 #import "UIBarButtonItem+ConventionalC.h"
+#import "ConventionalC.h"
 
 @implementation UIBarButtonItem(ConventionalC)
 

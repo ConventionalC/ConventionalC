@@ -12,48 +12,48 @@
 		981C630416FCD859004E9A93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628316FCD04F004E9A93 /* UIKit.framework */; };
 		981C630516FCD859004E9A93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
 		981C630816FCD859004E9A93 /* libConventionalC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */; };
-		981C637716FCDF4E004E9A93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62CA16FCD84A004E9A93 /* Cocoa.framework */; };
-		981C637D16FCDF4E004E9A93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981C637B16FCDF4E004E9A93 /* InfoPlist.strings */; };
-		981C638116FCDF4E004E9A93 /* ConventionalC_Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 981C638016FCDF4E004E9A93 /* ConventionalC_Mac.m */; };
-		981C638816FCDF4E004E9A93 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628116FCD04F004E9A93 /* SenTestingKit.framework */; };
-		981C638916FCDF4E004E9A93 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62CA16FCD84A004E9A93 /* Cocoa.framework */; };
-		981C638C16FCDF4E004E9A93 /* ConventionalC-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C637616FCDF4E004E9A93 /* ConventionalC-Mac.framework */; };
-		981C639216FCDF4E004E9A93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 981C639016FCDF4E004E9A93 /* InfoPlist.strings */; };
 		9852F85917067BF2007823DD /* ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F84817067BF2007823DD /* ConventionalC.m */; };
 		9852F85A17067BF2007823DD /* UIBarButtonItem+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85217067BF2007823DD /* UIBarButtonItem+ConventionalC.m */; };
 		9852F85B17067BF2007823DD /* UIDevice+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */; };
 		9852F85C17067BF2007823DD /* UIToolbar+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */; };
 		9852F85D17067BF2007823DD /* UIView+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85817067BF2007823DD /* UIView+ConventionalC.m */; };
 		9852F85E17067C2D007823DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9852F84F17067BF2007823DD /* InfoPlist.strings */; };
+		9852F87917068502007823DD /* ConventionalC_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86B17068502007823DD /* ConventionalC_Shared.m */; };
+		9852F87A17068502007823DD /* ConventionalC_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86B17068502007823DD /* ConventionalC_Shared.m */; };
+		9852F87B17068502007823DD /* NSArray+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86D17068502007823DD /* NSArray+ConventionalC.m */; };
+		9852F87C17068502007823DD /* NSArray+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86D17068502007823DD /* NSArray+ConventionalC.m */; };
+		9852F87D17068502007823DD /* NSBundle+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86F17068502007823DD /* NSBundle+ConventionalC.m */; };
+		9852F87E17068502007823DD /* NSBundle+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86F17068502007823DD /* NSBundle+ConventionalC.m */; };
+		9852F87F17068502007823DD /* NSDate+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F87117068502007823DD /* NSDate+ConventionalC.m */; };
+		9852F88017068502007823DD /* NSDate+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F87117068502007823DD /* NSDate+ConventionalC.m */; };
+		9852F89E170686AE007823DD /* ConventionalC-SharedTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9852F898170686AE007823DD /* ConventionalC-SharedTests-Info.plist */; };
+		9852F8A1170686AE007823DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9852F899170686AE007823DD /* InfoPlist.strings */; };
+		9852F8A3170686AE007823DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9852F899170686AE007823DD /* InfoPlist.strings */; };
+		9852F8A4170686AE007823DD /* NSArray_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89B170686AE007823DD /* NSArray_ConventionalC_SharedTests.m */; };
+		9852F8A6170686AE007823DD /* NSArray_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89B170686AE007823DD /* NSArray_ConventionalC_SharedTests.m */; };
+		9852F8A7170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */; };
+		9852F8A9170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */; };
+		9852F8AA170686AE007823DD /* NSDate_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */; };
+		9852F8AC170686AE007823DD /* NSDate_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */; };
+		9852F8DB1707928E007823DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62CA16FCD84A004E9A93 /* Cocoa.framework */; };
+		9852F8E81707928E007823DD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628116FCD04F004E9A93 /* SenTestingKit.framework */; };
+		9852F90A1707940E007823DD /* ConventionalC.h in Headers */ = {isa = PBXBuildFile; fileRef = 9852F8FF1707940E007823DD /* ConventionalC.h */; };
+		9852F90B1707940E007823DD /* ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F9001707940E007823DD /* ConventionalC.m */; };
+		9852F91317079478007823DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9852F91017079478007823DD /* InfoPlist.strings */; };
+		9852F9151707952F007823DD /* ConventionalC_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86B17068502007823DD /* ConventionalC_Shared.m */; };
+		9852F91617079532007823DD /* NSArray+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86D17068502007823DD /* NSArray+ConventionalC.m */; };
+		9852F91717079534007823DD /* NSBundle+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F86F17068502007823DD /* NSBundle+ConventionalC.m */; };
+		9852F91817079537007823DD /* NSDate+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F87117068502007823DD /* NSDate+ConventionalC.m */; };
+		9852F9191707953E007823DD /* NSArray_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89B170686AE007823DD /* NSArray_ConventionalC_SharedTests.m */; };
+		9852F91A17079542007823DD /* NSBundle_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */; };
+		9852F91B17079545007823DD /* NSDate_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */; };
+		9852F91F1707D0CB007823DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9852F91E1707D0CB007823DD /* Cocoa.framework */; };
+		9852F9221707D24F007823DD /* libConventionalC-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9852F8DA1707928E007823DD /* libConventionalC-Mac.a */; };
 		986BB0321703E34A00248441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
-		986BB0371703E34A00248441 /* ConventionalC_Shared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 986BB0361703E34A00248441 /* ConventionalC_Shared.h */; };
-		986BB0391703E34A00248441 /* ConventionalC_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0381703E34A00248441 /* ConventionalC_Shared.m */; };
 		986BB0401703E34A00248441 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628116FCD04F004E9A93 /* SenTestingKit.framework */; };
 		986BB0411703E34A00248441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628316FCD04F004E9A93 /* UIKit.framework */; };
 		986BB0421703E34A00248441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
 		986BB0451703E34A00248441 /* libConventionalC-Shared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 986BB0311703E34A00248441 /* libConventionalC-Shared.a */; };
-		986BB04B1703E34A00248441 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 986BB0491703E34A00248441 /* InfoPlist.strings */; };
-		986BB0571703E5D400248441 /* NSArray_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0551703E5D400248441 /* NSArray_ConventionalC_SharedTests.m */; };
-		986BB0581703E5D400248441 /* NSArray_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0551703E5D400248441 /* NSArray_ConventionalC_SharedTests.m */; };
-		986BB0591703E5D400248441 /* NSArray_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0551703E5D400248441 /* NSArray_ConventionalC_SharedTests.m */; };
-		986BB05A1703E5D400248441 /* NSDate_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0561703E5D400248441 /* NSDate_ConventionalC_SharedTests.m */; };
-		986BB05B1703E5D400248441 /* NSDate_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0561703E5D400248441 /* NSDate_ConventionalC_SharedTests.m */; };
-		986BB05C1703E5D400248441 /* NSDate_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0561703E5D400248441 /* NSDate_ConventionalC_SharedTests.m */; };
-		986BB0631703E62E00248441 /* NSArray+ConventionalC.h in Headers */ = {isa = PBXBuildFile; fileRef = 986BB05D1703E62E00248441 /* NSArray+ConventionalC.h */; };
-		986BB0641703E62E00248441 /* NSArray+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB05E1703E62E00248441 /* NSArray+ConventionalC.m */; };
-		986BB0651703E62E00248441 /* NSArray+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB05E1703E62E00248441 /* NSArray+ConventionalC.m */; };
-		986BB0661703E62E00248441 /* NSArray+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB05E1703E62E00248441 /* NSArray+ConventionalC.m */; };
-		986BB0671703E62E00248441 /* NSBundle+ConventionalC.h in Headers */ = {isa = PBXBuildFile; fileRef = 986BB05F1703E62E00248441 /* NSBundle+ConventionalC.h */; };
-		986BB0681703E62E00248441 /* NSBundle+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0601703E62E00248441 /* NSBundle+ConventionalC.m */; };
-		986BB0691703E62E00248441 /* NSBundle+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0601703E62E00248441 /* NSBundle+ConventionalC.m */; };
-		986BB06A1703E62E00248441 /* NSBundle+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0601703E62E00248441 /* NSBundle+ConventionalC.m */; };
-		986BB06B1703E62E00248441 /* NSDate+ConventionalC.h in Headers */ = {isa = PBXBuildFile; fileRef = 986BB0611703E62E00248441 /* NSDate+ConventionalC.h */; };
-		986BB06C1703E62E00248441 /* NSDate+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0621703E62E00248441 /* NSDate+ConventionalC.m */; };
-		986BB06D1703E62E00248441 /* NSDate+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0621703E62E00248441 /* NSDate+ConventionalC.m */; };
-		986BB06E1703E62E00248441 /* NSDate+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB0621703E62E00248441 /* NSDate+ConventionalC.m */; };
-		986BB0701703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB06F1703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m */; };
-		986BB0711703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB06F1703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m */; };
-		986BB0721703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 986BB06F1703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +64,11 @@
 			remoteGlobalIDString = 981C62F316FCD858004E9A93;
 			remoteInfo = "ConventionalC-iOS";
 		};
-		981C638A16FCDF4E004E9A93 /* PBXContainerItemProxy */ = {
+		9852F91C1707D0BD007823DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 981C626716FCD04F004E9A93 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 981C637516FCDF4E004E9A93;
+			remoteGlobalIDString = 9852F8D91707928E007823DD;
 			remoteInfo = "ConventionalC-Mac";
 		};
 		986BB0431703E34A00248441 /* PBXContainerItemProxy */ = {
@@ -96,7 +96,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				986BB0371703E34A00248441 /* ConventionalC_Shared.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,15 +111,6 @@
 		981C62CF16FCD84A004E9A93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libConventionalC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981C630216FCD858004E9A93 /* ConventionalC-iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		981C637616FCDF4E004E9A93 /* ConventionalC-Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "ConventionalC-Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		981C637A16FCDF4E004E9A93 /* ConventionalC-Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConventionalC-Mac-Info.plist"; sourceTree = "<group>"; };
-		981C637C16FCDF4E004E9A93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		981C637E16FCDF4E004E9A93 /* ConventionalC-Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConventionalC-Mac-Prefix.pch"; sourceTree = "<group>"; };
-		981C637F16FCDF4E004E9A93 /* ConventionalC_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConventionalC_Mac.h; sourceTree = "<group>"; };
-		981C638016FCDF4E004E9A93 /* ConventionalC_Mac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConventionalC_Mac.m; sourceTree = "<group>"; };
-		981C638716FCDF4E004E9A93 /* ConventionalC-MacTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-MacTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		981C638F16FCDF4E004E9A93 /* ConventionalC-MacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConventionalC-MacTests-Info.plist"; sourceTree = "<group>"; };
-		981C639116FCDF4E004E9A93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9852F84717067BF2007823DD /* ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventionalC.h; sourceTree = "<group>"; };
 		9852F84817067BF2007823DD /* ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventionalC.m; sourceTree = "<group>"; };
 		9852F84E17067BF2007823DD /* ConventionalC-iOSTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConventionalC-iOSTests-Info.plist"; sourceTree = "<group>"; };
@@ -133,23 +123,29 @@
 		9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+ConventionalC.m"; sourceTree = "<group>"; };
 		9852F85717067BF2007823DD /* UIView+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConventionalC.h"; sourceTree = "<group>"; };
 		9852F85817067BF2007823DD /* UIView+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F86A17068502007823DD /* ConventionalC_Shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventionalC_Shared.h; sourceTree = "<group>"; };
+		9852F86B17068502007823DD /* ConventionalC_Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventionalC_Shared.m; sourceTree = "<group>"; };
+		9852F86C17068502007823DD /* NSArray+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F86D17068502007823DD /* NSArray+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F86E17068502007823DD /* NSBundle+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F86F17068502007823DD /* NSBundle+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F87017068502007823DD /* NSDate+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ConventionalC.h"; sourceTree = "<group>"; };
+		9852F87117068502007823DD /* NSDate+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ConventionalC.m"; sourceTree = "<group>"; };
+		9852F898170686AE007823DD /* ConventionalC-SharedTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConventionalC-SharedTests-Info.plist"; sourceTree = "<group>"; };
+		9852F89A170686AE007823DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9852F89B170686AE007823DD /* NSArray_ConventionalC_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_ConventionalC_SharedTests.m; sourceTree = "<group>"; };
+		9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBundle_ConventionalC_SharedTests.m; sourceTree = "<group>"; };
+		9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_ConventionalC_SharedTests.m; sourceTree = "<group>"; };
+		9852F8DA1707928E007823DD /* libConventionalC-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libConventionalC-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9852F8E71707928E007823DD /* ConventionalC-MacTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-MacTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9852F8FF1707940E007823DD /* ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventionalC.h; sourceTree = "<group>"; };
+		9852F9001707940E007823DD /* ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventionalC.m; sourceTree = "<group>"; };
+		9852F90F17079478007823DD /* ConventionalC-MacTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConventionalC-MacTests-Info.plist"; sourceTree = "<group>"; };
+		9852F91117079478007823DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9852F91E1707D0CB007823DD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		986BB025170241A100248441 /* ConventionalC.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ConventionalC.podspec; sourceTree = "<group>"; };
 		986BB0311703E34A00248441 /* libConventionalC-Shared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libConventionalC-Shared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		986BB0351703E34A00248441 /* ConventionalC-Shared-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConventionalC-Shared-Prefix.pch"; sourceTree = "<group>"; };
-		986BB0361703E34A00248441 /* ConventionalC_Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConventionalC_Shared.h; sourceTree = "<group>"; };
-		986BB0381703E34A00248441 /* ConventionalC_Shared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConventionalC_Shared.m; sourceTree = "<group>"; };
 		986BB03F1703E34A00248441 /* ConventionalC-SharedTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-SharedTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		986BB0481703E34A00248441 /* ConventionalC-SharedTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConventionalC-SharedTests-Info.plist"; sourceTree = "<group>"; };
-		986BB04A1703E34A00248441 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		986BB0551703E5D400248441 /* NSArray_ConventionalC_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_ConventionalC_SharedTests.m; sourceTree = "<group>"; };
-		986BB0561703E5D400248441 /* NSDate_ConventionalC_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_ConventionalC_SharedTests.m; sourceTree = "<group>"; };
-		986BB05D1703E62E00248441 /* NSArray+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ConventionalC.h"; sourceTree = "<group>"; };
-		986BB05E1703E62E00248441 /* NSArray+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ConventionalC.m"; sourceTree = "<group>"; };
-		986BB05F1703E62E00248441 /* NSBundle+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ConventionalC.h"; sourceTree = "<group>"; };
-		986BB0601703E62E00248441 /* NSBundle+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ConventionalC.m"; sourceTree = "<group>"; };
-		986BB0611703E62E00248441 /* NSDate+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ConventionalC.h"; sourceTree = "<group>"; };
-		986BB0621703E62E00248441 /* NSDate+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ConventionalC.m"; sourceTree = "<group>"; };
-		986BB06F1703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBundle_ConventionalC_SharedTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,21 +168,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		981C637216FCDF4E004E9A93 /* Frameworks */ = {
+		9852F8D71707928E007823DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981C637716FCDF4E004E9A93 /* Cocoa.framework in Frameworks */,
+				9852F8DB1707928E007823DD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		981C638316FCDF4E004E9A93 /* Frameworks */ = {
+		9852F8E31707928E007823DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981C638816FCDF4E004E9A93 /* SenTestingKit.framework in Frameworks */,
-				981C638916FCDF4E004E9A93 /* Cocoa.framework in Frameworks */,
-				981C638C16FCDF4E004E9A93 /* ConventionalC-Mac.framework in Frameworks */,
+				9852F9221707D24F007823DD /* libConventionalC-Mac.a in Frameworks */,
+				9852F91F1707D0CB007823DD /* Cocoa.framework in Frameworks */,
+				9852F8E81707928E007823DD /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,10 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				9852F84517067BF2007823DD /* ios */,
-				981C637816FCDF4E004E9A93 /* ConventionalC-Mac */,
-				981C638D16FCDF4E004E9A93 /* ConventionalC-MacTests */,
-				986BB0331703E34A00248441 /* ConventionalC-Shared */,
-				986BB0461703E34A00248441 /* ConventionalC-SharedTests */,
+				9852F8FC1707940E007823DD /* mac */,
+				9852F86817068502007823DD /* shared */,
 				981C627116FCD04F004E9A93 /* Frameworks */,
 				981C627016FCD04F004E9A93 /* Products */,
 				986BB025170241A100248441 /* ConventionalC.podspec */,
@@ -231,10 +225,10 @@
 			children = (
 				981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */,
 				981C630216FCD858004E9A93 /* ConventionalC-iOSTests.octest */,
-				981C637616FCDF4E004E9A93 /* ConventionalC-Mac.framework */,
-				981C638716FCDF4E004E9A93 /* ConventionalC-MacTests.octest */,
 				986BB0311703E34A00248441 /* libConventionalC-Shared.a */,
 				986BB03F1703E34A00248441 /* ConventionalC-SharedTests.octest */,
+				9852F8DA1707928E007823DD /* libConventionalC-Mac.a */,
+				9852F8E71707928E007823DD /* ConventionalC-MacTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +236,7 @@
 		981C627116FCD04F004E9A93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9852F91E1707D0CB007823DD /* Cocoa.framework */,
 				981C627216FCD04F004E9A93 /* Foundation.framework */,
 				981C628116FCD04F004E9A93 /* SenTestingKit.framework */,
 				981C628316FCD04F004E9A93 /* UIKit.framework */,
@@ -259,43 +254,6 @@
 				981C62CF16FCD84A004E9A93 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		981C637816FCDF4E004E9A93 /* ConventionalC-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				981C637F16FCDF4E004E9A93 /* ConventionalC_Mac.h */,
-				981C638016FCDF4E004E9A93 /* ConventionalC_Mac.m */,
-				981C637916FCDF4E004E9A93 /* Supporting Files */,
-			);
-			path = "ConventionalC-Mac";
-			sourceTree = "<group>";
-		};
-		981C637916FCDF4E004E9A93 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				981C637A16FCDF4E004E9A93 /* ConventionalC-Mac-Info.plist */,
-				981C637B16FCDF4E004E9A93 /* InfoPlist.strings */,
-				981C637E16FCDF4E004E9A93 /* ConventionalC-Mac-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		981C638D16FCDF4E004E9A93 /* ConventionalC-MacTests */ = {
-			isa = PBXGroup;
-			children = (
-				981C638E16FCDF4E004E9A93 /* Supporting Files */,
-			);
-			path = "ConventionalC-MacTests";
-			sourceTree = "<group>";
-		};
-		981C638E16FCDF4E004E9A93 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				981C638F16FCDF4E004E9A93 /* ConventionalC-MacTests-Info.plist */,
-				981C639016FCDF4E004E9A93 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9852F84517067BF2007823DD /* ios */ = {
@@ -333,60 +291,77 @@
 			path = etc;
 			sourceTree = "<group>";
 		};
-		986BB0331703E34A00248441 /* ConventionalC-Shared */ = {
+		9852F86817068502007823DD /* shared */ = {
 			isa = PBXGroup;
 			children = (
-				986BB0361703E34A00248441 /* ConventionalC_Shared.h */,
-				986BB0381703E34A00248441 /* ConventionalC_Shared.m */,
-				986BB05D1703E62E00248441 /* NSArray+ConventionalC.h */,
-				986BB05E1703E62E00248441 /* NSArray+ConventionalC.m */,
-				986BB05F1703E62E00248441 /* NSBundle+ConventionalC.h */,
-				986BB0601703E62E00248441 /* NSBundle+ConventionalC.m */,
-				986BB0611703E62E00248441 /* NSDate+ConventionalC.h */,
-				986BB0621703E62E00248441 /* NSDate+ConventionalC.m */,
-				986BB0341703E34A00248441 /* Supporting Files */,
+				9852F86A17068502007823DD /* ConventionalC_Shared.h */,
+				9852F86B17068502007823DD /* ConventionalC_Shared.m */,
+				9852F86C17068502007823DD /* NSArray+ConventionalC.h */,
+				9852F86D17068502007823DD /* NSArray+ConventionalC.m */,
+				9852F86E17068502007823DD /* NSBundle+ConventionalC.h */,
+				9852F86F17068502007823DD /* NSBundle+ConventionalC.m */,
+				9852F87017068502007823DD /* NSDate+ConventionalC.h */,
+				9852F87117068502007823DD /* NSDate+ConventionalC.m */,
+				9852F896170686AE007823DD /* test */,
 			);
-			path = "ConventionalC-Shared";
+			path = shared;
 			sourceTree = "<group>";
 		};
-		986BB0341703E34A00248441 /* Supporting Files */ = {
+		9852F896170686AE007823DD /* test */ = {
 			isa = PBXGroup;
 			children = (
-				986BB0351703E34A00248441 /* ConventionalC-Shared-Prefix.pch */,
+				9852F89B170686AE007823DD /* NSArray_ConventionalC_SharedTests.m */,
+				9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */,
+				9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */,
+				9852F897170686AE007823DD /* etc */,
 			);
-			name = "Supporting Files";
+			path = test;
 			sourceTree = "<group>";
 		};
-		986BB0461703E34A00248441 /* ConventionalC-SharedTests */ = {
+		9852F897170686AE007823DD /* etc */ = {
 			isa = PBXGroup;
 			children = (
-				986BB0551703E5D400248441 /* NSArray_ConventionalC_SharedTests.m */,
-				986BB06F1703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m */,
-				986BB0561703E5D400248441 /* NSDate_ConventionalC_SharedTests.m */,
-				986BB0471703E34A00248441 /* Supporting Files */,
+				9852F898170686AE007823DD /* ConventionalC-SharedTests-Info.plist */,
+				9852F899170686AE007823DD /* InfoPlist.strings */,
 			);
-			path = "ConventionalC-SharedTests";
+			path = etc;
 			sourceTree = "<group>";
 		};
-		986BB0471703E34A00248441 /* Supporting Files */ = {
+		9852F8FC1707940E007823DD /* mac */ = {
 			isa = PBXGroup;
 			children = (
-				986BB0481703E34A00248441 /* ConventionalC-SharedTests-Info.plist */,
-				986BB0491703E34A00248441 /* InfoPlist.strings */,
+				9852F8FF1707940E007823DD /* ConventionalC.h */,
+				9852F9001707940E007823DD /* ConventionalC.m */,
+				9852F9031707940E007823DD /* test */,
 			);
-			name = "Supporting Files";
+			path = mac;
+			sourceTree = "<group>";
+		};
+		9852F9031707940E007823DD /* test */ = {
+			isa = PBXGroup;
+			children = (
+				9852F90E17079478007823DD /* etc */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		9852F90E17079478007823DD /* etc */ = {
+			isa = PBXGroup;
+			children = (
+				9852F90F17079478007823DD /* ConventionalC-MacTests-Info.plist */,
+				9852F91017079478007823DD /* InfoPlist.strings */,
+			);
+			path = etc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		981C637316FCDF4E004E9A93 /* Headers */ = {
+		9852F8D81707928E007823DD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB0631703E62E00248441 /* NSArray+ConventionalC.h in Headers */,
-				986BB0671703E62E00248441 /* NSBundle+ConventionalC.h in Headers */,
-				986BB06B1703E62E00248441 /* NSDate+ConventionalC.h in Headers */,
+				9852F90A1707940E007823DD /* ConventionalC.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,14 +404,13 @@
 			productReference = 981C630216FCD858004E9A93 /* ConventionalC-iOSTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		981C637516FCDF4E004E9A93 /* ConventionalC-Mac */ = {
+		9852F8D91707928E007823DD /* ConventionalC-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 981C639616FCDF4E004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-Mac" */;
+			buildConfigurationList = 9852F8F61707928E007823DD /* Build configuration list for PBXNativeTarget "ConventionalC-Mac" */;
 			buildPhases = (
-				981C637116FCDF4E004E9A93 /* Sources */,
-				981C637216FCDF4E004E9A93 /* Frameworks */,
-				981C637316FCDF4E004E9A93 /* Headers */,
-				981C637416FCDF4E004E9A93 /* Resources */,
+				9852F8D61707928E007823DD /* Sources */,
+				9852F8D71707928E007823DD /* Frameworks */,
+				9852F8D81707928E007823DD /* Headers */,
 			);
 			buildRules = (
 			);
@@ -444,26 +418,26 @@
 			);
 			name = "ConventionalC-Mac";
 			productName = "ConventionalC-Mac";
-			productReference = 981C637616FCDF4E004E9A93 /* ConventionalC-Mac.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 9852F8DA1707928E007823DD /* libConventionalC-Mac.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		981C638616FCDF4E004E9A93 /* ConventionalC-MacTests */ = {
+		9852F8E61707928E007823DD /* ConventionalC-MacTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 981C639916FCDF4E004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-MacTests" */;
+			buildConfigurationList = 9852F8F91707928E007823DD /* Build configuration list for PBXNativeTarget "ConventionalC-MacTests" */;
 			buildPhases = (
-				981C638216FCDF4E004E9A93 /* Sources */,
-				981C638316FCDF4E004E9A93 /* Frameworks */,
-				981C638416FCDF4E004E9A93 /* Resources */,
-				981C638516FCDF4E004E9A93 /* ShellScript */,
+				9852F8E21707928E007823DD /* Sources */,
+				9852F8E31707928E007823DD /* Frameworks */,
+				9852F8E41707928E007823DD /* Resources */,
+				9852F8E51707928E007823DD /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				981C638B16FCDF4E004E9A93 /* PBXTargetDependency */,
+				9852F91D1707D0BD007823DD /* PBXTargetDependency */,
 			);
 			name = "ConventionalC-MacTests";
 			productName = "ConventionalC-MacTests";
-			productReference = 981C638716FCDF4E004E9A93 /* ConventionalC-MacTests.octest */;
+			productReference = 9852F8E71707928E007823DD /* ConventionalC-MacTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		986BB0301703E34A00248441 /* ConventionalC-Shared */ = {
@@ -525,8 +499,8 @@
 			targets = (
 				981C62F316FCD858004E9A93 /* ConventionalC-iOS */,
 				981C630116FCD858004E9A93 /* ConventionalC-iOSTests */,
-				981C637516FCDF4E004E9A93 /* ConventionalC-Mac */,
-				981C638616FCDF4E004E9A93 /* ConventionalC-MacTests */,
+				9852F8D91707928E007823DD /* ConventionalC-Mac */,
+				9852F8E61707928E007823DD /* ConventionalC-MacTests */,
 				986BB0301703E34A00248441 /* ConventionalC-Shared */,
 				986BB03E1703E34A00248441 /* ConventionalC-SharedTests */,
 			);
@@ -539,22 +513,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9852F85E17067C2D007823DD /* InfoPlist.strings in Resources */,
+				9852F89E170686AE007823DD /* ConventionalC-SharedTests-Info.plist in Resources */,
+				9852F8A1170686AE007823DD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		981C637416FCDF4E004E9A93 /* Resources */ = {
+		9852F8E41707928E007823DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981C637D16FCDF4E004E9A93 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		981C638416FCDF4E004E9A93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				981C639216FCDF4E004E9A93 /* InfoPlist.strings in Resources */,
+				9852F91317079478007823DD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +530,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB04B1703E34A00248441 /* InfoPlist.strings in Resources */,
+				9852F8A3170686AE007823DD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +550,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		981C638516FCDF4E004E9A93 /* ShellScript */ = {
+		9852F8E51707928E007823DD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -615,14 +583,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB0641703E62E00248441 /* NSArray+ConventionalC.m in Sources */,
-				986BB0681703E62E00248441 /* NSBundle+ConventionalC.m in Sources */,
-				986BB06C1703E62E00248441 /* NSDate+ConventionalC.m in Sources */,
 				9852F85917067BF2007823DD /* ConventionalC.m in Sources */,
 				9852F85A17067BF2007823DD /* UIBarButtonItem+ConventionalC.m in Sources */,
 				9852F85B17067BF2007823DD /* UIDevice+ConventionalC.m in Sources */,
 				9852F85C17067BF2007823DD /* UIToolbar+ConventionalC.m in Sources */,
 				9852F85D17067BF2007823DD /* UIView+ConventionalC.m in Sources */,
+				9852F87917068502007823DD /* ConventionalC_Shared.m in Sources */,
+				9852F87B17068502007823DD /* NSArray+ConventionalC.m in Sources */,
+				9852F87D17068502007823DD /* NSBundle+ConventionalC.m in Sources */,
+				9852F87F17068502007823DD /* NSDate+ConventionalC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,30 +599,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB0571703E5D400248441 /* NSArray_ConventionalC_SharedTests.m in Sources */,
-				986BB05A1703E5D400248441 /* NSDate_ConventionalC_SharedTests.m in Sources */,
-				986BB0701703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m in Sources */,
+				9852F8A4170686AE007823DD /* NSArray_ConventionalC_SharedTests.m in Sources */,
+				9852F8A7170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m in Sources */,
+				9852F8AA170686AE007823DD /* NSDate_ConventionalC_SharedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		981C637116FCDF4E004E9A93 /* Sources */ = {
+		9852F8D61707928E007823DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				981C638116FCDF4E004E9A93 /* ConventionalC_Mac.m in Sources */,
-				986BB0651703E62E00248441 /* NSArray+ConventionalC.m in Sources */,
-				986BB0691703E62E00248441 /* NSBundle+ConventionalC.m in Sources */,
-				986BB06D1703E62E00248441 /* NSDate+ConventionalC.m in Sources */,
+				9852F90B1707940E007823DD /* ConventionalC.m in Sources */,
+				9852F9151707952F007823DD /* ConventionalC_Shared.m in Sources */,
+				9852F91617079532007823DD /* NSArray+ConventionalC.m in Sources */,
+				9852F91717079534007823DD /* NSBundle+ConventionalC.m in Sources */,
+				9852F91817079537007823DD /* NSDate+ConventionalC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		981C638216FCDF4E004E9A93 /* Sources */ = {
+		9852F8E21707928E007823DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB0581703E5D400248441 /* NSArray_ConventionalC_SharedTests.m in Sources */,
-				986BB05B1703E5D400248441 /* NSDate_ConventionalC_SharedTests.m in Sources */,
-				986BB0711703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m in Sources */,
+				9852F9191707953E007823DD /* NSArray_ConventionalC_SharedTests.m in Sources */,
+				9852F91A17079542007823DD /* NSBundle_ConventionalC_SharedTests.m in Sources */,
+				9852F91B17079545007823DD /* NSDate_ConventionalC_SharedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,10 +631,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB0391703E34A00248441 /* ConventionalC_Shared.m in Sources */,
-				986BB0661703E62E00248441 /* NSArray+ConventionalC.m in Sources */,
-				986BB06A1703E62E00248441 /* NSBundle+ConventionalC.m in Sources */,
-				986BB06E1703E62E00248441 /* NSDate+ConventionalC.m in Sources */,
+				9852F87A17068502007823DD /* ConventionalC_Shared.m in Sources */,
+				9852F87C17068502007823DD /* NSArray+ConventionalC.m in Sources */,
+				9852F87E17068502007823DD /* NSBundle+ConventionalC.m in Sources */,
+				9852F88017068502007823DD /* NSDate+ConventionalC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,9 +642,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				986BB0591703E5D400248441 /* NSArray_ConventionalC_SharedTests.m in Sources */,
-				986BB05C1703E5D400248441 /* NSDate_ConventionalC_SharedTests.m in Sources */,
-				986BB0721703ED2400248441 /* NSBundle_ConventionalC_SharedTests.m in Sources */,
+				9852F8A6170686AE007823DD /* NSArray_ConventionalC_SharedTests.m in Sources */,
+				9852F8A9170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m in Sources */,
+				9852F8AC170686AE007823DD /* NSDate_ConventionalC_SharedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,10 +656,10 @@
 			target = 981C62F316FCD858004E9A93 /* ConventionalC-iOS */;
 			targetProxy = 981C630616FCD859004E9A93 /* PBXContainerItemProxy */;
 		};
-		981C638B16FCDF4E004E9A93 /* PBXTargetDependency */ = {
+		9852F91D1707D0BD007823DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 981C637516FCDF4E004E9A93 /* ConventionalC-Mac */;
-			targetProxy = 981C638A16FCDF4E004E9A93 /* PBXContainerItemProxy */;
+			target = 9852F8D91707928E007823DD /* ConventionalC-Mac */;
+			targetProxy = 9852F91C1707D0BD007823DD /* PBXContainerItemProxy */;
 		};
 		986BB0441703E34A00248441 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -699,22 +669,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		981C637B16FCDF4E004E9A93 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				981C637C16FCDF4E004E9A93 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		981C639016FCDF4E004E9A93 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				981C639116FCDF4E004E9A93 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		9852F84F17067BF2007823DD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -723,10 +677,18 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		986BB0491703E34A00248441 /* InfoPlist.strings */ = {
+		9852F899170686AE007823DD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				986BB04A1703E34A00248441 /* en */,
+				9852F89A170686AE007823DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9852F91017079478007823DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9852F91117079478007823DD /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -843,58 +805,44 @@
 			};
 			name = Release;
 		};
-		981C639716FCDF4E004E9A93 /* Debug */ = {
+		9852F8F71707928E007823DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
-				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Mac/ConventionalC-Mac-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "ConventionalC-Mac/ConventionalC-Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
-		981C639816FCDF4E004E9A93 /* Release */ = {
+		9852F8F81707928E007823DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
-				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Mac/ConventionalC-Mac-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "ConventionalC-Mac/ConventionalC-Mac-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
-		981C639A16FCDF4E004E9A93 /* Debug */ = {
+		9852F8FA1707928E007823DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -902,9 +850,9 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Mac/ConventionalC-Mac-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "ConventionalC-MacTests/ConventionalC-MacTests-Info.plist";
+				INFOPLIST_FILE = "mac/test/etc/ConventionalC-MacTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -913,7 +861,7 @@
 			};
 			name = Debug;
 		};
-		981C639B16FCDF4E004E9A93 /* Release */ = {
+		9852F8FB1707928E007823DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -922,9 +870,9 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Mac/ConventionalC-Mac-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				INFOPLIST_FILE = "ConventionalC-MacTests/ConventionalC-MacTests-Info.plist";
+				INFOPLIST_FILE = "mac/test/etc/ConventionalC-MacTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -938,7 +886,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ConventionalC_Shared.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Shared/ConventionalC-Shared-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -950,7 +898,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ConventionalC_Shared.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Shared/ConventionalC-Shared-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -965,8 +913,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Shared/ConventionalC-Shared-Prefix.pch";
-				INFOPLIST_FILE = "ConventionalC-SharedTests/ConventionalC-SharedTests-Info.plist";
+				INFOPLIST_FILE = "shared/test/etc/ConventionalC-SharedTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -981,8 +928,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ConventionalC-Shared/ConventionalC-Shared-Prefix.pch";
-				INFOPLIST_FILE = "ConventionalC-SharedTests/ConventionalC-SharedTests-Info.plist";
+				INFOPLIST_FILE = "shared/test/etc/ConventionalC-SharedTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
@@ -1019,23 +965,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		981C639616FCDF4E004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-Mac" */ = {
+		9852F8F61707928E007823DD /* Build configuration list for PBXNativeTarget "ConventionalC-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				981C639716FCDF4E004E9A93 /* Debug */,
-				981C639816FCDF4E004E9A93 /* Release */,
+				9852F8F71707928E007823DD /* Debug */,
+				9852F8F81707928E007823DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		981C639916FCDF4E004E9A93 /* Build configuration list for PBXNativeTarget "ConventionalC-MacTests" */ = {
+		9852F8F91707928E007823DD /* Build configuration list for PBXNativeTarget "ConventionalC-MacTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				981C639A16FCDF4E004E9A93 /* Debug */,
-				981C639B16FCDF4E004E9A93 /* Release */,
+				9852F8FA1707928E007823DD /* Debug */,
+				9852F8FB1707928E007823DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		986BB0531703E34A00248441 /* Build configuration list for PBXNativeTarget "ConventionalC-Shared" */ = {
 			isa = XCConfigurationList;
