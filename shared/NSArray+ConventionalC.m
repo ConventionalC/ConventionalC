@@ -1,5 +1,4 @@
 #import "NSArray+ConventionalC.h"
-#import "ConventionalC_Shared.h"
 
 @implementation NSArray(ConventionalC)
 

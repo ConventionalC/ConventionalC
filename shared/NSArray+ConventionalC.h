@@ -1,7 +1,4 @@
-#ifdef TARGET_OS_MAC
-#else
-  #import <Foundation/Foundation.h>
-#endif
+#import "ConventionalC_Shared.h"
 
 @interface NSArray(ConventionalC)
 
