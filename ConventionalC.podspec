@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "ConventionalC"
-  s.version      = '0.3'
+  s.version      = '0.4'
   s.summary      = "Cocoapod and static library to provide defaults and convenience methods for terser Objective-C."
   s.homepage     = "http://github.com/ConventionalC/ConventionalC"
   s.license      = 'MIT'
   s.author       = { "Peter DeWeese" => "peter@dewee.se" }
-  s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :tag => '0.3' }
+  s.source       = { :git => "https://github.com/ConventionalC/ConventionalC.git", :tag => '0.4' }
   s.requires_arc = true
 
   s.ios.source_files = 'ios/*.{m,h}', 'shared/*.{m,h}'
