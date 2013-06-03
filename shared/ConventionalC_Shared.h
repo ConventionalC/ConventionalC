@@ -5,7 +5,9 @@
 
 #ifndef CONVENTIONALC_BLOCKS
     #define CONVENTIONALC_BLOCKS
-    typedef void(^EmptyBlock)();
+    #ifndef EmptyBlock
+        typedef void(^EmptyBlock)();
+    #endif
     typedef id(^ReturnBlock)();
     typedef id(^ObjectReturnBlock)(id object);
     typedef id(^IndexReturnBlock)(NSUInteger index);
