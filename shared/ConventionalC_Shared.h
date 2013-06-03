@@ -3,13 +3,16 @@
   #import <Foundation/Foundation.h>
 #endif
 
-typedef void(^EmptyBlock)();
-typedef id(^ReturnBlock)();
-typedef id(^ObjectReturnBlock)(id object);
-typedef id(^IndexReturnBlock)(NSUInteger index);
-typedef void(^IndexBlock)(NSUInteger index);
-typedef void(^ObjectBlock)(id object);
-typedef void(^IndexAndObjectBlock)(NSUInteger index, id object);
+#ifndef CONVENTIONALC_BLOCKS
+    #define CONVENTIONALC_BLOCKS
+    typedef void(^EmptyBlock)();
+    typedef id(^ReturnBlock)();
+    typedef id(^ObjectReturnBlock)(id object);
+    typedef id(^IndexReturnBlock)(NSUInteger index);
+    typedef void(^IndexBlock)(NSUInteger index);
+    typedef void(^ObjectBlock)(id object);
+    typedef void(^IndexAndObjectBlock)(NSUInteger index, id object);
+#endif
 
 #import "NSArray+ConventionalC.h"
 #import "NSArray+rubyish.h"
