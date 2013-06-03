@@ -23,11 +23,11 @@
         NSObject* value = [self valueForKey:property];
         if(value)
         {
-            if([value isKindOfClass:NSArray.class])
+            if([value conformsToProtocol:@protocol(NSFastEnumeration)])
             {
-                NSArray* array = (NSArray*)value;
-                NSMutableArray* processedArray = [NSMutableArray arrayWithCapacity:array.count];
-                for(NSObject* arrayValue in array)
+                id<NSFastEnumeration> collection = (id<NSFastEnumeration>)value;
+                NSMutableArray* processedArray = NSMutableArray.new;
+                for(NSObject* arrayValue in collection)
                     if([arrayValue isKindOfClasses:valueClasses])
                         [processedArray addObject:arrayValue];
                     else
