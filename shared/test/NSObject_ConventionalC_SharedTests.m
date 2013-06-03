@@ -24,7 +24,8 @@
                          (@{@"string":@"string1",
                             @"strings":@[@"string2", @"string3"],
                             @"testObjects":@[
-                              @{@"string":@"string4"}
+                                @{@"string":@"string4"},
+                                NSNull.null
                             ],
                           }), nil);
 }
@@ -48,7 +49,7 @@
     object.strings = @[@"string2", @"string3"];
     TestObject* subObject = TestObject.alloc.init;
     subObject.string = @"string4";
-    object.testObjects = @[subObject];
+    object.testObjects = @[subObject, object]; //Add object to test recursion.
     return object;
 }
 

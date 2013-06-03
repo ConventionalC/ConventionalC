@@ -13,8 +13,13 @@
     return result.copy;
 }
 
--(NSDictionary*)asDictionary
+-(id)asDictionaryWithReferenced:(NSMutableSet*)referenced
 {
+    // prevent circular references
+    if([referenced containsObject:self])
+        return NSNull.null;
+    [referenced addObject:self];
+    
     NSArray *valueClasses = @[NSString.class, NSNumber.class, NSNull.class];
     NSArray* propertyNames = self.propertyNames;
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithCapacity:propertyNames.count];
@@ -23,24 +28,29 @@
         NSObject* value = [self valueForKey:property];
         if(value)
         {
-            if([value isKindOfClass:NSArray.class])
+            if([value conformsToProtocol:@protocol(NSFastEnumeration)])
             {
-                NSArray* array = (NSArray*)value;
-                NSMutableArray* processedArray = [NSMutableArray arrayWithCapacity:array.count];
-                for(NSObject* arrayValue in array)
+                id<NSFastEnumeration> collection = (id<NSFastEnumeration>)value;
+                NSMutableArray* processedArray = NSMutableArray.new;
+                for(NSObject* arrayValue in collection)
                     if([arrayValue isKindOfClasses:valueClasses])
                         [processedArray addObject:arrayValue];
                     else
-                        [processedArray addObject:arrayValue.asDictionary];
+                        [processedArray addObject:[arrayValue asDictionaryWithReferenced:referenced]];
                 result[property] = processedArray;
             }
             else if([value isKindOfClasses:valueClasses])
                 result[property] = value;
             else
-                result[property] = value.asDictionary;
+                result[property] = [value asDictionaryWithReferenced:referenced];
         }
     }
     return result;
+}
+
+-(NSDictionary*)asDictionary
+{
+    return [self asDictionaryWithReferenced:NSMutableSet.new];
 }
 
 -(BOOL)isKindOfClasses:(NSArray*)classes
