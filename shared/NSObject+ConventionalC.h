@@ -2,7 +2,8 @@
 
 @interface NSObject (ConventionalC)
 
-/* Creates a dictionary representing the object. Cyclical references are not detected.
+/* Creates a dictionary representing the object. Cyclical references are detected and presented
+ * for the first reference to the gate, and all others will be NSNull.
  * • NSStrings, NSNumbers, and NSNulls are returned unprocessed.
  * • NSFastEnumeration elements such as NSArray are converted as needed and returned in a new array.
  * • Other objects are converted to dictionaries.
