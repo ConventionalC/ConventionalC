@@ -20,8 +20,7 @@
 
 -(void)testDateHour
 {
-    int diff = NSTimeZone.localTimeZone.secondsFromGMT / 60 / 60;
-
+    int diff = (int)(NSTimeZone.localTimeZone.secondsFromGMT / 60 / 60);
     STAssertEquals((int)self.date.hour, 23 + diff, nil);
 }
 
