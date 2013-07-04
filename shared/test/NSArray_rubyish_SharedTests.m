@@ -31,6 +31,16 @@
         STAssertEquals(object, o, @"Object should match original object");
 }
 
+-(void)testNewWithSize
+{
+    NSArray* array;
+    STAssertNoThrow(array = [NSArray newWithSize:3], nil);
+    STAssertNotNil(array, nil);
+    STAssertTrue(3 == array.count, nil);
+    for(id o in array)
+        STAssertEqualObjects(o, NSNull.null, @"Object should be NSNull");
+}
+
 -(void)testNewWithSizeAndBlock
 {
     NSArray* array;
@@ -39,6 +49,24 @@
     STAssertTrue(3 == array.count, nil);
     for(int i=0; i<3; i++)
         STAssertEqualObjects([array objectAtIndex:i], [NSNumber numberWithInt:i], @"Object should match original object");
+}
+
+-(void)testAt
+{
+    STAssertEqualObjects([self.abc at:0], @"a", nil);
+    STAssertEqualObjects([self.abc at:1], @"b", nil);
+    STAssertEqualObjects([self.abc at:2], @"c", nil);
+    STAssertNil([self.abc at:3], nil);
+}
+
+-(void)testCompacted
+{
+    STAssertEqualObjects((@[NSNull.null, @"a", @"b", NSNull.null, @"c"]).compacted, self.abc, nil);
+}
+
+-(void)testCollected
+{
+    [self testMapped];
 }
 
 -(void)testEach
@@ -59,6 +87,34 @@
 {
     STAssertFalse(abc.isEmpty, nil);
     STAssertTrue(empty.isEmpty, nil);
+}
+
+-(void)testFirst
+{
+    STAssertEqualObjects(self.abc.first, @"a", nil);
+    STAssertNil(NSArray.new.first, nil);
+}
+
+-(void)testLast
+{
+    STAssertEqualObjects(self.abc.last, @"c", nil);
+    STAssertNil(NSArray.new.last, nil);
+}
+
+-(void)testLength
+{
+    STAssertEquals(self.abc.length, 3u, nil);
+}
+
+-(void)testMapped
+{
+    NSArray* result = [self.abc mapped:(id)^(NSString *o){ return [o stringByAppendingString:o]; }];
+    STAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]), nil);
+}
+
+-(void)testSize
+{
+    STAssertEquals(self.abc.size, 3u, nil);
 }
 
 @end

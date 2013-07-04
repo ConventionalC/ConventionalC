@@ -13,7 +13,7 @@ Cocoapod and static library to provide defaults and convenience methods for ters
 
 Rubyish Categories
 ------------------
-Objective c equivalents are provided for many ruby methods.
+Objective-C equivalents are provided for many ruby methods. Objective-C conventions are followed; For example, boolean returning methods start with verbs like 'is'. Methods with mutable versions like `collect!` will be named with a noun like `collected` for the immutable version and with a verb like `collect` for the mutable.
 
 Examples:
  * Array.new(10, 'A') -> [NSArray newWithSize:10 object:@"A"]
