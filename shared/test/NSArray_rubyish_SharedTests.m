@@ -103,7 +103,7 @@
 
 -(void)testLength
 {
-    STAssertEquals(self.abc.length, 3u, nil);
+    STAssertEquals(self.abc.length, (NSUInteger)3, nil);
 }
 
 -(void)testMapped
@@ -131,7 +131,7 @@
 
 -(void)testSize
 {
-    STAssertEquals(self.abc.size, 3u, nil);
+    STAssertEquals(self.abc.size, (NSUInteger)3, nil);
 }
 
 -(void)testSorted
