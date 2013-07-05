@@ -112,9 +112,32 @@
     STAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]), nil);
 }
 
+-(void)testReversed
+{
+    STAssertEqualObjects(self.abc.reversed, (@[@"c", @"b", @"a"]), nil);
+    STAssertEqualObjects(self.abc.reversed.reversed, self.abc, nil);
+}
+
+-(void)testSample
+{
+    NSArray* result = [NSArray newWithSize:100 block:(id)^(NSUInteger i){return self.abc.sample;}];
+    STAssertEqualObjects([[NSSet setWithArray:result] allObjects], self.abc, nil);
+}
+
+-(void)testSelected
+{
+    STAssertEqualObjects([self.abc selected:^BOOL(id o) { return [@"b" isEqual:o]; }], (@[@"b"]), nil);
+}
+
 -(void)testSize
 {
     STAssertEquals(self.abc.size, 3u, nil);
+}
+
+-(void)testSorted
+{
+    STAssertEqualObjects((@[@"c", @"a", @"b"].sorted), self.abc, nil);
+    STAssertEqualObjects((self.abc.reversed.sorted), self.abc, nil);
 }
 
 @end

@@ -66,6 +66,26 @@
     return result.copy;
 }
 
+-(NSArray*)reversed
+{
+    return self.reverseObjectEnumerator.allObjects;
+}
+
+-(id)sample
+{
+    return self[arc4random_uniform(self.count)];
+}
+
+-(NSArray*)selected:(ObjectReturnBoolBlock)selectionBlock
+{
+    return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return selectionBlock(o);}]];
+}
+
 -(NSUInteger)size { return self.count; }
+
+-(NSArray*)sorted
+{
+    return [self sortedArrayUsingSelector:@selector(compare:)];
+}
 
 @end

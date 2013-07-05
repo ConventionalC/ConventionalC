@@ -10,6 +10,7 @@
     #endif
     typedef id(^ReturnBlock)();
     typedef id(^ObjectReturnBlock)(id object);
+    typedef BOOL(^ObjectReturnBoolBlock)(id object);
     typedef id(^IndexReturnBlock)(NSUInteger index);
     typedef void(^IndexBlock)(NSUInteger index);
     typedef void(^ObjectBlock)(id object);

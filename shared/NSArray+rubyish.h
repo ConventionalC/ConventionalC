@@ -94,28 +94,28 @@
   // not implemented: `fetch(index, default) → obj`
   // not implemented: `fetch(index) { |index| block } → obj`
 
-  // not implemented: `fill(obj) → ary click to toggle source`
+  // not implemented: `fill(obj) → ary`
   // not implemented: `fill(obj, start [, length]) → ary`
   // not implemented: `fill(obj, range ) → ary`
   // not implemented: `fill { |index| block } → ary`
   // not implemented: `fill(start [, length] ) { |index| block } → ary`
   // not implemented: `fill(range) { |index| block } → ary`
-  // `find_index(obj) → int or nil click to toggle source` Use indexOfObject:
+  // `find_index(obj) → int or nil` Use indexOfObject:
   // `find_index { |item| block } → int or nil` Use indexOfObjectPassingTest:
   // not implemented: `find_index → Enumerator`
 
-  // `first → obj or nil click to toggle source`
+  // `first → obj or nil`
   -(id)first;
 
   // not implemented: `first(n) → new_ary`
-  // not implemented: `flatten → new_ary click to toggle source`
+  // not implemented: `flatten → new_ary`
   // not implemented: `flatten(level) → new_ary`
-  // not implemented: `flatten! → ary or nil click to toggle source`
+  // not implemented: `flatten! → ary or nil`
   // not implemented: `flatten!(level) → ary or nil`
   // not implemented: `frozen? → true or false`
   // not implemented: `hash → fixnum`
   // not implemented: `include?(object) → true or false`
-  // not implemented: `index(obj) → int or nil click to toggle source`
+  // not implemented: `index(obj) → int or nil`
   // not implemented: `index { |item| block } → int or nil`
   // not implemented: `index → Enumerator`
   // not implemented: `initialize_copy(other_ary) → ary`
@@ -123,9 +123,9 @@
   // not implemented: `inspect → string`
   // not implemented: `to_s → string`
   // not implemented: `join(separator=$,) → str`
-  // not implemented: `keep_if { |item| block } → ary click to toggle source`
+  // not implemented: `keep_if { |item| block } → ary`
   // not implemented: `keep_if → Enumerator`
-  // not implemented: `last → obj or nil click to toggle source`
+  // not implemented: `last → obj or nil`
 
   // `last(n) → new_ary`
   -(id)last;
@@ -133,86 +133,98 @@
   // `length → int`
   -(NSUInteger)length;
 
-  // `map { |item| block } → new_ary click to toggle source`
+  // `map { |item| block } → new_ary`
   // `nil` is replaced with `NSNull.null`.
   -(NSArray*)mapped:(ObjectReturnBlock)b;
-
   // not implemented: `map → Enumerator`
-  // not implemented: `map! {|item| block } → ary click to toggle source`
+  // not implemented: `map! {|item| block } → ary`
   // not implemented: `map! → Enumerator`
+
   // not implemented: `pack ( aTemplateString ) → aBinaryString`
-  // not implemented: `permutation { |p| block } → ary click to toggle source`
+  // not implemented: `permutation { |p| block } → ary`
   // not implemented: `permutation → Enumerator`
   // not implemented: `permutation(n) { |p| block } → ary`
   // not implemented: `permutation(n) → Enumerator`
-  // not implemented: `pop → obj or nil click to toggle source`
+  // not implemented: `pop → obj or nil`
   // not implemented: `pop(n) → new_ary`
-  // not implemented: `product(other_ary, ...) → new_ary click to toggle source`
+  // not implemented: `product(other_ary, ...) → new_ary`
   // not implemented: `product(other_ary, ...) { |p| block } → ary`
   // not implemented: `push(obj, ... ) → ary`
   // not implemented: `rassoc(obj) → new_ary or nil`
-  // not implemented: `reject {|item| block } → new_ary click to toggle source`
+  // not implemented: `reject {|item| block } → new_ary`
   // not implemented: `reject → Enumerator`
-  // not implemented: `reject! { |item| block } → ary or nil click to toggle source`
+  // not implemented: `reject! { |item| block } → ary or nil`
   // not implemented: `reject! → Enumerator`
-  // not implemented: `repeated_combination(n) { |c| block } → ary click to toggle source`
+  // not implemented: `repeated_combination(n) { |c| block } → ary`
   // not implemented: `repeated_combination(n) → Enumerator`
-  // not implemented: `repeated_permutation(n) { |p| block } → ary click to toggle source`
+  // not implemented: `repeated_permutation(n) { |p| block } → ary`
   // not implemented: `repeated_permutation(n) → Enumerator`
   // not implemented: `replace(other_ary) → ary`
-  // not implemented: `reverse → new_ary`
+
+  // `reverse → new_ary`
+  -(NSArray*)reversed;
   // not implemented: `reverse! → ary`
-  // not implemented: `reverse_each { |item| block } → ary click to toggle source`
+  // not implemented: `reverse_each { |item| block } → ary`
   // not implemented: `reverse_each → Enumerator`
-  // not implemented: `rindex(obj) → int or nil click to toggle source`
+
+  // not implemented: `rindex(obj) → int or nil`
   // not implemented: `rindex { |item| block } → int or nil`
   // not implemented: `rindex → Enumerator`
   // not implemented: `rotate(count=1) → new_ary`
   // not implemented: `rotate!(count=1) → ary`
-  // not implemented: `sample → obj click to toggle source`
+
+  // not implemented: `sample → obj`
+  -(id)sample;
   // not implemented: `sample(random: rng) → obj`
   // not implemented: `sample(n) → new_ary`
   // not implemented: `sample(n, random: rng) → new_ary`
-  // not implemented: `select { |item| block } → new_ary click to toggle source`
+
+  // not implemented: `select { |item| block } → new_ary`
+  -(NSArray*)selected:(ObjectReturnBoolBlock)selectionBlock;
   // not implemented: `select → Enumerator`
-  // not implemented: `select! {|item| block } → ary or nil click to toggle source`
+  // not implemented: `select! {|item| block } → ary or nil`
   // not implemented: `select! → Enumerator`
-  // not implemented: `shift → obj or nil click to toggle source`
+
+  // not implemented: `shift → obj or nil`
   // not implemented: `shift(n) → new_ary`
-  // not implemented: `shuffle → new_ary click to toggle source`
+  // not implemented: `shuffle → new_ary`
   // not implemented: `shuffle(random: rng) → new_ary`
-  // not implemented: `shuffle! → ary click to toggle source`
+  // not implemented: `shuffle! → ary`
   // not implemented: `shuffle!(random: rng) → ary`
 
   // `size()`
   -(NSUInteger)size;
 
-  // not implemented: `slice(index) → obj or nil click to toggle source`
+  // not implemented: `slice(index) → obj or nil`
   // not implemented: `slice(start, length) → new_ary or nil`
   // not implemented: `slice(range) → new_ary or nil`
-  // not implemented: `slice!(index) → obj or nil click to toggle source`
+  // not implemented: `slice!(index) → obj or nil`
   // not implemented: `slice!(start, length) → new_ary or nil`
   // not implemented: `slice!(range) → new_ary or nil`
-  // not implemented: `sort → new_ary click to toggle source`
-  // not implemented: `sort { |a, b| block } → new_ary`
-  // not implemented: `sort! → ary click to toggle source`
+
+  // `sort → new_ary`
+  // Uses the compare: method of objects.
+  -(NSArray*)sorted;
+  // not implemented: `sort { |a, b| block } → new_ary` Use sortedArrayUsingComparator:.
+  // not implemented: `sort! → ary`
   // not implemented: `sort! { |a, b| block } → ary`
-  // not implemented: `sort_by! { |obj| block } → ary click to toggle source`
+  // not implemented: `sort_by! { |obj| block } → ary`
   // not implemented: `sort_by! → Enumerator`
+
   // not implemented: `take(n) → new_ary`
-  // not implemented: `take_while { |arr| block } → new_ary click to toggle source`
+  // not implemented: `take_while { |arr| block } → new_ary`
   // not implemented: `take_while → Enumerator`
   // not implemented: `to_a → ary`
   // not implemented: `to_ary → ary`
   // not implemented: `to_s()`
   // not implemented: `transpose → new_ary`
-  // not implemented: `uniq → new_ary click to toggle source`
+  // not implemented: `uniq → new_ary`
   // not implemented: `uniq { |item| ... } → new_ary`
-  // not implemented: `uniq! → ary or nil click to toggle source`
+  // not implemented: `uniq! → ary or nil`
   // not implemented: `uniq! { |item| ... } → ary or nil`
   // not implemented: `unshift(obj, ...) → ary`
   // not implemented: `values_at(selector, ...) → new_ary`
-  // not implemented: `zip(arg, ...) → new_ary click to toggle source`
+  // not implemented: `zip(arg, ...) → new_ary`
   // not implemented: `zip(arg, ...) { |arr| block } → nil`
   // not implemented: `ary | other_ary → new_ary`
 
