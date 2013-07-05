@@ -16,46 +16,29 @@
 -(void)setUp
 {
     [super setUp];
-    self.abc = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
-    self.empty = [NSArray arrayWithObjects: nil];
+    self.abc = @[@"a", @"b", @"c"];
+    self.empty = NSArray.new;
 }
 
 -(void)testNewWithSizeAndObject
 {
-    id object = @"object";
-    NSArray* array;
-    STAssertNoThrow(array = [NSArray newWithSize:3 object:object], nil);
-    STAssertNotNil(array, nil);
-    STAssertTrue(3 == array.count, nil);
-    for(id o in array)
-        STAssertEquals(object, o, @"Object should match original object");
+    id o = @"object";
+    STAssertEqualObjects([NSArray newWithSize:3 object:o], (@[o, o, o]), nil);
 }
 
 -(void)testNewWithSize
 {
-    NSArray* array;
-    STAssertNoThrow(array = [NSArray newWithSize:3], nil);
-    STAssertNotNil(array, nil);
-    STAssertTrue(3 == array.count, nil);
-    for(id o in array)
-        STAssertEqualObjects(o, NSNull.null, @"Object should be NSNull");
+    STAssertEqualObjects([NSArray newWithSize:3], (@[NSNull.null, NSNull.null, NSNull.null]), nil);
 }
 
 -(void)testNewWithSizeAndBlock
 {
-    NSArray* array;
-    STAssertNoThrow(array = [NSArray newWithSize:3 block:(id)^(int i){ return [NSNumber numberWithInt:i]; }], nil);
-    STAssertNotNil(array, nil);
-    STAssertTrue(3 == array.count, nil);
-    for(int i=0; i<3; i++)
-        STAssertEqualObjects([array objectAtIndex:i], [NSNumber numberWithInt:i], @"Object should match original object");
+    STAssertEqualObjects([NSArray newWithSize:3 block:(id)^(int i){return @(i);}], (@[@(0), @(1), @(2)]), nil);
 }
 
 -(void)testAt
 {
-    STAssertEqualObjects([self.abc at:0], @"a", nil);
-    STAssertEqualObjects([self.abc at:1], @"b", nil);
-    STAssertEqualObjects([self.abc at:2], @"c", nil);
+    STAssertEqualObjects([NSArray newWithSize:3 block:(id)^(int i){return [self.abc at:i];}], self.abc, nil);
     STAssertNil([self.abc at:3], nil);
 }
 
