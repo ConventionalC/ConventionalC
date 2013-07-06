@@ -1,0 +1,3 @@
+language: objective-c
+before_script: test/before_script.sh
+script: test/script.sh
