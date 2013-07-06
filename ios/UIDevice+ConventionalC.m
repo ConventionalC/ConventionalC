@@ -20,7 +20,7 @@
 
 +(BOOL)isInPortrait
 {
-    return UIDeviceOrientationIsPortrait(UIDevice.currentDevice.orientation);
+    return UIDeviceOrientationIsPortrait(UIApplication.sharedApplication.statusBarOrientation);
 }
 
 @end
