@@ -54,7 +54,7 @@
 
 -(id)first { return self.count ? self[0] : nil; }
 
--(id)last { return self.count ? self[self.count-1] : nil; }
+-(id)last { return self.lastObject; }
 
 -(NSUInteger)length { return self.count; }
 
