@@ -16,8 +16,8 @@
 -(void)setUp
 {
     [super setUp];
-    self.abc = @[@"a", @"b", @"c"];
-    self.empty = NSArray.new;
+    abc = @[@"a", @"b", @"c"];
+    empty = NSArray.new;
 }
 
 -(void)testNewWithSizeAndObject
@@ -38,13 +38,13 @@
 
 -(void)testAt
 {
-    STAssertEqualObjects([NSArray newWithSize:3 block:(id)^(int i){return [self.abc at:i];}], self.abc, nil);
-    STAssertNil([self.abc at:3], nil);
+    STAssertEqualObjects([NSArray newWithSize:3 block:(id)^(int i){return [abc at:i];}], abc, nil);
+    STAssertNil([abc at:3], nil);
 }
 
 -(void)testCompacted
 {
-    STAssertEqualObjects((@[NSNull.null, @"a", @"b", NSNull.null, @"c"]).compacted, self.abc, nil);
+    STAssertEqualObjects((@[NSNull.null, @"a", @"b", NSNull.null, @"c"]).compacted, abc, nil);
 }
 
 -(void)testCollected
@@ -74,53 +74,53 @@
 
 -(void)testFirst
 {
-    STAssertEqualObjects(self.abc.first, @"a", nil);
+    STAssertEqualObjects(abc.first, @"a", nil);
     STAssertNil(NSArray.new.first, nil);
 }
 
 -(void)testLast
 {
-    STAssertEqualObjects(self.abc.last, @"c", nil);
+    STAssertEqualObjects(abc.last, @"c", nil);
     STAssertNil(NSArray.new.last, nil);
 }
 
 -(void)testLength
 {
-    STAssertEquals(self.abc.length, (NSUInteger)3, nil);
+    STAssertEquals(abc.length, (NSUInteger)3, nil);
 }
 
 -(void)testMapped
 {
-    NSArray* result = [self.abc mapped:(id)^(NSString *o){ return [o stringByAppendingString:o]; }];
+    NSArray* result = [abc mapped:(id)^(NSString *o){ return [o stringByAppendingString:o]; }];
     STAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]), nil);
 }
 
 -(void)testReversed
 {
-    STAssertEqualObjects(self.abc.reversed, (@[@"c", @"b", @"a"]), nil);
-    STAssertEqualObjects(self.abc.reversed.reversed, self.abc, nil);
+    STAssertEqualObjects(abc.reversed, (@[@"c", @"b", @"a"]), nil);
+    STAssertEqualObjects(abc.reversed.reversed, abc, nil);
 }
 
 -(void)testSample
 {
-    NSArray* result = [NSArray newWithSize:100 block:(id)^(NSUInteger i){return self.abc.sample;}];
-    STAssertEqualObjects([[NSSet setWithArray:result] allObjects], self.abc, nil);
+    NSArray* result = [NSArray newWithSize:100 block:(id)^(NSUInteger i){return abc.sample;}];
+    STAssertEqualObjects([[NSSet setWithArray:result] allObjects], abc, nil);
 }
 
 -(void)testSelected
 {
-    STAssertEqualObjects([self.abc selected:^BOOL(id o) { return [@"b" isEqual:o]; }], (@[@"b"]), nil);
+    STAssertEqualObjects([abc selected:^BOOL(id o) { return [@"b" isEqual:o]; }], (@[@"b"]), nil);
 }
 
 -(void)testSize
 {
-    STAssertEquals(self.abc.size, (NSUInteger)3, nil);
+    STAssertEquals(abc.size, (NSUInteger)3, nil);
 }
 
 -(void)testSorted
 {
-    STAssertEqualObjects((@[@"c", @"a", @"b"].sorted), self.abc, nil);
-    STAssertEqualObjects((self.abc.reversed.sorted), self.abc, nil);
+    STAssertEqualObjects((@[@"c", @"a", @"b"].sorted), abc, nil);
+    STAssertEqualObjects((abc.reversed.sorted), abc, nil);
 }
 
 @end

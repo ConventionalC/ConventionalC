@@ -29,11 +29,7 @@
 
 -(NSArray*)compacted
 {
-    NSMutableArray *result = NSMutableArray.new;
-    for(id o in self)
-        if(![o isKindOfClass:NSNull.class])
-            [result addObject:o];
-    return result;
+    return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return ![o isKindOfClass:NSNull.class];}]];
 }
 
 -(void)each:(ObjectBlock)b { for(id o in self) b(o); }

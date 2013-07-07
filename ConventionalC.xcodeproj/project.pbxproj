@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981301F617891472002BA863 /* NSMutableArray+rubyish.h in Headers */ = {isa = PBXBuildFile; fileRef = 981301F417891472002BA863 /* NSMutableArray+rubyish.h */; };
+		981301F717891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
+		981301F817891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
+		981301F917891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
+		981301FE178914BE002BA863 /* NSMutableArray_rubyish_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301FA1789149E002BA863 /* NSMutableArray_rubyish_SharedTests.m */; };
+		981301FF178914BF002BA863 /* NSMutableArray_rubyish_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301FA1789149E002BA863 /* NSMutableArray_rubyish_SharedTests.m */; };
+		98130200178914C1002BA863 /* NSMutableArray_rubyish_SharedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301FA1789149E002BA863 /* NSMutableArray_rubyish_SharedTests.m */; };
 		981C62F516FCD858004E9A93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
 		981C630316FCD859004E9A93 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628116FCD04F004E9A93 /* SenTestingKit.framework */; };
 		981C630416FCD859004E9A93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628316FCD04F004E9A93 /* UIKit.framework */; };
@@ -123,6 +130,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		981301F417891472002BA863 /* NSMutableArray+rubyish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+rubyish.h"; sourceTree = "<group>"; };
+		981301F517891472002BA863 /* NSMutableArray+rubyish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+rubyish.m"; sourceTree = "<group>"; };
+		981301FA1789149E002BA863 /* NSMutableArray_rubyish_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArray_rubyish_SharedTests.m; sourceTree = "<group>"; };
 		981C627216FCD04F004E9A93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		981C628116FCD04F004E9A93 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		981C628316FCD04F004E9A93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -334,6 +344,8 @@
 				9852F86F17068502007823DD /* NSBundle+ConventionalC.m */,
 				9852F87017068502007823DD /* NSDate+ConventionalC.h */,
 				9852F87117068502007823DD /* NSDate+ConventionalC.m */,
+				981301F417891472002BA863 /* NSMutableArray+rubyish.h */,
+				981301F517891472002BA863 /* NSMutableArray+rubyish.m */,
 				98FA879C175A4D73009B03C2 /* NSObject+ConventionalC.h */,
 				98FA879D175A4D73009B03C2 /* NSObject+ConventionalC.m */,
 				98FFE364175BF7C4005985FF /* NSSet+rubyish.h */,
@@ -350,6 +362,7 @@
 				98FFE37B175BF80E005985FF /* NSArray_rubyish_SharedTests.m */,
 				9852F89C170686AE007823DD /* NSBundle_ConventionalC_SharedTests.m */,
 				9852F89D170686AE007823DD /* NSDate_ConventionalC_SharedTests.m */,
+				981301FA1789149E002BA863 /* NSMutableArray_rubyish_SharedTests.m */,
 				98FA87A6175A5265009B03C2 /* NSObject_ConventionalC_SharedTests.m */,
 				98FFE37D175BF80E005985FF /* NSSet_rubyish_sharedTests.m */,
 				9852F897170686AE007823DD /* etc */,
@@ -404,6 +417,7 @@
 				98FA879E175A4D73009B03C2 /* NSObject+ConventionalC.h in Headers */,
 				98FFE36A175BF7C4005985FF /* NSArray+rubyish.h in Headers */,
 				98FFE384175BFAD1005985FF /* NSSet+rubyish.h in Headers */,
+				981301F617891472002BA863 /* NSMutableArray+rubyish.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +651,7 @@
 				98FA879F175A4D73009B03C2 /* NSObject+ConventionalC.m in Sources */,
 				98FFE36B175BF7C4005985FF /* NSArray+rubyish.m in Sources */,
 				98FFE36F175BF7C4005985FF /* NSSet+rubyish.m in Sources */,
+				981301F717891472002BA863 /* NSMutableArray+rubyish.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +665,7 @@
 				98FA87A7175A5265009B03C2 /* NSObject_ConventionalC_SharedTests.m in Sources */,
 				98FFE37E175BF80E005985FF /* NSArray_rubyish_SharedTests.m in Sources */,
 				98FFE381175BF80E005985FF /* NSSet_rubyish_sharedTests.m in Sources */,
+				981301FE178914BE002BA863 /* NSMutableArray_rubyish_SharedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +681,7 @@
 				98FA87A0175A4D73009B03C2 /* NSObject+ConventionalC.m in Sources */,
 				98FFE36C175BF7C4005985FF /* NSArray+rubyish.m in Sources */,
 				98FFE370175BF7C4005985FF /* NSSet+rubyish.m in Sources */,
+				981301F817891472002BA863 /* NSMutableArray+rubyish.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +695,7 @@
 				98FA87A8175A5265009B03C2 /* NSObject_ConventionalC_SharedTests.m in Sources */,
 				98FFE37F175BF80E005985FF /* NSArray_rubyish_SharedTests.m in Sources */,
 				98FFE382175BF80E005985FF /* NSSet_rubyish_sharedTests.m in Sources */,
+				981301FF178914BF002BA863 /* NSMutableArray_rubyish_SharedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +710,7 @@
 				98FA87A1175A4D73009B03C2 /* NSObject+ConventionalC.m in Sources */,
 				98FFE36D175BF7C4005985FF /* NSArray+rubyish.m in Sources */,
 				98FFE371175BF7C4005985FF /* NSSet+rubyish.m in Sources */,
+				981301F917891472002BA863 /* NSMutableArray+rubyish.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +724,7 @@
 				98FA87A9175A5265009B03C2 /* NSObject_ConventionalC_SharedTests.m in Sources */,
 				98FFE380175BF80E005985FF /* NSArray_rubyish_SharedTests.m in Sources */,
 				98FFE383175BF80E005985FF /* NSSet_rubyish_sharedTests.m in Sources */,
+				98130200178914C1002BA863 /* NSMutableArray_rubyish_SharedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
