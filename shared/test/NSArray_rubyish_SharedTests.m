@@ -112,6 +112,14 @@
     STAssertEqualObjects([abc selected:^BOOL(id o) { return [@"b" isEqual:o]; }], (@[@"b"]), nil);
 }
 
+-(void)testShuffled
+{
+    NSArray* oneTo99 = [NSArray newWithSize:100 block:(id)^(int i){return @(i+1);}];
+    NSArray* result = oneTo99.shuffled;
+    STAssertFalse([oneTo99 isEqual:result], nil);
+    STAssertEqualObjects(result.sorted, oneTo99, nil);
+}
+
 -(void)testSize
 {
     STAssertEquals(abc.size, (NSUInteger)3, nil);

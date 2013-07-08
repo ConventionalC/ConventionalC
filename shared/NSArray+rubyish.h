@@ -106,7 +106,6 @@
   // `map { |item| block } → new_ary`
   // `nil` is replaced with `NSNull.null`.
   -(NSArray*)mapped:(ObjectReturnBlock)b;
-  // not implemented: `map! {|item| block } → ary`
 
   // not implemented: `pack ( aTemplateString ) → aBinaryString`
   // not implemented: `permutation { |p| block } → ary`
@@ -127,17 +126,18 @@
   // not implemented: `rindex { |item| block } → int or nil`
   // not implemented: `rotate(count=1) → new_ary`
 
-  // not implemented: `sample → obj`
+  // `sample → obj`
   -(id)sample;
   // not implemented: `sample(random: rng) → obj`
   // not implemented: `sample(n) → new_ary`
   // not implemented: `sample(n, random: rng) → new_ary`
 
-  // not implemented: `select { |item| block } → new_ary`
+  // `select { |item| block } → new_ary`
   -(NSArray*)selected:(ObjectReturnBoolBlock)selectionBlock;
   // not implemented: `select! {|item| block } → ary or nil`
 
-  // not implemented: `shuffle → new_ary`
+  // `shuffle → new_ary`
+  -(NSArray*)shuffled;
   // not implemented: `shuffle(random: rng) → new_ary`
 
   // `size()`

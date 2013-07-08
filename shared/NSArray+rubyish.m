@@ -77,6 +77,19 @@
     return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return selectionBlock(o);}]];
 }
 
+-(NSArray*)shuffled
+{
+    NSMutableArray* source = self.mutableCopy;
+    NSMutableArray* result = NSMutableArray.new;
+    while(source.count)
+    {
+        int i = arc4random_uniform(source.count);
+        [result addObject:source[i]];
+        [source removeObjectAtIndex:i];
+    }
+    return result;
+}
+
 -(NSUInteger)size { return self.count; }
 
 -(NSArray*)sorted

@@ -56,6 +56,14 @@
     STAssertEqualObjects(result, compare, nil);
 }
 
+-(void)testShuffle
+{
+    NSArray* oneTo99 = [NSArray newWithSize:100 block:(id)^(int i){return @(i+1);}];
+    NSArray* result = [oneTo99.mutableCopy shuffle];
+    STAssertFalse([oneTo99 isEqual:result], nil);
+    STAssertEqualObjects(result.sorted, oneTo99, nil);
+}
+
 -(void)testSort
 {
     STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);

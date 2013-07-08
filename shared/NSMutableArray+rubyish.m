@@ -37,6 +37,11 @@
     return [self replace:[self selected:selectionBlock]];
 }
 
+-(NSMutableArray*)shuffle
+{
+    return [self replace:self.shuffled];
+}
+
 -(NSMutableArray*)sort
 {
     return [self replace:self.sorted];
