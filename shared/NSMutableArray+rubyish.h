@@ -60,7 +60,7 @@
   // not implemented: `shift → obj or nil`
   // not implemented: `shift(n) → new_ary`
 
-  // not implemented: `shuffle! → ary`
+  // `shuffle! → ary`
   -(NSMutableArray*)shuffle;
   // not implemented: `shuffle!(random: rng) → ary`
 
