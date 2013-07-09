@@ -16,10 +16,10 @@
 
 -(void)testCasecmp
 {
-    STAssertEquals([@"abcdef" casecmp:@"abcde"], 1, nil);    // "abcdef".casecmp("abcde")     #=> 1
-    STAssertEquals([@"aBcDeF" casecmp:@"abcdef"], 0, nil);   // "aBcDeF".casecmp("abcdef")    #=> 0
-    STAssertEquals([@"abcdef" casecmp:@"abcdefg"], -1, nil); // "abcdef".casecmp("abcdefg")   #=> -1
-    STAssertEquals([@"abcdef" casecmp:@"ABCDEF"], 0, nil);   // "abcdef".casecmp("ABCDEF")    #=> 0
+    STAssertEquals((int)[@"abcdef" casecmp:@"abcde"], 1, nil);    // "abcdef".casecmp("abcde")     #=> 1
+    STAssertEquals((int)[@"aBcDeF" casecmp:@"abcdef"], 0, nil);   // "aBcDeF".casecmp("abcdef")    #=> 0
+    STAssertEquals((int)[@"abcdef" casecmp:@"abcdefg"], -1, nil); // "abcdef".casecmp("abcdefg")   #=> -1
+    STAssertEquals((int)[@"abcdef" casecmp:@"ABCDEF"], 0, nil);   // "abcdef".casecmp("ABCDEF")    #=> 0
 }
 
 -(void)testChr
