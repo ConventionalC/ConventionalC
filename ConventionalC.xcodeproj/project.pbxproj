@@ -143,6 +143,7 @@
 		98130204178B3C2F002BA863 /* NSString_rubyish_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_rubyish_SharedTests.m; sourceTree = "<group>"; };
 		98130208178B7A9D002BA863 /* NSString+rubyish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+rubyish.h"; sourceTree = "<group>"; };
 		98130209178B7A9D002BA863 /* NSString+rubyish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+rubyish.m"; sourceTree = "<group>"; };
+		98130213178C8C7F002BA863 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		981C627216FCD04F004E9A93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		981C628116FCD04F004E9A93 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		981C628316FCD04F004E9A93 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -267,6 +268,7 @@
 				981C627116FCD04F004E9A93 /* Frameworks */,
 				981C627016FCD04F004E9A93 /* Products */,
 				986BB025170241A100248441 /* ConventionalC.podspec */,
+				98130213178C8C7F002BA863 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
