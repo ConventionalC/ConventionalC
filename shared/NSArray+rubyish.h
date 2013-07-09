@@ -2,8 +2,8 @@
 
 // Methods based off of Ruby 2.0.
 // See NSMutableArray+rubyish.h for mutation methods.
-// When methods have a mutable and immutable method, the mutable method will be named like 'map',
-// and the immutable version will be 'mapped'.
+// When methods have a mutable and immutable method, the mutable method is named like 'map', and the
+// immutable version is 'mapped'.
 // Alternative empty argument methods that return enumerators are not implemented.
 @interface NSArray(rubyish)
   // `[](*args)`. Use Objective-C literal @[].
