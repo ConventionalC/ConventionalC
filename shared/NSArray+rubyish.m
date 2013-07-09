@@ -29,11 +29,7 @@
 
 -(NSArray*)compacted
 {
-    NSMutableArray *result = NSMutableArray.new;
-    for(id o in self)
-        if(![o isKindOfClass:NSNull.class])
-            [result addObject:o];
-    return result;
+    return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return ![o isKindOfClass:NSNull.class];}]];
 }
 
 -(void)each:(ObjectBlock)b { for(id o in self) b(o); }
@@ -54,7 +50,7 @@
 
 -(id)first { return self.count ? self[0] : nil; }
 
--(id)last { return self.count ? self[self.count-1] : nil; }
+-(id)last { return self.lastObject; }
 
 -(NSUInteger)length { return self.count; }
 
@@ -79,6 +75,19 @@
 -(NSArray*)selected:(ObjectReturnBoolBlock)selectionBlock
 {
     return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return selectionBlock(o);}]];
+}
+
+-(NSArray*)shuffled
+{
+    NSMutableArray* source = self.mutableCopy;
+    NSMutableArray* result = NSMutableArray.new;
+    while(source.count)
+    {
+        int i = arc4random_uniform(source.count);
+        [result addObject:source[i]];
+        [source removeObjectAtIndex:i];
+    }
+    return result;
 }
 
 -(NSUInteger)size { return self.count; }

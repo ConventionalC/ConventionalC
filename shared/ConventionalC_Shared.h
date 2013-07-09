@@ -19,6 +19,7 @@
 
 #import "NSArray+ConventionalC.h"
 #import "NSArray+rubyish.h"
+#import "NSMutableArray+rubyish.h"
 #import "NSBundle+ConventionalC.h"
 #import "NSDate+ConventionalC.h"
 #import "NSObject+ConventionalC.h"
