@@ -30,4 +30,22 @@
     STAssertEqualObjects(result, (@[@1, @2]), nil);
 }
 
+-(void)testSubarrayFromWithLength
+{
+    id result = [@[@1, @2, @3] subarrayFrom:1 length:1];
+    STAssertEqualObjects(result, (@[@2]), nil);
+}
+
+-(void)testSubarrayFrom
+{
+    id result = [@[@1, @2, @3] subarrayFrom:1];
+    STAssertEqualObjects(result, (@[@2, @3]), nil);
+}
+
+-(void)testSubarrayTo
+{
+    id result = [@[@1, @2, @3] subarrayTo:1];
+    STAssertEqualObjects(result, (@[@1, @2]), nil);
+}
+
 @end

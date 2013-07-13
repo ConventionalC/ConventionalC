@@ -83,7 +83,7 @@
     NSMutableArray* result = NSMutableArray.new;
     while(source.count)
     {
-        int i = arc4random_uniform(source.count);
+        int i = arc4random_uniform((int)source.count);
         [result addObject:source[i]];
         [source removeObjectAtIndex:i];
     }

@@ -14,4 +14,19 @@
     return a.copy;
 }
 
+-(NSArray*)subarrayFrom:(NSUInteger)from length:(NSUInteger)length
+{
+    return [self subarrayWithRange:NSMakeRange(from, length)];
+}
+
+-(NSArray*)subarrayFrom:(NSUInteger)from
+{
+    return [self subarrayWithRange:NSMakeRange(from, self.length - from)];
+}
+
+-(NSArray*)subarrayTo:(NSUInteger)to
+{
+    return [self subarrayFrom:0 length:to+1];
+}
+
 @end
