@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9800E742179B643F007187B9 /* UIImage+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9800E741179B643F007187B9 /* UIImage+ConventionalC.m */; };
 		981301F617891472002BA863 /* NSMutableArray+rubyish.h in Headers */ = {isa = PBXBuildFile; fileRef = 981301F417891472002BA863 /* NSMutableArray+rubyish.h */; };
 		981301F717891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
 		981301F817891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
@@ -137,6 +138,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9800E740179B643F007187B9 /* UIImage+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ConventionalC.h"; sourceTree = "<group>"; };
+		9800E741179B643F007187B9 /* UIImage+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ConventionalC.m"; sourceTree = "<group>"; };
 		981301F417891472002BA863 /* NSMutableArray+rubyish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+rubyish.h"; sourceTree = "<group>"; };
 		981301F517891472002BA863 /* NSMutableArray+rubyish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+rubyish.m"; sourceTree = "<group>"; };
 		981301FA1789149E002BA863 /* NSMutableArray_rubyish_SharedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArray_rubyish_SharedTests.m; sourceTree = "<group>"; };
@@ -317,6 +320,8 @@
 				9852F85217067BF2007823DD /* UIBarButtonItem+ConventionalC.m */,
 				9852F85317067BF2007823DD /* UIDevice+ConventionalC.h */,
 				9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */,
+				9800E740179B643F007187B9 /* UIImage+ConventionalC.h */,
+				9800E741179B643F007187B9 /* UIImage+ConventionalC.m */,
 				9852F85517067BF2007823DD /* UIToolbar+ConventionalC.h */,
 				9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */,
 				9852F85717067BF2007823DD /* UIView+ConventionalC.h */,
@@ -669,6 +674,7 @@
 				98FFE36F175BF7C4005985FF /* NSSet+rubyish.m in Sources */,
 				981301F717891472002BA863 /* NSMutableArray+rubyish.m in Sources */,
 				9813020B178B7A9D002BA863 /* NSString+rubyish.m in Sources */,
+				9800E742179B643F007187B9 /* UIImage+ConventionalC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
