@@ -117,7 +117,9 @@
         else if(s[i] >= 'a' && s[i] <= 'z')
             s[i] = s[i] - ('a' - 'A');
     }
-    return [NSString stringWithCharacters:s length:self.length];
+    NSString* result = [NSString stringWithCharacters:s length:self.length];
+    free(s);
+    return result;
 }
 
 -(NSString*)upcased { return self.uppercaseString; }
