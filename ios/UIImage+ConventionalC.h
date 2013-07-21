@@ -2,4 +2,6 @@
 
 @interface UIImage (ConventionalC)
 
+-(NSData*)pngRepresentation;
+
 @end
