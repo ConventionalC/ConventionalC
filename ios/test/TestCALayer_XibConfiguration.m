@@ -1,6 +1,6 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import "UIView+XibConfiguration.h"
+#import "CALayer+XibConfiguration.h"
 
 @interface TestUIView_XibConfiguration : SenTestCase
     @property UIView* view;
@@ -15,8 +15,8 @@
 
 -(void)testBorderColor
 {
-    self.view.borderColor = UIColor.redColor;
-    STAssertEqualObjects(self.view.borderColor, UIColor.redColor, nil);
+    self.view.layer.borderUIColor = UIColor.redColor;
+    STAssertEqualObjects(self.view.layer.borderUIColor, UIColor.redColor, nil);
     STAssertEqualObjects([UIColor colorWithCGColor:self.view.layer.borderColor], UIColor.redColor, nil);
 }
 

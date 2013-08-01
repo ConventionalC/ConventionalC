@@ -4,7 +4,7 @@
 #import "UIImage+ConventionalC.h"
 #import "UIToolbar+ConventionalC.h"
 #import "UIView+ConventionalC.h"
-#import "UIView+XibConfiguration.h"
+#import "CALayer+XibConfiguration.h"
 
 @interface ConventionalC_iOS : NSObject
 
