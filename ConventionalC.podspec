@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.source_files = 'ios/*.{m,h}', 'shared/*.{m,h}'
   s.ios.deployment_target = '5.1'
-  s.ios.frameworks = 'Foundation'
+  s.ios.frameworks = 'Foundation', 'QuartzCore'
 
   s.osx.source_files = 'mac/*.{m,h}', 'shared/*.{m,h}'
   s.osx.deployment_target = '10.7'
