@@ -1,4 +1,4 @@
-conventional-c
+ConventionalC
 ==============
 
 Cocoapod and static library to provide defaults, configurability, and convenience methods for terse Objective-C.
