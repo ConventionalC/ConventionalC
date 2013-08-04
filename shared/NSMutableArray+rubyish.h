@@ -6,7 +6,7 @@
 // and the immutable version will be 'mapped'.
 // Alternative methods that return enumerators are ignored.
 @interface NSMutableArray(rubyish)
-  // not implemented: `clear → ary`
+  -(NSMutableArray*)clear;// `clear → ary`
 
   // `collect! {|item| block } → ary`
   // `nil` is replaced with `NSNull.null`.

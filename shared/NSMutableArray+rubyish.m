@@ -2,6 +2,12 @@
 
 @implementation NSMutableArray(rubyish)
 
+-(NSMutableArray*)clear
+{
+    [self removeAllObjects];
+    return self;
+}
+
 -(NSMutableArray*)collect:(ObjectReturnBlock)b { return [self map:b]; }
 
 -(NSMutableArray*)compact

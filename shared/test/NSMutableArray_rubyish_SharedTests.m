@@ -20,6 +20,11 @@
     empty = NSMutableArray.new;
 }
 
+-(void)testClear
+{
+    STAssertEquals(abc.clear.count, (NSUInteger)0, nil);
+}
+
 -(void)testCollect
 {
     [self testMap];
