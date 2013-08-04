@@ -76,6 +76,14 @@
     STAssertEqualObjects(result, compare, nil);
 }
 
+-(void)testShift
+{
+    id result = abc.shift;
+    STAssertEqualObjects(abc, (@[@"b", @"c"]), nil);
+    STAssertEqualObjects(result, @"a", nil);
+    STAssertNil([(@[]).mutableCopy shift], nil);
+}
+
 -(void)testShuffle
 {
     NSArray* oneTo99 = [NSArray newWithSize:100 block:(id)^(int i){return @(i+1);}];
@@ -88,6 +96,13 @@
 {
     STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);
     STAssertEqualObjects((abc.reverse.sort), abc, nil);
+}
+
+-(void)testUnshift
+{
+    NSMutableArray* result = [abc unshift:@"d"];
+    STAssertEqualObjects(result, (@[@"d",@"a",@"b",@"c"]), nil);
+    STAssertEqualObjects(result, abc, @"should return itself");
 }
 
 @end

@@ -50,7 +50,7 @@
 
   -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock; // `select! {|item| block } → ary or nil`
 
-  // not implemented: `shift → obj or nil`
+  -(id)shift; // `shift → obj or nil`
   // not implemented: `shift(n) → new_ary`
 
   -(NSMutableArray*)shuffle; // `shuffle! → ary`
@@ -68,4 +68,7 @@
 
   // not implemented: `uniq! → ary or nil`
   // not implemented: `uniq! { |item| ... } → ary or nil`
+
+  -(NSMutableArray*)unshift:(id)object; // `unshift(obj, ...) → ary` Not implemented – multiple
+
 @end

@@ -56,6 +56,14 @@
     return [self replace:[self selected:selectionBlock]];
 }
 
+-(id)shift
+{
+    id result = self.first;
+    if(result)
+       [self removeObjectAtIndex:0];
+    return result;
+}
+
 -(NSMutableArray*)shuffle
 {
     return [self replace:self.shuffled];
@@ -64,6 +72,12 @@
 -(NSMutableArray*)sort
 {
     return [self replace:self.sorted];
+}
+
+-(NSMutableArray*)unshift:(id)object
+{
+    [self insertObject:object atIndex:0];
+    return self;
 }
 
 @end

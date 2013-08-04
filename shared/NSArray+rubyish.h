@@ -160,7 +160,6 @@
   // not implemented: `transpose → new_ary`
   // not implemented: `uniq → new_ary`
   // not implemented: `uniq { |item| ... } → new_ary`
-  // not implemented: `unshift(obj, ...) → ary`
   // not implemented: `values_at(selector, ...) → new_ary`
   // not implemented: `zip(arg, ...) → new_ary`
   // not implemented: `zip(arg, ...) { |arr| block } → nil`
