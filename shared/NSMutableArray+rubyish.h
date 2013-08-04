@@ -12,11 +12,8 @@
   // `nil` is replaced with `NSNull.null`.
   -(NSMutableArray*)collect:(ObjectReturnBlock)b;
 
-  // `compact! → ary or nil`
-  -(NSMutableArray*)compact;
-
-  // `concat(other_ary) → ary`
-  -(NSMutableArray*)concat:(NSArray*)otherArray;
+  -(NSMutableArray*)compact; // `compact! → ary or nil`
+  -(NSMutableArray*)concat:(NSArray*)otherArray; // `concat(other_ary) → ary`
 
   // not implemented: `delete(obj) → item or nil`
   // not implemented: `delete(obj) { block } → item or result of block`
@@ -46,22 +43,17 @@
   -(NSMutableArray*)push:(id)object; // `push(obj, ... ) → ary` Not implemented – multiple
   // not implemented: `reject! { |item| block } → ary or nil`
 
-  // `replace(other_ary) → ary`
-  -(NSMutableArray*)replace:(NSArray*)otherArray;
-
-  // `reverse! → ary`
-  -(NSMutableArray*)reverse;
+  -(NSMutableArray*)replace:(NSArray*)otherArray; // `replace(other_ary) → ary`
+  -(NSMutableArray*)reverse; // `reverse! → ary`
 
   // not implemented: `rotate!(count=1) → ary`
 
-  // `select! {|item| block } → ary or nil`
-  -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock;
+  -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock; // `select! {|item| block } → ary or nil`
 
   // not implemented: `shift → obj or nil`
   // not implemented: `shift(n) → new_ary`
 
-  // `shuffle! → ary`
-  -(NSMutableArray*)shuffle;
+  -(NSMutableArray*)shuffle; // `shuffle! → ary`
   // not implemented: `shuffle!(random: rng) → ary`
 
   // not implemented: `slice!(index) → obj or nil`

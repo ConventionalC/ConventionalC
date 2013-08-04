@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9800E742179B643F007187B9 /* UIImage+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9800E741179B643F007187B9 /* UIImage+ConventionalC.m */; };
-		981301F617891472002BA863 /* NSMutableArray+rubyish.h in Headers */ = {isa = PBXBuildFile; fileRef = 981301F417891472002BA863 /* NSMutableArray+rubyish.h */; };
 		981301F717891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
 		981301F817891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
 		981301F917891472002BA863 /* NSMutableArray+rubyish.m in Sources */ = {isa = PBXBuildFile; fileRef = 981301F517891472002BA863 /* NSMutableArray+rubyish.m */; };
@@ -451,7 +450,6 @@
 				98FA879E175A4D73009B03C2 /* NSObject+ConventionalC.h in Headers */,
 				98FFE36A175BF7C4005985FF /* NSArray+rubyish.h in Headers */,
 				98FFE384175BFAD1005985FF /* NSSet+rubyish.h in Headers */,
-				981301F617891472002BA863 /* NSMutableArray+rubyish.h in Headers */,
 				9813020A178B7A9D002BA863 /* NSString+rubyish.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
