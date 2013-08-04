@@ -21,6 +21,19 @@
     return self;
 }
 
+-(id)pop
+{
+    id result = self.last;
+    [self removeLastObject];
+    return result;
+}
+
+-(NSMutableArray*)push:(id)object
+{
+    [self addObject:object];
+    return self;
+}
+
 -(NSMutableArray*)replace:(NSArray*)otherArray
 {
     [self replaceObjectsInRange:NSMakeRange(0, self.count) withObjectsFromArray:otherArray];

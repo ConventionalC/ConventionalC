@@ -37,6 +37,21 @@
     STAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]), nil);
 }
 
+-(void)testPop
+{
+    id result = abc.pop;
+    STAssertEqualObjects(abc, (@[@"a", @"b"]), nil);
+    STAssertEqualObjects(result, @"c", nil);
+    STAssertNil([(@[]).mutableCopy pop], nil);
+}
+
+-(void)testPush
+{
+    NSMutableArray* result = [abc push:@"d"];
+    STAssertEqualObjects(result, (@[@"a",@"b",@"c",@"d"]), nil);
+    STAssertEqualObjects(result, abc, @"should return itself");
+}
+
 -(void)testReplace
 {
     NSArray* replaced = @[@"replaced"];

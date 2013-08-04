@@ -41,9 +41,9 @@
   // `nil` is replaced with `NSNull.null`.
   -(NSMutableArray*)map:(ObjectReturnBlock)b;
 
-  // not implemented: `pop → obj or nil`
+  -(id)pop; //`pop → obj or nil`
   // not implemented: `pop(n) → new_ary`
-  // not implemented: `push(obj, ... ) → ary`
+  -(NSMutableArray*)push:(id)object; // `push(obj, ... ) → ary` Not implemented – multiple
   // not implemented: `reject! { |item| block } → ary or nil`
 
   // `replace(other_ary) → ary`
