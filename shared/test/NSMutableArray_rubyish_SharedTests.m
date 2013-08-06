@@ -36,6 +36,21 @@
     STAssertEqualObjects(result.compact, abc, nil);
 }
 
+-(void)testConcat
+{
+    STAssertEqualObjects([abc concat:@[@"d"]], (@[@"a", @"b", @"c", @"d"]), nil);
+}
+
+-(void)testDelete
+{
+    STAssertEqualObjects([abc delete:@"b"], @"b", nil);
+}
+
+-(void)testDeleteAt
+{
+    STAssertEqualObjects([abc deleteAt:1], @"b", nil);
+}
+
 -(void)testMap
 {
     NSArray* result = [abc map:(id)^(NSString *o){ return [o stringByAppendingString:o]; }];

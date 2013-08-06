@@ -15,9 +15,9 @@
   -(NSMutableArray*)compact; // `compact! → ary or nil`
   -(NSMutableArray*)concat:(NSArray*)otherArray; // `concat(other_ary) → ary`
 
-  // not implemented: `delete(obj) → item or nil`
+  -(id)delete:(id)object; // `delete(obj) → item or nil`
   // not implemented: `delete(obj) { block } → item or result of block`
-  // not implemented: `delete_at(index) → obj or nil`
+  -(id)deleteAt:(NSUInteger)index; // `delete_at(index) → obj or nil`
   // not implemented: `delete_if { |item| block } → ary`
   // not implemented: `drop(n) → new_ary`
   // not implemented: `drop_while { |arr| block } → new_ary`

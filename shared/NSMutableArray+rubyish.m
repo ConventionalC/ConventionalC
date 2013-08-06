@@ -21,6 +21,20 @@
     return self;
 }
 
+-(id)delete:(id)object
+{
+    id result = [self containsObject:object] ? object : nil;
+    [self removeObject:object];
+    return result;
+}
+
+-(id)deleteAt:(NSUInteger)index
+{
+    id result = self[index];
+    [self removeObjectAtIndex:index];
+    return result;
+}
+
 -(NSMutableArray*)map:(ObjectReturnBlock)b
 {
     [self eachIndexAndObject:^(NSUInteger i, id o){ self[i] = b(o); }];
