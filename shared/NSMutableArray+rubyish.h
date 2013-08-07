@@ -18,6 +18,7 @@
   -(id)delete:(id)object; // `delete(obj) → item or nil`
   -(id)deleteWithBlock:(ReturnBlock)block; // `delete(obj) { block } → item or result of block`
   -(id)deleteAt:(NSUInteger)index; // `delete_at(index) → obj or nil`
+  -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block;
   // not implemented: `delete_if { |item| block } → ary`
   // not implemented: `drop(n) → new_ary`
   // not implemented: `drop_while { |arr| block } → new_ary`
