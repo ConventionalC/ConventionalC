@@ -46,6 +46,11 @@
     STAssertEqualObjects([abc delete:@"b"], @"b", nil);
 }
 
+-(void)testDeleteWithBlock
+{
+    STAssertEqualObjects([abc deleteWithBlock:^id{ return @"b"; }], @"b", nil);
+}
+
 -(void)testDeleteAt
 {
     STAssertEqualObjects([abc deleteAt:1], @"b", nil);

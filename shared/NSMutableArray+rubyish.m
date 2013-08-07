@@ -28,6 +28,11 @@
     return result;
 }
 
+-(id)deleteWithBlock:(ReturnBlock)block
+{
+    return [self delete:block()];
+}
+
 -(id)deleteAt:(NSUInteger)index
 {
     id result = self[index];

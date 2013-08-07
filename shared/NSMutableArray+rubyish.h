@@ -16,7 +16,7 @@
   -(NSMutableArray*)concat:(NSArray*)otherArray; // `concat(other_ary) → ary`
 
   -(id)delete:(id)object; // `delete(obj) → item or nil`
-  // not implemented: `delete(obj) { block } → item or result of block`
+  -(id)deleteWithBlock:(ReturnBlock)block; // `delete(obj) { block } → item or result of block`
   -(id)deleteAt:(NSUInteger)index; // `delete_at(index) → obj or nil`
   // not implemented: `delete_if { |item| block } → ary`
   // not implemented: `drop(n) → new_ary`
