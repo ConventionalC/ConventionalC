@@ -6,22 +6,14 @@
 // and the immutable version will be 'mapped'.
 // Alternative methods that return enumerators are ignored.
 @interface NSMutableArray(rubyish)
-  -(NSMutableArray*)clear;// `clear → ary`
-
-  // `collect! {|item| block } → ary`
-  // `nil` is replaced with `NSNull.null`.
-  -(NSMutableArray*)collect:(ObjectReturnBlock)b;
-
-  -(NSMutableArray*)compact; // `compact! → ary or nil`
-  -(NSMutableArray*)concat:(NSArray*)otherArray; // `concat(other_ary) → ary`
-
-  -(id)delete:(id)object; // `delete(obj) → item or nil`
-  -(id)deleteWithBlock:(ReturnBlock)block; // `delete(obj) { block } → item or result of block`
-  -(id)deleteAt:(NSUInteger)index; // `delete_at(index) → obj or nil`
-  -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block;
-  // not implemented: `delete_if { |item| block } → ary`
-  // not implemented: `drop(n) → new_ary`
-  // not implemented: `drop_while { |arr| block } → new_ary`
+  -(NSMutableArray*)clear;                          // `clear → ary`
+  -(NSMutableArray*)collect:(ObjectReturnBlock)b;   // `collect! {|item| block } → ary`. `nil` is replaced with `NSNull.null`.
+  -(NSMutableArray*)compact;                        // `compact! → ary or nil`
+  -(NSMutableArray*)concat:(NSArray*)array;         // `concat(other_ary) → ary`
+  -(id)delete:(id)object;                           // `delete(obj) → item or nil`
+  -(id)deleteWithBlock:(ReturnBlock)block;          // `delete(obj) { block } → item or result of block`
+  -(id)deleteAt:(NSUInteger)index;                  // `delete_at(index) → obj or nil`
+  -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block; // `delete_if { |item| block } → ary`
 
   // not implemented: `fill(obj) → ary`
   // not implemented: `fill(obj, start [, length]) → ary`
@@ -35,9 +27,8 @@
   // not implemented: `insert(index, obj...) → ary`
   // not implemented: `keep_if { |item| block } → ary`
 
-  // `map! {|item| block } → ary`
-  // `nil` is replaced with `NSNull.null`.
-  -(NSMutableArray*)map:(ObjectReturnBlock)b;
+  -(NSMutableArray*)map:(ObjectReturnBlock)b; // `map! {|item| block } → ary`. // `nil` is replaced with `NSNull.null`.
+
 
   -(id)pop; //`pop → obj or nil`
   // not implemented: `pop(n) → new_ary`

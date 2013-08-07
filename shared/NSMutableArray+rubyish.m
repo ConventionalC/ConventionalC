@@ -15,9 +15,9 @@
     return [self replace:self.compacted];
 }
 
--(NSMutableArray*)concat:(NSArray*)otherArray
+-(NSMutableArray*)concat:(NSArray*)other
 {
-    [self addObjectsFromArray:otherArray];
+    [self addObjectsFromArray:other];
     return self;
 }
 
