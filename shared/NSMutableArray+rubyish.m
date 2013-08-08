@@ -45,6 +45,12 @@
     return [self mapped:^id(id o){return block(o)?o:nil;}].compacted;
 }
 
+-(NSMutableArray*)flatten
+{
+    [self replace:self.flattened];
+    return self;
+}
+
 -(NSMutableArray*)map:(ObjectReturnBlock)b
 {
     [self eachIndexAndObject:^(NSUInteger i, id o){ self[i] = b(o); }];

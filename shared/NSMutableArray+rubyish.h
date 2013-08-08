@@ -22,7 +22,7 @@
   // not implemented: `fill(start [, length] ) { |index| block } → ary`
   // not implemented: `fill(range) { |index| block } → ary`
 
-  // not implemented: `flatten! → ary or nil`
+  -(NSMutableArray*)flatten; // `flatten! → ary or nil`
   // not implemented: `flatten!(level) → ary or nil`
   // not implemented: `insert(index, obj...) → ary`
   // not implemented: `keep_if { |item| block } → ary`

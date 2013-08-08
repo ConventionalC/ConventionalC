@@ -69,7 +69,7 @@
   -(id)first; // `first → obj or nil`
 
   // not implemented: `first(n) → new_ary`
-  // not implemented: `flatten → new_ary`
+  -(NSArray*)flattened; // `flatten → new_ary`
   // not implemented: `flatten(level) → new_ary`
   // not implemented: `frozen? → true or false`
   // not implemented: `hash → fixnum`

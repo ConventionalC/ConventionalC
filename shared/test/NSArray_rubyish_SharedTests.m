@@ -78,6 +78,12 @@
     STAssertNil(NSArray.new.first, nil);
 }
 
+-(void)testFlattened
+{
+    NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
+    STAssertEqualObjects(source.flattened, (@[@(1),@(2),@(3),@(4),@(5)]), nil);
+}
+
 -(void)testLast
 {
     STAssertEqualObjects(abc.last, @"c", nil);
