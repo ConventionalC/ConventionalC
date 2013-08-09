@@ -15,7 +15,7 @@
   -(id)deleteAt:(NSUInteger)index;                  // `delete_at(index) → obj or nil`
   -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block; // `delete_if { |item| block } → ary`
 
-  // not implemented: `fill(obj) → ary`
+  -(NSMutableArray*)fill:(id)object; // `fill(obj) → ary`
   // not implemented: `fill(obj, start [, length]) → ary`
   // not implemented: `fill(obj, range ) → ary`
   // not implemented: `fill { |index| block } → ary`

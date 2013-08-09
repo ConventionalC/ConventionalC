@@ -61,6 +61,11 @@
     STAssertEqualObjects([abc deleteIf:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]), nil);
 }
 
+-(void)testFill
+{
+    STAssertEqualObjects([abc fill:@"f"], (@[@"f",@"f",@"f"]), nil);
+}
+
 -(void)testFlatten
 {
     NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
