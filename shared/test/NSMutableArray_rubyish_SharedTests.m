@@ -63,7 +63,14 @@
 
 -(void)testFill
 {
-    STAssertEqualObjects([abc fill:@"f"], (@[@"f",@"f",@"f"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fill:@"f"], (@[@"f",@"f",@"f"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fill:@"f" start:1], (@[@"a",@"f",@"f"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fill:@"f" start:1 length:1], (@[@"a",@"f",@"c"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fill:@"f" range:NSMakeRange(1, 1)], (@[@"a",@"f",@"c"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";}], (@[@"f",@"f",@"f"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} start:1], (@[@"a",@"f",@"f"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} start:1 length:1], (@[@"a",@"f",@"c"]), nil);
+    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} range:NSMakeRange(1, 1)], (@[@"a",@"f",@"c"]), nil);
 }
 
 -(void)testFlatten

@@ -15,12 +15,21 @@
   -(id)deleteAt:(NSUInteger)index;                  // `delete_at(index) → obj or nil`
   -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block; // `delete_if { |item| block } → ary`
 
-  -(NSMutableArray*)fill:(id)object; // `fill(obj) → ary`
-  // not implemented: `fill(obj, start [, length]) → ary`
-  // not implemented: `fill(obj, range ) → ary`
-  // not implemented: `fill { |index| block } → ary`
-  // not implemented: `fill(start [, length] ) { |index| block } → ary`
-  // not implemented: `fill(range) { |index| block } → ary`
+  // `fill(obj) → ary`
+  // `fill(obj, start [, length]) → ary`
+  // `fill(obj, range ) → ary`
+  // `fill { |index| block } → ary`
+  // `fill(start [, length] ) { |index| block } → ary`
+  // `fill(start [, length] ) { |index| block } → ary`
+  // `fill(range) { |index| block } → ary`
+  -(NSMutableArray*)fill:(id)object;
+  -(NSMutableArray*)fill:(id)object start:(NSUInteger)start;
+  -(NSMutableArray*)fill:(id)object start:(NSUInteger)start length:(NSUInteger)length;
+  -(NSMutableArray*)fill:(id)object range:(NSRange)range;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start length:(NSUInteger)length;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block range:(NSRange)range;
 
   -(NSMutableArray*)flatten; // `flatten! → ary or nil`
   // not implemented: `flatten!(level) → ary or nil`

@@ -50,6 +50,46 @@
     return [self map:^id(id o){return object;}];
 }
 
+-(NSMutableArray*)fill:(id)object start:(NSUInteger)start
+{
+    return [self fill:object range:NSMakeRange(start, 1 + self.length - start - 1)];
+}
+
+-(NSMutableArray*)fill:(id)object start:(NSUInteger)start length:(NSUInteger)length;
+{
+    return [self fill:object range:NSMakeRange(start, length)];
+}
+
+-(NSMutableArray*)fill:(id)object range:(NSRange)range;
+{
+    for(NSUInteger i=0; i<range.length; i++)
+        self[i + range.location] = object;
+    return self;
+}
+
+-(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block;
+{
+    [self eachIndex:^(NSUInteger i){ self[i] = block(i); }];
+    return self;
+}
+
+-(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start;
+{
+    return [self fillWithBlock:block range:NSMakeRange(start, self.length - start)];
+}
+
+-(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start length:(NSUInteger)length;
+{
+    return [self fillWithBlock:block range:NSMakeRange(start, length)];
+}
+
+-(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block range:(NSRange)range;
+{
+    for(int i=0; i<range.length; i++)
+        self[i + range.location] = block(i + range.location);
+    return self;
+}
+
 -(NSMutableArray*)flatten
 {
     [self replace:self.flattened];
