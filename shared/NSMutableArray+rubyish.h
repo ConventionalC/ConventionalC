@@ -32,15 +32,15 @@
   -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block range:(NSRange)range;
 
   -(NSMutableArray*)flatten;// `flatten! → ary or nil`
-  -(NSMutableArray*)flattenToLevel:(NSUInteger)level;// `flatten!(level) → ary or nil`
-  // not implemented: `insert(index, obj...) → ary`
+  -(NSMutableArray*)flatten:(NSUInteger)level;// `flatten!(level) → ary or nil`
+  -(NSMutableArray*)insertArray:(NSArray*)objects at:(NSUInteger)index;// `insert(index, obj...) → ary`
   -(NSMutableArray*)keepIf:(ObjectReturnBoolBlock)block;// `keep_if { |item| block } → ary`
 
   -(NSMutableArray*)map:(ObjectReturnBlock)b; // `map! {|item| block } → ary`. // `nil` is replaced with `NSNull.null`.
 
 
   -(id)pop;//`pop → obj or nil`
-  // not implemented: `pop(n) → new_ary`
+  -(NSArray*)pop:(NSUInteger)n;// `pop(n) → new_ary`
   -(NSMutableArray*)push:(id)object;// `push(obj, ... ) → ary` Not implemented – multiple
   // not implemented: `reject! { |item| block } → ary or nil`
 
@@ -62,7 +62,7 @@
   // not implemented: `slice!(range) → new_ary or nil`
 
   -(NSMutableArray*)sort;// `sort! → ary`. Uses the compare: method of objects.
-  -(NSMutableArray*)sortWithComparator:(NSComparator)block;// `sort! { |a, b| block } → ary`
+  -(NSMutableArray*)sort:(NSComparator)block;// `sort! { |a, b| block } → ary`
   -(NSMutableArray*)sortBy:(ObjectReturnBlock)block;// `sort_by! { |obj| block } → ary`
 
   // not implemented: `uniq! → ary or nil`

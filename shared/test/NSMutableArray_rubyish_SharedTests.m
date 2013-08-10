@@ -84,7 +84,12 @@
 -(void)testFlattenedToLevel
 {
     NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
-    STAssertEqualObjects([source flattenToLevel:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
+    STAssertEqualObjects([source flatten:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
+}
+
+-(void)testInsert
+{
+    STAssertEqualObjects([abc insertArray:@[@"n"] at:1], (@[@"a",@"n",@"b",@"c"]), nil);
 }
 
 -(void)testKeepIf
@@ -104,6 +109,12 @@
     STAssertEqualObjects(abc, (@[@"a", @"b"]), nil);
     STAssertEqualObjects(result, @"c", nil);
     STAssertNil([(@[]).mutableCopy pop], nil);
+}
+
+-(void)testPopN
+{
+    STAssertEqualObjects([abc pop:2], (@[@"b", @"c"]), nil);
+    STAssertEqualObjects(abc, (@[@"a"]), nil);
 }
 
 -(void)testPush
@@ -157,7 +168,7 @@
 -(void)testSortWithComparator
 {
     STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);
-    STAssertEqualObjects(([abc.reverse sortWithComparator:^NSComparisonResult(id a, id b){return [a compare:b]; }]), abc, nil);
+    STAssertEqualObjects(([abc.reverse sort:^NSComparisonResult(id a, id b){return [a compare:b]; }]), abc, nil);
 }
 
 -(void)testSortBy

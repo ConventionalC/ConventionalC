@@ -95,9 +95,16 @@
     return [self replace:self.flattened];
 }
 
--(NSMutableArray*)flattenToLevel:(NSUInteger)level
+-(NSMutableArray*)flatten:(NSUInteger)level
 {
     return [self replace:[self flattenedToLevel:level]];
+}
+
+-(NSMutableArray*)insertArray:(NSArray*)objects at:(NSUInteger)index
+{
+    for(id o in objects)
+        [self insertObject:o atIndex:index++];
+    return self;
 }
 
 -(NSMutableArray*)keepIf:(ObjectReturnBoolBlock)block
@@ -119,6 +126,14 @@
 {
     id result = self.last;
     [self removeLastObject];
+    return result;
+}
+
+-(NSArray*)pop:(NSUInteger)n
+{
+    NSArray* result = [self subarrayFrom:self.length - n];
+    for(int i=0; i<n; i++)
+        [self pop];
     return result;
 }
 
@@ -162,7 +177,7 @@
     return [self replace:self.sorted];
 }
 
--(NSMutableArray*)sortWithComparator:(NSComparator)block
+-(NSMutableArray*)sort:(NSComparator)block
 {
     [self sortUsingComparator:block];
     return self;
@@ -170,7 +185,7 @@
 
 -(NSMutableArray*)sortBy:(ObjectReturnBlock)block
 {
-    return [self sortWithComparator:^NSComparisonResult(id a, id b){return [block(a) compare:block(b)];}];
+    return [self sort:^NSComparisonResult(id a, id b){return [block(a) compare:block(b)];}];
 }
 
 -(NSMutableArray*)unshift:(id)object
