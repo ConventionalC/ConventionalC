@@ -7,16 +7,18 @@
 @interface NSMutableArray_rubyish_SharedTests()
   @property(retain) NSMutableArray* abc;
   @property(retain) NSMutableArray* empty;
+  @property(retain) NSMutableArray* nums;
 @end
 
 @implementation NSMutableArray_rubyish_SharedTests
 
-@synthesize abc, empty;
+@synthesize abc, empty, nums;
 
 -(void)setUp
 {
     [super setUp];
     abc = @[@"a", @"b", @"c"].mutableCopy;
+    nums = @[@(1),@(2),@(3),@(4),@(5)].mutableCopy;
     empty = NSMutableArray.new;
 }
 
@@ -83,6 +85,11 @@
 {
     NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
     STAssertEqualObjects([source flattenToLevel:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
+}
+
+-(void)testKeepIf
+{
+    STAssertEqualObjects([nums keepIf:^BOOL(NSNumber* o){return o.intValue%2;}], (@[@(1),@(3),@(5)]), nil);
 }
 
 -(void)testMap

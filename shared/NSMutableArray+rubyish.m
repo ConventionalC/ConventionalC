@@ -100,6 +100,15 @@
     return [self replace:[self flattenedToLevel:level]];
 }
 
+-(NSMutableArray*)keepIf:(ObjectReturnBoolBlock)block
+{
+    if(self.count)
+        for(long i = self.length - 1; i >= 0; i--)
+            if(!block(self[i]))
+                [self removeObjectAtIndex:i];
+    return self;
+}
+
 -(NSMutableArray*)map:(ObjectReturnBlock)b
 {
     [self eachIndexAndObject:^(NSUInteger i, id o){ self[i] = b(o); }];

@@ -34,7 +34,7 @@
   -(NSMutableArray*)flatten;// `flatten! → ary or nil`
   -(NSMutableArray*)flattenToLevel:(NSUInteger)level;// `flatten!(level) → ary or nil`
   // not implemented: `insert(index, obj...) → ary`
-  // not implemented: `keep_if { |item| block } → ary`
+  -(NSMutableArray*)keepIf:(ObjectReturnBoolBlock)block;// `keep_if { |item| block } → ary`
 
   -(NSMutableArray*)map:(ObjectReturnBlock)b; // `map! {|item| block } → ary`. // `nil` is replaced with `NSNull.null`.
 
