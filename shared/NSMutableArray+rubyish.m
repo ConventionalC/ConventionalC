@@ -92,8 +92,12 @@
 
 -(NSMutableArray*)flatten
 {
-    [self replace:self.flattened];
-    return self;
+    return [self replace:self.flattened];
+}
+
+-(NSMutableArray*)flattenToLevel:(NSUInteger)level
+{
+    return [self replace:[self flattenedToLevel:level]];
 }
 
 -(NSMutableArray*)map:(ObjectReturnBlock)b

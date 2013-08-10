@@ -6,14 +6,14 @@
 // and the immutable version will be 'mapped'.
 // Alternative methods that return enumerators are ignored.
 @interface NSMutableArray(rubyish)
-  -(NSMutableArray*)clear;                          // `clear → ary`
-  -(NSMutableArray*)collect:(ObjectReturnBlock)b;   // `collect! {|item| block } → ary`. `nil` is replaced with `NSNull.null`.
-  -(NSMutableArray*)compact;                        // `compact! → ary or nil`
-  -(NSMutableArray*)concat:(NSArray*)array;         // `concat(other_ary) → ary`
-  -(id)delete:(id)object;                           // `delete(obj) → item or nil`
-  -(id)deleteWithBlock:(ReturnBlock)block;          // `delete(obj) { block } → item or result of block`
-  -(id)deleteAt:(NSUInteger)index;                  // `delete_at(index) → obj or nil`
-  -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block; // `delete_if { |item| block } → ary`
+  -(NSMutableArray*)clear;                         // `clear → ary`
+  -(NSMutableArray*)collect:(ObjectReturnBlock)b;  // `collect! {|item| block } → ary`. `nil` is replaced with `NSNull.null`.
+  -(NSMutableArray*)compact;                       // `compact! → ary or nil`
+  -(NSMutableArray*)concat:(NSArray*)array;        // `concat(other_ary) → ary`
+  -(id)delete:(id)object;                          // `delete(obj) → item or nil`
+  -(id)deleteWithBlock:(ReturnBlock)block;         // `delete(obj) { block } → item or result of block`
+  -(id)deleteAt:(NSUInteger)index;                 // `delete_at(index) → obj or nil`
+  -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block;// `delete_if { |item| block } → ary`
 
   // `fill(obj) → ary`
   // `fill(obj, start [, length]) → ary`
@@ -31,8 +31,8 @@
   -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start length:(NSUInteger)length;
   -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block range:(NSRange)range;
 
-  -(NSMutableArray*)flatten; // `flatten! → ary or nil`
-  // not implemented: `flatten!(level) → ary or nil`
+  -(NSMutableArray*)flatten;// `flatten! → ary or nil`
+  -(NSMutableArray*)flattenToLevel:(NSUInteger)level;// `flatten!(level) → ary or nil`
   // not implemented: `insert(index, obj...) → ary`
   // not implemented: `keep_if { |item| block } → ary`
 

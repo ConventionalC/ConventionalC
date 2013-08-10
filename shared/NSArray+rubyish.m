@@ -61,6 +61,17 @@
     return result.copy;
 }
 
+-(NSArray*)flattenedToLevel:(NSUInteger)level
+{
+    NSMutableArray* result = NSMutableArray.new;
+    for(id o in self)
+        if([o isKindOfClass:NSArray.class] && level > 0)
+            [result addObjectsFromArray:[o flattenedToLevel:level-1]];
+        else
+            [result addObject:o];
+    return result.copy;
+}
+
 -(id)last { return self.lastObject; }
 
 -(NSUInteger)length { return self.count; }

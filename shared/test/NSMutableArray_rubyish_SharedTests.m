@@ -79,6 +79,12 @@
     STAssertEqualObjects(source.flatten, (@[@(1),@(2),@(3),@(4),@(5)]), nil);
 }
 
+-(void)testFlattenedToLevel
+{
+    NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
+    STAssertEqualObjects([source flattenToLevel:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
+}
+
 -(void)testMap
 {
     NSArray* result = [abc map:(id)^(NSString *o){ return [o stringByAppendingString:o]; }];
