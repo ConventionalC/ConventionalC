@@ -153,6 +153,17 @@
     return [self replace:self.sorted];
 }
 
+-(NSMutableArray*)sortWithComparator:(NSComparator)block
+{
+    [self sortUsingComparator:block];
+    return self;
+}
+
+-(NSMutableArray*)sortBy:(ObjectReturnBlock)block
+{
+    return [self sortWithComparator:^NSComparisonResult(id a, id b){return [block(a) compare:block(b)];}];
+}
+
 -(NSMutableArray*)unshift:(id)object
 {
     [self insertObject:object atIndex:0];

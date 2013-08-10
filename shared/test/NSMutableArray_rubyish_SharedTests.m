@@ -147,6 +147,19 @@
     STAssertEqualObjects((abc.reverse.sort), abc, nil);
 }
 
+-(void)testSortWithComparator
+{
+    STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);
+    STAssertEqualObjects(([abc.reverse sortWithComparator:^NSComparisonResult(id a, id b){return [a compare:b]; }]), abc, nil);
+}
+
+-(void)testSortBy
+{
+    NSMutableArray* source = @[@"ccc", @"a", @"bb"].mutableCopy;
+    [source sortBy:(id)^(NSString* o){return @(o.length);}];
+    STAssertEqualObjects(source, (@[@"a", @"bb", @"ccc"]), nil);
+}
+
 -(void)testUnshift
 {
     NSMutableArray* result = [abc unshift:@"d"];
