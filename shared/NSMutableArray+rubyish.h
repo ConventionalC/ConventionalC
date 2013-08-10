@@ -35,15 +35,11 @@
   -(NSMutableArray*)flatten:(NSUInteger)level;// `flatten!(level) → ary or nil`
   -(NSMutableArray*)insertArray:(NSArray*)objects at:(NSUInteger)index;// `insert(index, obj...) → ary`
   -(NSMutableArray*)keepIf:(ObjectReturnBoolBlock)block;// `keep_if { |item| block } → ary`
-
   -(NSMutableArray*)map:(ObjectReturnBlock)b; // `map! {|item| block } → ary`. // `nil` is replaced with `NSNull.null`.
-
-
   -(id)pop;//`pop → obj or nil`
   -(NSArray*)pop:(NSUInteger)n;// `pop(n) → new_ary`
   -(NSMutableArray*)push:(id)object;// `push(obj, ... ) → ary` Not implemented – multiple
-  // not implemented: `reject! { |item| block } → ary or nil`
-
+  -(NSMutableArray*)reject:(ObjectReturnBoolBlock)block;// `reject! { |item| block } → ary or nil`
   -(NSMutableArray*)replace:(NSArray*)otherArray;// `replace(other_ary) → ary`
   -(NSMutableArray*)reverse;// `reverse! → ary`
 

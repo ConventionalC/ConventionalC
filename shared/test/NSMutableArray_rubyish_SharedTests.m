@@ -124,6 +124,12 @@
     STAssertEqualObjects(result, abc, @"should return itself");
 }
 
+-(void)testReject
+{
+    STAssertEqualObjects([abc reject:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]), nil);
+    STAssertNil([abc reject:^BOOL(NSString* o){return YES;}], nil);
+}
+
 -(void)testReplace
 {
     NSArray* replaced = @[@"replaced"];

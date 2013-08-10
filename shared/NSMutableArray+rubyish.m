@@ -143,6 +143,19 @@
     return self;
 }
 
+-(NSMutableArray*)reject:(ObjectReturnBoolBlock)block
+{
+    BOOL rejected = NO;
+    if(self.count)
+        for(long i = self.length - 1; i >= 0; i--)
+            if(!block(self[i]))
+            {
+                rejected = YES;
+                [self removeObjectAtIndex:i];
+            }
+    return rejected ? self : nil;
+}
+
 -(NSMutableArray*)replace:(NSArray*)otherArray
 {
     [self replaceObjectsInRange:NSMakeRange(0, self.count) withObjectsFromArray:otherArray];
