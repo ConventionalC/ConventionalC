@@ -142,6 +142,15 @@
     STAssertEqualObjects(abc.reverse.reverse, abc, nil);
 }
 
+-(void)testRotate
+{
+    NSMutableArray* a = @[@"a", @"b", @"c", @"d"].mutableCopy;
+    STAssertEqualObjects(a.rotate, (@[@"b", @"c", @"d", @"a"]), nil);
+    STAssertEqualObjects(a, (@[@"b", @"c", @"d", @"a"]), nil);
+    STAssertEqualObjects([a rotate:2], (@[@"d", @"a", @"b", @"c"]), nil);
+    STAssertEqualObjects([a rotate:-3], (@[@"a", @"b", @"c", @"d"]), nil);
+}
+
 -(void)testSelect
 {
     NSArray* result = [abc select:^BOOL(id o){return [@"b" isEqual:o];}];
@@ -155,6 +164,14 @@
     STAssertEqualObjects(abc, (@[@"b", @"c"]), nil);
     STAssertEqualObjects(result, @"a", nil);
     STAssertNil([(@[]).mutableCopy shift], nil);
+}
+
+-(void)testShiftN
+{
+    id result = [abc shift:2];
+    STAssertEqualObjects(abc, (@[@"c"]), nil);
+    STAssertEqualObjects(result, (@[@"a", @"b"]), nil);
+    STAssertNil([empty shift:2], nil);
 }
 
 -(void)testShuffle

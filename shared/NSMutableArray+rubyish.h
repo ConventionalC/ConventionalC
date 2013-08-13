@@ -42,13 +42,13 @@
   -(NSMutableArray*)reject:(ObjectReturnBoolBlock)block;// `reject! { |item| block } → ary or nil`
   -(NSMutableArray*)replace:(NSArray*)otherArray;// `replace(other_ary) → ary`
   -(NSMutableArray*)reverse;// `reverse! → ary`
-
-  // not implemented: `rotate!(count=1) → ary`
+  -(NSMutableArray*)rotate;// `rotate! → ary`
+  -(NSMutableArray*)rotate:(int)count;// `rotate!(count=1) → ary`
 
   -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock;// `select! {|item| block } → ary or nil`
 
   -(id)shift;// `shift → obj or nil`
-  // not implemented: `shift(n) → new_ary`
+  -(NSArray*)shift:(NSUInteger)n;// `shift(n) → new_ary`
 
   -(NSMutableArray*)shuffle;// `shuffle! → ary`
   // not implemented: `shuffle!(random: rng) → ary`

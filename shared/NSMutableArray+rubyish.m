@@ -139,7 +139,8 @@
 
 -(NSMutableArray*)push:(id)object
 {
-    [self addObject:object];
+    if(object)
+        [self addObject:object];
     return self;
 }
 
@@ -167,6 +168,21 @@
     return [self replace:self.reversed];
 }
 
+-(NSMutableArray*)rotate
+{
+    return [self push:self.shift];
+}
+
+-(NSMutableArray*)rotate:(int)count
+{
+    count = MIN(ABS(count), self.count) * (count ? 1 : -1);
+    if(count)
+        [self insertArray:[self pop:count] at:0];
+    else
+        [self addObjectsFromArray:[self shift:-count]];
+    return self;
+}
+
 -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock
 {
     return [self replace:[self selected:selectionBlock]];
@@ -178,6 +194,17 @@
     if(result)
        [self removeObjectAtIndex:0];
     return result;
+}
+
+-(NSArray*)shift:(NSUInteger)n
+{
+    n = MIN(n, self.count);
+    if(n == 0)
+        return nil;
+    NSMutableArray* array = NSMutableArray.new;
+    for(int i=0; i<n; i++)
+        [array push:self.shift];
+    return array.copy;
 }
 
 -(NSMutableArray*)shuffle
