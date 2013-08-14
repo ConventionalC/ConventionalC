@@ -51,11 +51,12 @@
   -(NSArray*)shift:(NSUInteger)n;// `shift(n) → new_ary`
 
   -(NSMutableArray*)shuffle;// `shuffle! → ary`
-  // not implemented: `shuffle!(random: rng) → ary`
+  // not implemented: `shuffle!(random: rng) → ary`, arc4random_uniform is used
 
-  // not implemented: `slice!(index) → obj or nil`
-  // not implemented: `slice!(start, length) → new_ary or nil`
-  // not implemented: `slice!(range) → new_ary or nil`
+  -(id)slice:(NSUInteger)index;// `slice!(index) → obj or nil`
+  // not implemented: `slice!(negative index) → obj or nil`
+  -(NSArray*)slice:(NSUInteger)start length:(NSUInteger)length;// `slice!(start, length) → new_ary or nil`
+  -(NSArray*)sliceRange:(NSRange)range;// `slice!(range) → new_ary or nil`
 
   -(NSMutableArray*)sort;// `sort! → ary`. Uses the compare: method of objects.
   -(NSMutableArray*)sort:(NSComparator)block;// `sort! { |a, b| block } → ary`

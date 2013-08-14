@@ -182,6 +182,26 @@
     STAssertEqualObjects(result.sorted, oneTo99, nil);
 }
 
+-(void)testSlice
+{
+    STAssertEqualObjects([abc slice:1], @"b", nil);//a.slice!(1)     #=> "b"
+    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a", "c"]
+    //not implemented: a.slice!(-1)    #=> "c"
+    //not implemented: a               #=> ["a"]
+    STAssertNil([abc slice:100], nil);//a.slice!(100)   #=> nil
+    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a"]
+}
+
+-(void)testSliceRange
+{
+    STAssertEqualObjects([abc slice:1 length:1], (@[@"b"]), nil);//a.slice!(1)     #=> "b"
+    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a", "c"]
+    //not implemented: a.slice!(-1)    #=> "c"
+    //not implemented: a               #=> ["a"]
+    STAssertNil([abc slice:100 length:1], nil);//a.slice!(100)   #=> nil
+    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a"]
+}
+
 -(void)testSort
 {
     STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);

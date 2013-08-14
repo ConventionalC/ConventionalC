@@ -212,6 +212,25 @@
     return [self replace:self.shuffled];
 }
 
+-(id)slice:(NSUInteger)index
+{
+    return (index >= self.length) ? nil : [self deleteAt:index];
+}
+
+-(NSArray*)slice:(NSUInteger)start length:(NSUInteger)length
+{
+    return [self sliceRange:NSMakeRange(start, length)];
+}
+
+-(NSArray*)sliceRange:(NSRange)range
+{
+    if(range.location >= self.length)
+        return nil;
+    NSArray* result = [self subarrayWithRange:range];
+    [self removeObjectsInRange:range];
+    return result;
+}
+
 -(NSMutableArray*)sort
 {
     return [self replace:self.sorted];
