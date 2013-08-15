@@ -43,7 +43,7 @@
   -(NSMutableArray*)replace:(NSArray*)otherArray;// `replace(other_ary) → ary`
   -(NSMutableArray*)reverse;// `reverse! → ary`
   -(NSMutableArray*)rotate;// `rotate! → ary`
-  -(NSMutableArray*)rotate:(int)count;// `rotate!(count=1) → ary`
+  -(NSMutableArray*)rotate:(long)count;// `rotate!(count=1) → ary`
 
   -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock;// `select! {|item| block } → ary or nil`
 

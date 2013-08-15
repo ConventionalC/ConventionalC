@@ -173,7 +173,7 @@
     return [self push:self.shift];
 }
 
--(NSMutableArray*)rotate:(int)count
+-(NSMutableArray*)rotate:(long)count
 {
     count = MIN(ABS(count), self.count) * (count ? 1 : -1);
     if(count)
