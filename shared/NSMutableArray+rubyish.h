@@ -62,8 +62,8 @@
   -(NSMutableArray*)sort:(NSComparator)block;// `sort! { |a, b| block } → ary`
   -(NSMutableArray*)sortBy:(ObjectReturnBlock)block;// `sort_by! { |obj| block } → ary`
 
-  // not implemented: `uniq! → ary or nil`
-  // not implemented: `uniq! { |item| ... } → ary or nil`
+  -(NSMutableArray*)uniq;// `uniq! → ary or nil`
+  -(NSMutableArray*)uniq:(ObjectReturnBlock)block;// `uniq! { |item| ... } → ary or nil`
 
   -(NSMutableArray*)unshift:(id)object;// `unshift(obj, ...) → ary` Not implemented – multiple
 

@@ -221,6 +221,18 @@
     STAssertEqualObjects(source, (@[@"a", @"bb", @"ccc"]), nil);
 }
 
+-(void)testUniq
+{
+    NSMutableArray* a = @[@"a", @"a", @"b", @"b", @"c"].mutableCopy;//a = [ "a", "a", "b", "b", "c" ]
+    STAssertEqualObjects(a.uniq, abc, nil);//a.uniq!   # => ["a", "b", "c"]
+
+    //b = [ "a", "b", "c" ]
+    STAssertNil(abc.uniq, nil);//b.uniq!   # => nil
+
+    NSMutableArray* c = @[@[@"student",@"sam"], @[@"student",@"george"], @[@"teacher",@"matz"]].mutableCopy; //c = [["student","sam"], ["student","george"], ["teacher","matz"]]
+    STAssertEqualObjects([c uniq:^id(id o){return [o first];}], (@[@[@"student", @"sam"], @[@"teacher", @"matz"]]), nil);//c.uniq! { |s| s.first } # => [["student", "sam"], ["teacher", "matz"]]
+}
+
 -(void)testUnshift
 {
     NSMutableArray* result = [abc unshift:@"d"];

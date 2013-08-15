@@ -247,6 +247,32 @@
     return [self sort:^NSComparisonResult(id a, id b){return [block(a) compare:block(b)];}];
 }
 
+-(NSMutableArray*)uniq
+{
+    NSArray* result = [[NSOrderedSet alloc] initWithArray:self].array;
+    BOOL changed = ![self isEqualToArray:result];
+    [self replace:result];
+    return changed ? self : nil;
+}
+
+-(NSMutableArray*)uniq:(ObjectReturnBlock)block
+{
+    NSMutableSet* set = NSMutableSet.new;
+    NSMutableArray* result = NSMutableArray.new;
+    for(id o in self)
+    {
+        id blockResult = block(o);
+        if(![set containsObject:blockResult])
+        {
+            [result addObject:o];
+            [set addObject:blockResult];
+        }
+    }
+    BOOL changed = ![self isEqualToArray:result];
+    [self replace:result];
+    return changed ? self : nil;
+}
+
 -(NSMutableArray*)unshift:(id)object
 {
     [self insertObject:object atIndex:0];
