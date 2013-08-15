@@ -78,6 +78,18 @@
     STAssertNil(NSArray.new.first, nil);
 }
 
+-(void)testFlattened
+{
+    NSArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]];
+    STAssertEqualObjects(source.flattened, (@[@(1),@(2),@(3),@(4),@(5)]), nil);
+}
+
+-(void)testFlattenedToLevel
+{
+    NSArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]];
+    STAssertEqualObjects([source flattenedToLevel:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
+}
+
 -(void)testLast
 {
     STAssertEqualObjects(abc.last, @"c", nil);

@@ -50,6 +50,28 @@
 
 -(id)first { return self.count ? self[0] : nil; }
 
+-(NSArray*)flattened
+{
+    NSMutableArray* result = NSMutableArray.new;
+    for(id o in self)
+        if([o isKindOfClass:NSArray.class])
+            [result addObjectsFromArray:[o flattened]];
+        else
+            [result addObject:o];
+    return result.copy;
+}
+
+-(NSArray*)flattenedToLevel:(NSUInteger)level
+{
+    NSMutableArray* result = NSMutableArray.new;
+    for(id o in self)
+        if([o isKindOfClass:NSArray.class] && level > 0)
+            [result addObjectsFromArray:[o flattenedToLevel:level-1]];
+        else
+            [result addObject:o];
+    return result.copy;
+}
+
 -(id)last { return self.lastObject; }
 
 -(NSUInteger)length { return self.count; }

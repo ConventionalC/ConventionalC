@@ -6,74 +6,65 @@
 // and the immutable version will be 'mapped'.
 // Alternative methods that return enumerators are ignored.
 @interface NSMutableArray(rubyish)
-  // not implemented: `clear → ary`
+  -(NSMutableArray*)clear;                         // `clear → ary`
+  -(NSMutableArray*)collect:(ObjectReturnBlock)b;  // `collect! {|item| block } → ary`. `nil` is replaced with `NSNull.null`.
+  -(NSMutableArray*)compact;                       // `compact! → ary or nil`
+  -(NSMutableArray*)concat:(NSArray*)array;        // `concat(other_ary) → ary`
+  -(id)delete:(id)object;                          // `delete(obj) → item or nil`
+  -(id)deleteWithBlock:(ReturnBlock)block;         // `delete(obj) { block } → item or result of block`
+  -(id)deleteAt:(NSUInteger)index;                 // `delete_at(index) → obj or nil`
+  -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block;// `delete_if { |item| block } → ary`
 
-  // `collect! {|item| block } → ary`
-  // `nil` is replaced with `NSNull.null`.
-  -(NSMutableArray*)collect:(ObjectReturnBlock)b;
+  // `fill(obj) → ary`
+  // `fill(obj, start [, length]) → ary`
+  // `fill(obj, range ) → ary`
+  // `fill { |index| block } → ary`
+  // `fill(start [, length] ) { |index| block } → ary`
+  // `fill(start [, length] ) { |index| block } → ary`
+  // `fill(range) { |index| block } → ary`
+  -(NSMutableArray*)fill:(id)object;
+  -(NSMutableArray*)fill:(id)object start:(NSUInteger)start;
+  -(NSMutableArray*)fill:(id)object start:(NSUInteger)start length:(NSUInteger)length;
+  -(NSMutableArray*)fill:(id)object range:(NSRange)range;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block start:(NSUInteger)start length:(NSUInteger)length;
+  -(NSMutableArray*)fillWithBlock:(IndexReturnBlock)block range:(NSRange)range;
 
-  // `compact! → ary or nil`
-  -(NSMutableArray*)compact;
+  -(NSMutableArray*)flatten;// `flatten! → ary or nil`
+  -(NSMutableArray*)flatten:(NSUInteger)level;// `flatten!(level) → ary or nil`
+  -(NSMutableArray*)insertArray:(NSArray*)objects at:(NSUInteger)index;// `insert(index, obj...) → ary`
+  -(NSMutableArray*)keepIf:(ObjectReturnBoolBlock)block;// `keep_if { |item| block } → ary`
+  -(NSMutableArray*)map:(ObjectReturnBlock)b; // `map! {|item| block } → ary`. // `nil` is replaced with `NSNull.null`.
+  -(id)pop;//`pop → obj or nil`
+  -(NSArray*)pop:(NSUInteger)n;// `pop(n) → new_ary`
+  -(NSMutableArray*)push:(id)object;// `push(obj, ... ) → ary` Not implemented – multiple
+  -(NSMutableArray*)reject:(ObjectReturnBoolBlock)block;// `reject! { |item| block } → ary or nil`
+  -(NSMutableArray*)replace:(NSArray*)otherArray;// `replace(other_ary) → ary`
+  -(NSMutableArray*)reverse;// `reverse! → ary`
+  -(NSMutableArray*)rotate;// `rotate! → ary`
+  -(NSMutableArray*)rotate:(long)count;// `rotate!(count=1) → ary`
 
-  // `concat(other_ary) → ary`
-  -(NSMutableArray*)concat:(NSArray*)otherArray;
+  -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock;// `select! {|item| block } → ary or nil`
 
-  // not implemented: `delete(obj) → item or nil`
-  // not implemented: `delete(obj) { block } → item or result of block`
-  // not implemented: `delete_at(index) → obj or nil`
-  // not implemented: `delete_if { |item| block } → ary`
-  // not implemented: `drop(n) → new_ary`
-  // not implemented: `drop_while { |arr| block } → new_ary`
+  -(id)shift;// `shift → obj or nil`
+  -(NSArray*)shift:(NSUInteger)n;// `shift(n) → new_ary`
 
-  // not implemented: `fill(obj) → ary`
-  // not implemented: `fill(obj, start [, length]) → ary`
-  // not implemented: `fill(obj, range ) → ary`
-  // not implemented: `fill { |index| block } → ary`
-  // not implemented: `fill(start [, length] ) { |index| block } → ary`
-  // not implemented: `fill(range) { |index| block } → ary`
+  -(NSMutableArray*)shuffle;// `shuffle! → ary`
+  // not implemented: `shuffle!(random: rng) → ary`, arc4random_uniform is used
 
-  // not implemented: `flatten! → ary or nil`
-  // not implemented: `flatten!(level) → ary or nil`
-  // not implemented: `insert(index, obj...) → ary`
-  // not implemented: `keep_if { |item| block } → ary`
+  -(id)slice:(NSUInteger)index;// `slice!(index) → obj or nil`
+  // not implemented: `slice!(negative index) → obj or nil`
+  -(NSArray*)slice:(NSUInteger)start length:(NSUInteger)length;// `slice!(start, length) → new_ary or nil`
+  -(NSArray*)sliceRange:(NSRange)range;// `slice!(range) → new_ary or nil`
 
-  // `map! {|item| block } → ary`
-  // `nil` is replaced with `NSNull.null`.
-  -(NSMutableArray*)map:(ObjectReturnBlock)b;
+  -(NSMutableArray*)sort;// `sort! → ary`. Uses the compare: method of objects.
+  -(NSMutableArray*)sort:(NSComparator)block;// `sort! { |a, b| block } → ary`
+  -(NSMutableArray*)sortBy:(ObjectReturnBlock)block;// `sort_by! { |obj| block } → ary`
 
-  // not implemented: `pop → obj or nil`
-  // not implemented: `pop(n) → new_ary`
-  // not implemented: `push(obj, ... ) → ary`
-  // not implemented: `reject! { |item| block } → ary or nil`
+  -(NSMutableArray*)uniq;// `uniq! → ary or nil`
+  -(NSMutableArray*)uniq:(ObjectReturnBlock)block;// `uniq! { |item| ... } → ary or nil`
 
-  // `replace(other_ary) → ary`
-  -(NSMutableArray*)replace:(NSArray*)otherArray;
+  -(NSMutableArray*)unshift:(id)object;// `unshift(obj, ...) → ary` Not implemented – multiple
 
-  // `reverse! → ary`
-  -(NSMutableArray*)reverse;
-
-  // not implemented: `rotate!(count=1) → ary`
-
-  // `select! {|item| block } → ary or nil`
-  -(NSMutableArray*)select:(ObjectReturnBoolBlock)selectionBlock;
-
-  // not implemented: `shift → obj or nil`
-  // not implemented: `shift(n) → new_ary`
-
-  // `shuffle! → ary`
-  -(NSMutableArray*)shuffle;
-  // not implemented: `shuffle!(random: rng) → ary`
-
-  // not implemented: `slice!(index) → obj or nil`
-  // not implemented: `slice!(start, length) → new_ary or nil`
-  // not implemented: `slice!(range) → new_ary or nil`
-
-  // `sort! → ary`
-  // Uses the compare: method of objects.
-  -(NSMutableArray*)sort;
-  // not implemented: `sort! { |a, b| block } → ary`
-  // not implemented: `sort_by! { |obj| block } → ary`
-
-  // not implemented: `uniq! → ary or nil`
-  // not implemented: `uniq! { |item| ... } → ary or nil`
 @end
