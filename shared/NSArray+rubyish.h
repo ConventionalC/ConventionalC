@@ -7,12 +7,10 @@
 // Alternative empty argument methods that return enumerators are not implemented.
 @interface NSArray(rubyish)
   // `[](*args)`. Use Objective-C literal @[].
-  +(id)newWithSize:(int)size object:(id)o; // `new(size=0, obj=nil)`. `nil` replaced with `NSNull.null`, since size is expected.
+  +(id)newWithSize:(int)size object:(id)o; // `new(size=0, obj=nil)`. `nil` replaced with `NSNull.null`.
   +(id)newWithSize:(int)size; // Defaults entries to `NSNull.null`.
-
-  // not implemented: `new(array)` Use NSArray's +arrayWithArray.
-
-  +(id)newWithSize:(int)size block:(IndexReturnBlock)block; // `new(size) {|index| block }`. `nil` replaced with `NSNull`, since size is expected.
+  // `new(array)` Use NSArray's +arrayWithArray.
+  +(id)newWithSize:(int)size block:(IndexReturnBlock)block; // `new(size) {|index| block }`. `nil` replaced with `NSNull`.
 
   // not implemented: `try_convert(obj) → array or nil`
   // not implemented: `ary & other_ary → new_ary`
@@ -117,9 +115,9 @@
 
   -(NSUInteger)size; // `size()`
 
-  // not implemented: `slice(index) → obj or nil`
-  // not implemented: `slice(start, length) → new_ary or nil`
-  // not implemented: `slice(range) → new_ary or nil`
+  -(id)sliced:(NSUInteger)index;// `slice(index) → obj or nil`
+  -(NSArray*)sliced:(NSUInteger)start length:(NSUInteger)length;// `slice(start, length) → new_ary or nil`
+  -(NSArray*)slicedRange:(NSRange)range; // `slice(range) → new_ary or nil`
 
   -(NSArray*)sorted; // `sort → new_ary`. Uses the compare: method of objects.
   // not implemented: `sort { |a, b| block } → new_ary` Use sortedArrayUsingComparator:.

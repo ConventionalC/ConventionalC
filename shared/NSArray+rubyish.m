@@ -114,6 +114,21 @@
 
 -(NSUInteger)size { return self.count; }
 
+-(id)sliced:(NSUInteger)index
+{
+    return self[index];
+}
+
+-(NSArray*)sliced:(NSUInteger)start length:(NSUInteger)length
+{
+    return [self slicedRange:NSMakeRange(start, length)];
+}
+
+-(NSArray*)slicedRange:(NSRange)range
+{
+    return range.location >= self.count ? nil : [self subarrayWithRange:range];
+}
+
 -(NSArray*)sorted
 {
     return [self sortedArrayUsingSelector:@selector(compare:)];
