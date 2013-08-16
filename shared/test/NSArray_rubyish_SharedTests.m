@@ -140,21 +140,15 @@
 -(void)testSliced
 {
     STAssertEqualObjects([abc sliced:1], @"b", nil);//a.slice(1)     #=> "b"
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a", "c"]
     //not implemented: a.slice!(-1)    #=> "c"
-    //not implemented: a               #=> ["a"]
     STAssertNil([abc sliced:100], nil);//a.slice(100)   #=> nil
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a"]
 }
 
 -(void)testSlicedRange
 {
     STAssertEqualObjects([abc sliced:1 length:1], (@[@"b"]), nil);//a.slice!(1)     #=> "b"
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a", "c"]
     //not implemented: a.slice!(-1)    #=> "c"
-    //not implemented: a               #=> ["a"]
     STAssertNil([abc sliced:100 length:1], nil);//a.slice!(100)   #=> nil
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a"]
 }
 
 -(void)testSorted

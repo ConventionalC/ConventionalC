@@ -116,7 +116,7 @@
 
 -(id)sliced:(NSUInteger)index
 {
-    return self[index];
+    return index >= self.count ? nil : self[index];
 }
 
 -(NSArray*)sliced:(NSUInteger)start length:(NSUInteger)length
