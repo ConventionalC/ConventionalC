@@ -75,9 +75,9 @@
   // not implemented: `inspect → string`
   // not implemented: `to_s → string`
   // not implemented: `join(separator=$,) → str`
-  // not implemented: `last → obj or nil`
 
-  -(id)last; // `last(n) → new_ary`
+  -(id)last; // `last → obj or nil`
+  -(NSArray*)last:(NSUInteger)n;// `last(n) → new_ary`
   -(NSUInteger)length; // `length → int`
   -(NSArray*)mapped:(ObjectReturnBlock)b; // `map { |item| block } → new_ary`. `nil` is replaced with `NSNull.null`.
 

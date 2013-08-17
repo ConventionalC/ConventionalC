@@ -75,6 +75,11 @@
 
 -(id)last { return self.lastObject; }
 
+-(NSArray*)last:(NSUInteger)n
+{
+    return [self subarrayWithRange:NSMakeRange(MAX(0, (long)self.length - (long)n), MIN(self.count, n))];
+}
+
 -(NSUInteger)length { return self.count; }
 
 -(NSArray*)mapped:(ObjectReturnBlock)b

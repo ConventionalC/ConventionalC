@@ -93,6 +93,8 @@
 -(void)testLast
 {
     STAssertEqualObjects(abc.last, @"c", nil);
+    STAssertEqualObjects([abc last:2], (@[@"b",@"c"]), nil);
+    STAssertEqualObjects([abc last:6], abc, nil);
     STAssertNil(NSArray.new.last, nil);
 }
 
