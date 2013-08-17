@@ -64,8 +64,8 @@
   // not implemented: `frozen? → true or false`
   // not implemented: `hash → fixnum`
   // not implemented: `include?(object) → true or false`
-  // not implemented: `index(obj) → int or nil`
-  // not implemented: `index { |item| block } → int or nil`
+  -(NSUInteger)index:(id)obj;// `index(obj) → int or nil` nil replace with NSNotFound.
+  -(NSUInteger)indexWithBlock:(ReturnBlock)block;// `index { |item| block } → int or nil` nil replace with NSNotFound.
   // not implemented: `initialize_copy(other_ary) → ary`
   // not implemented: `inspect → string`
   // not implemented: `to_s → string`

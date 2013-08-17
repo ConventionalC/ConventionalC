@@ -90,6 +90,14 @@
     STAssertEqualObjects([source flattenedToLevel:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
 }
 
+-(void)testIndex
+{
+    //a = [ "a", "b", "c" ]
+    STAssertEquals([abc index:@"b"], (NSUInteger)1, nil);// a.index("b")              #=> 1
+    STAssertEquals([abc index:@"z"], (NSUInteger)NSNotFound, nil);//a.index("z")              #=> nil
+    STAssertEquals([abc indexWithBlock:^id{return @"b";}], (NSUInteger)1, nil);//a.index { |x| x == "b" }  #=> 1
+}
+
 -(void)testLast
 {
     STAssertEqualObjects(abc.last, @"c", nil);

@@ -47,6 +47,16 @@
         b(i, [self objectAtIndex:i]);
 }
 
+-(NSUInteger)index:(id)obj
+{
+    return [self indexOfObject:obj];
+}
+
+-(NSUInteger)indexWithBlock:(ReturnBlock)block
+{
+    return [self indexOfObject:block()];
+}
+
 -(BOOL)isEmpty { return self.count == 0; }
 
 -(id)first { return self.count ? self[0] : nil; }
