@@ -32,12 +32,13 @@
     return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return ![o isKindOfClass:NSNull.class];}]];
 }
 
--(void)each:(ObjectBlock)b { for(id o in self) b(o); }
+-(NSArray*)each:(ObjectBlock)b { for(id o in self) b(o); return self;}
 
--(void)eachIndex:(IndexBlock)block
+-(NSArray*)eachIndex:(IndexBlock)block
 {
     for(NSUInteger i=0; i<self.count; i++)
         block(i);
+    return self;
 }
 
 -(void)eachIndexAndObject:(IndexAndObjectBlock)b
@@ -87,6 +88,13 @@
 -(NSArray*)reversed
 {
     return self.reverseObjectEnumerator.allObjects;
+}
+
+-(NSArray*)reverseEach:(ObjectBlock)b
+{
+    for(id o in self.reverseObjectEnumerator)
+        b(o);
+    return self;
 }
 
 -(id)sample

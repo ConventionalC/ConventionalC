@@ -23,9 +23,6 @@
   // `ary[index] → obj or nil` Use Objective-C subscript like `ary[index]`.
   // not implemented: `ary[start, length] → new_ary or nil`
   // not implemented: `ary[range] → new_ary or nil`
-  // not implemented: `slice(index) → obj or nil`
-  // not implemented: `slice(start, length) → new_ary or nil`
-  // not implemented: `slice(range) → new_ary or nil`
   // `ary[index] = obj → obj` Use Objective-C subscript like `ary[index] = obj`.
   // not implemented: `ary[start, length] = obj or other_ary or nil → obj or other_ary or nil`
   // not implemented: `ary[range] = obj or other_ary or nil → obj or other_ary or nil`
@@ -48,8 +45,8 @@
   // not implemented: `drop(n) → new_ary`
   // not implemented: `drop_while { |arr| block } → new_ary`
 
-  -(void)each:(ObjectBlock)block; // `each {|item| block } → ary`
-  -(void)eachIndex:(IndexBlock)block; // `each_index {|index| block } → ary`
+  -(NSArray*)each:(ObjectBlock)block; // `each {|item| block } → ary`
+  -(NSArray*)eachIndex:(IndexBlock)block; // `each_index {|index| block } → ary`
   // not implemented: `each_index → an_enumerator`
 
   -(void)eachIndexAndObject:(IndexAndObjectBlock)block; // Not from ruby.
@@ -95,8 +92,8 @@
   // not implemented: `repeated_permutation(n) { |p| block } → ary`
   // not implemented: `replace(other_ary) → ary`
 
-  -(NSArray*)reversed; // `reverse → new_ary`
-  // not implemented: `reverse_each { |item| block } → ary`
+  -(NSArray*)reversed;// `reverse → new_ary`
+-(NSArray*)reverseEach:(ObjectBlock)b;// `reverse_each { |item| block } → ary`
 
   // not implemented: `rindex(obj) → int or nil`
   // not implemented: `rindex { |item| block } → int or nil`

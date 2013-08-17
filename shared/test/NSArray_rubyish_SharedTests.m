@@ -55,14 +55,14 @@
 -(void)testEach
 {
     __block int count=0;
-    STAssertNoThrow([abc each:^(id o){ count++; }], nil);
+    STAssertEqualObjects([abc each:^(id o){ count++; }], abc, nil);
     STAssertTrue(abc.count == count, nil);
 }
 
 -(void)testEachIndex
 {
     __block int count=0;
-    STAssertNoThrow([abc eachIndex:^(NSUInteger i){ count+=i+1; }], nil);
+    STAssertEqualObjects([abc eachIndex:^(NSUInteger i){ count+=i+1; }], abc, nil);
     STAssertTrue(6 == count, nil);
 }
 
@@ -111,6 +111,15 @@
 {
     STAssertEqualObjects(abc.reversed, (@[@"c", @"b", @"a"]), nil);
     STAssertEqualObjects(abc.reversed.reversed, abc, nil);
+}
+
+-(void)testReverseEach
+{
+    __block int count=0;
+    NSMutableArray* reversed = NSMutableArray.new;
+    STAssertEqualObjects([abc reverseEach:^(id o){ count++; [reversed push:o];}], abc, nil);
+    STAssertEqualObjects(reversed, (@[@"c", @"b", @"a"]), nil);
+    STAssertTrue(abc.count == count, nil);
 }
 
 -(void)testSample
