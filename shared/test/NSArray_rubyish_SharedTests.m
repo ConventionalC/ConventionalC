@@ -109,6 +109,12 @@
     STAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]), nil);
 }
 
+-(void)testRejected
+{
+    STAssertEqualObjects([abc rejected:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]), nil);
+    STAssertNil([abc rejected:^BOOL(NSString* o){return YES;}], nil);
+}
+
 -(void)testReversed
 {
     STAssertEqualObjects(abc.reversed, (@[@"c", @"b", @"a"]), nil);

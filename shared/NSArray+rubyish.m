@@ -90,6 +90,21 @@
     return result.copy;
 }
 
+-(NSMutableArray*)rejected:(ObjectReturnBoolBlock)block
+{
+    BOOL rejected = NO;
+    NSMutableArray* result = NSMutableArray.new;
+    if(self.count)
+        for(long i = self.length - 1; i >= 0; i--)
+        {
+            if(!block(self[i]))
+                rejected = YES;
+            else
+                [result addObject:self[i]];
+        }
+    return rejected ? result : nil;
+}
+
 -(NSArray*)reversed
 {
     return self.reverseObjectEnumerator.allObjects;

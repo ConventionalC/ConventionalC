@@ -51,18 +51,13 @@
 
   -(void)eachIndexAndObject:(IndexAndObjectBlock)block; // Not from ruby.
   -(BOOL)isEmpty; // `empty? → true or false`
-
   // `eql?(other) → true or false` Use -isEqual:
-
   // not implemented: `fetch(index) → obj`
   // not implemented: `fetch(index, default) → obj`
   // not implemented: `fetch(index) { |index| block } → obj`
-
   // not implemented: `find_index(obj) → int or nil` Use indexOfObject:
   // not implemented: `find_index { |item| block } → int or nil` Use indexOfObjectPassingTest:
-
   -(id)first; // `first → obj or nil`
-
   // not implemented: `first(n) → new_ary`
   -(NSArray*)flattened;// `flatten → new_ary`
   -(NSArray*)flattenedToLevel:(NSUInteger)level;// `flatten(level) → new_ary`
@@ -75,50 +70,39 @@
   // not implemented: `inspect → string`
   // not implemented: `to_s → string`
   // not implemented: `join(separator=$,) → str`
-
   -(id)last; // `last → obj or nil`
   -(NSArray*)last:(NSUInteger)n;// `last(n) → new_ary`
   -(NSUInteger)length; // `length → int`
   -(NSArray*)mapped:(ObjectReturnBlock)b; // `map { |item| block } → new_ary`. `nil` is replaced with `NSNull.null`.
-
   // not implemented: `pack ( aTemplateString ) → aBinaryString`
   // not implemented: `permutation { |p| block } → ary`
   // not implemented: `permutation(n) { |p| block } → ary`
   // not implemented: `product(other_ary, ...) → new_ary`
   // not implemented: `product(other_ary, ...) { |p| block } → ary`
   // not implemented: `rassoc(obj) → new_ary or nil`
-  // not implemented: `reject {|item| block } → new_ary`
+  -(NSMutableArray*)rejected:(ObjectReturnBoolBlock)block;// `reject {|item| block } → new_ary`
   // not implemented: `repeated_combination(n) { |c| block } → ary`
   // not implemented: `repeated_permutation(n) { |p| block } → ary`
   // not implemented: `replace(other_ary) → ary`
-
   -(NSArray*)reversed;// `reverse → new_ary`
--(NSArray*)reverseEach:(ObjectBlock)b;// `reverse_each { |item| block } → ary`
-
+  -(NSArray*)reverseEach:(ObjectBlock)b;// `reverse_each { |item| block } → ary`
   // not implemented: `rindex(obj) → int or nil`
   // not implemented: `rindex { |item| block } → int or nil`
   // not implemented: `rotate(count=1) → new_ary`
-
   -(id)sample; // `sample → obj`
   // not implemented: `sample(random: rng) → obj`
   // not implemented: `sample(n) → new_ary`
   // not implemented: `sample(n, random: rng) → new_ary`
-
   -(NSArray*)selected:(ObjectReturnBoolBlock)selectionBlock; // `select { |item| block } → new_ary`
   // not implemented: `select! {|item| block } → ary or nil`
-
   -(NSArray*)shuffled; // `shuffle → new_ary`
   // not implemented: `shuffle(random: rng) → new_ary`
-
   -(NSUInteger)size; // `size()`
-
   -(id)sliced:(NSUInteger)index;// `slice(index) → obj or nil`
   -(NSArray*)sliced:(NSUInteger)start length:(NSUInteger)length;// `slice(start, length) → new_ary or nil`
   -(NSArray*)slicedRange:(NSRange)range; // `slice(range) → new_ary or nil`
-
   -(NSArray*)sorted; // `sort → new_ary`. Uses the compare: method of objects.
   // not implemented: `sort { |a, b| block } → new_ary` Use sortedArrayUsingComparator:.
-
   // not implemented: `take(n) → new_ary`
   // not implemented: `take_while { |arr| block } → new_ary`
   // not implemented: `to_a → ary`
