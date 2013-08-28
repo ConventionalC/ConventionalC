@@ -39,8 +39,8 @@
   -(NSArray*)compacted; // `compact → new_ary`
 
   // `count → int` Use NSArray's -count.
-  // not implemented: `count(obj) → int`
-  // not implemented: `count { |item| block } → int`
+  -(NSUInteger)count:(id)obj;// `count(obj) → int`
+  -(NSUInteger)countWithBlock:(ObjectReturnBoolBlock)block;// `count { |item| block } → int`
   // not implemented: `cycle(n=nil) { |obj| block } → nil`
   // not implemented: `drop(n) → new_ary`
   // not implemented: `drop_while { |arr| block } → new_ary`

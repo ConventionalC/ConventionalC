@@ -52,6 +52,19 @@
     [self testMapped];
 }
 
+-(void)testCount
+{
+    STAssertEquals([abc count:@"b"], (NSUInteger)1, nil);
+    STAssertEquals([abc count:@"z"], (NSUInteger)0, nil);
+}
+
+-(void)testCountWithBlock
+{
+    STAssertEquals([abc countWithBlock:^BOOL(id o){return [o isEqual:@"b"];}], (NSUInteger)1, nil);
+    STAssertEquals([abc countWithBlock:^BOOL(id o){return YES;}], (NSUInteger)3, nil);
+    STAssertEquals([abc countWithBlock:^BOOL(id o){return NO;}], (NSUInteger)0, nil);
+}
+
 -(void)testEach
 {
     __block int count=0;

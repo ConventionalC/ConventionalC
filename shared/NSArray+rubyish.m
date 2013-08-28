@@ -32,6 +32,23 @@
     return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return ![o isKindOfClass:NSNull.class];}]];
 }
 
+-(NSUInteger)count:(id)obj
+{
+    NSUInteger result = 0;
+    for(id o in self)
+        if([o isEqual:obj])
+            result++;
+    return result;
+}
+
+-(NSUInteger)countWithBlock:(ObjectReturnBoolBlock)block
+{
+    NSUInteger result = 0;
+    for(id o in self)
+        if(block(o))
+            result++;
+    return result;}
+
 -(NSArray*)each:(ObjectBlock)b { for(id o in self) b(o); return self;}
 
 -(NSArray*)eachIndex:(IndexBlock)block
