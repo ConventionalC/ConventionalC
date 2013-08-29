@@ -52,9 +52,9 @@
   -(void)eachIndexAndObject:(IndexAndObjectBlock)block; // Not from ruby.
   -(BOOL)isEmpty; // `empty? → true or false`
   // `eql?(other) → true or false` Use -isEqual:
-  // not implemented: `fetch(index) → obj`
-  // not implemented: `fetch(index, default) → obj`
-  // not implemented: `fetch(index) { |index| block } → obj`
+  -(id)fetch:(NSUInteger)index;// `fetch(index) → obj`
+  -(id)fetch:(NSUInteger)index default:(id)d;// `fetch(index, default) → obj`
+  -(id)fetch:(NSUInteger)index defaultBlock:(IndexReturnBlock)block;// `fetch(index) { |index| block } → obj`
   // not implemented: `find_index(obj) → int or nil` Use indexOfObject:
   // not implemented: `find_index { |item| block } → int or nil` Use indexOfObjectPassingTest:
   -(id)first; // `first → obj or nil`

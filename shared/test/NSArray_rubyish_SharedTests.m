@@ -85,6 +85,17 @@
     STAssertTrue(empty.isEmpty, nil);
 }
 
+-(void)testFetch
+{
+    STAssertEqualObjects([abc fetch:1], @"b", nil);
+    
+    STAssertEqualObjects([abc fetch:1 default:@"z"], @"b", nil);
+    STAssertEqualObjects([abc fetch:5 default:@"z"], @"z", nil);
+    
+    STAssertEqualObjects([abc fetch:1 defaultBlock:^id(NSUInteger i){return @"z";}], @"b", nil);
+    STAssertEqualObjects([abc fetch:6 defaultBlock:^id(NSUInteger i){return @"z";}], @"z", nil);
+}
+
 -(void)testFirst
 {
     STAssertEqualObjects(abc.first, @"a", nil);

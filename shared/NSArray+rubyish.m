@@ -76,6 +76,21 @@
 
 -(BOOL)isEmpty { return self.count == 0; }
 
+-(id)fetch:(NSUInteger)index
+{
+    return self[index];
+}
+
+-(id)fetch:(NSUInteger)index default:(id)d
+{
+    return index < self.length ? self[index] : d;
+}
+
+-(id)fetch:(NSUInteger)index defaultBlock:(IndexReturnBlock)block
+{
+    return index < self.length ? self[index] : block(index);
+}
+
 -(id)first { return self.count ? self[0] : nil; }
 
 -(NSArray*)flattened
