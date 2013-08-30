@@ -14,7 +14,8 @@
   -(id)deleteWithBlock:(ReturnBlock)block;         // `delete(obj) { block } → item or result of block`
   -(id)deleteAt:(NSUInteger)index;                 // `delete_at(index) → obj or nil`
   -(NSArray*)deleteIf:(ObjectReturnBoolBlock)block;// `delete_if { |item| block } → ary`
-
+  -(NSArray*)drop:(NSUInteger)n;// `drop(n) → new_ary`
+  -(NSArray*)dropWhile:(ObjectReturnBoolBlock)block;// `drop_while { |arr| block } → new_ary`
   // `fill(obj) → ary`
   // `fill(obj, start [, length]) → ary`
   // `fill(obj, range ) → ary`

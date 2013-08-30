@@ -42,8 +42,6 @@
   -(NSUInteger)count:(id)obj;// `count(obj) → int`
   -(NSUInteger)countWithBlock:(ObjectReturnBoolBlock)block;// `count { |item| block } → int`
   // not implemented: `cycle(n=nil) { |obj| block } → nil`
-  // not implemented: `drop(n) → new_ary`
-  // not implemented: `drop_while { |arr| block } → new_ary`
 
   -(NSArray*)each:(ObjectBlock)block; // `each {|item| block } → ary`
   -(NSArray*)eachIndex:(IndexBlock)block; // `each_index {|index| block } → ary`

@@ -63,6 +63,22 @@
     STAssertEqualObjects([abc deleteIf:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]), nil);
 }
 
+-(void)testDrop
+{
+    NSMutableArray* a = @[@(1),@(2),@(3),@(4),@(5),@(0)].mutableCopy;//a = [1, 2, 3, 4, 5, 0]
+    NSArray* result = [a drop:3];
+    STAssertEqualObjects(result, (@[@(4),@(5),@(0)]), nil);
+    STAssertEqualObjects(a, (@[@(4),@(5),@(0)]), nil);
+}
+
+-(void)testDropWhile
+{
+    NSMutableArray* a = @[@(1),@(2),@(3),@(4),@(5),@(0)].mutableCopy;//a = [1, 2, 3, 4, 5, 0]
+    NSArray* result = [a dropWhile:^BOOL(NSNumber* o){return o.intValue < 3;}];//#=> [3, 4, 5, 0]
+    STAssertEqualObjects(result, (@[@(3),@(4),@(5),@(0)]), nil);
+    STAssertEqualObjects(a, (@[@(3),@(4),@(5),@(0)]), nil);
+}
+
 -(void)testFill
 {
     STAssertEqualObjects([abc.mutableCopy fill:@"f"], (@[@"f",@"f",@"f"]), nil);
