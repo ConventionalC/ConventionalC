@@ -55,8 +55,8 @@
   -(id)fetch:(NSUInteger)index defaultBlock:(IndexReturnBlock)block;// `fetch(index) { |index| block } → obj`
   // not implemented: `find_index(obj) → int or nil` Use indexOfObject:
   // not implemented: `find_index { |item| block } → int or nil` Use indexOfObjectPassingTest:
-  -(id)first; // `first → obj or nil`
-  // not implemented: `first(n) → new_ary`
+  -(id)first;// `first → obj or nil`
+  -(NSArray*)first:(NSUInteger)n;// `first(n) → new_ary`
   -(NSArray*)flattened;// `flatten → new_ary`
   -(NSArray*)flattenedToLevel:(NSUInteger)level;// `flatten(level) → new_ary`
   // not implemented: `frozen? → true or false`

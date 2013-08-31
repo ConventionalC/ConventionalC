@@ -93,6 +93,11 @@
 
 -(id)first { return self.count ? self[0] : nil; }
 
+-(NSArray*)first:(NSUInteger)n
+{
+    return [self subarrayFrom:0 length:n];
+}
+
 -(NSArray*)flattened
 {
     NSMutableArray* result = NSMutableArray.new;

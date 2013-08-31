@@ -100,6 +100,8 @@
 {
     STAssertEqualObjects(abc.first, @"a", nil);
     STAssertNil(NSArray.new.first, nil);
+    
+    STAssertEqualObjects([abc first:2], (@[@"a", @"b"]), nil);
 }
 
 -(void)testFlattened
