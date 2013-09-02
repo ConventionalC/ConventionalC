@@ -148,7 +148,8 @@
 
 -(NSArray*)pop:(NSUInteger)n
 {
-    NSArray* result = [self subarrayFrom:self.length - n];
+    NSArray* result = [self subarrayWithRange:NSMakeRange(self.length - n, n)];
+
     [self removeObjectsInRange:NSMakeRange(self.length - n, n)];
     return result;
 }

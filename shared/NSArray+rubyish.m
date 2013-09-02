@@ -95,7 +95,7 @@
 
 -(NSArray*)first:(NSUInteger)n
 {
-    return [self subarrayFrom:0 length:n];
+    return [self subarrayWithRange:NSMakeRange(0, n)];
 }
 
 -(NSArray*)flattened

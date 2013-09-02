@@ -26,6 +26,7 @@
 		981C630416FCD859004E9A93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C628316FCD04F004E9A93 /* UIKit.framework */; };
 		981C630516FCD859004E9A93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C627216FCD04F004E9A93 /* Foundation.framework */; };
 		981C630816FCD859004E9A93 /* libConventionalC-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */; };
+		981ED38B17D5587000F1D369 /* UITableView+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 981ED38A17D5587000F1D369 /* UITableView+ConventionalC.m */; };
 		9852F85917067BF2007823DD /* ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F84817067BF2007823DD /* ConventionalC.m */; };
 		9852F85A17067BF2007823DD /* UIBarButtonItem+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85217067BF2007823DD /* UIBarButtonItem+ConventionalC.m */; };
 		9852F85B17067BF2007823DD /* UIDevice+ConventionalC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */; };
@@ -159,6 +160,8 @@
 		981C62CF16FCD84A004E9A93 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		981C62F416FCD858004E9A93 /* libConventionalC-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libConventionalC-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		981C630216FCD858004E9A93 /* ConventionalC-iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConventionalC-iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		981ED38917D5587000F1D369 /* UITableView+ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ConventionalC.h"; sourceTree = "<group>"; };
+		981ED38A17D5587000F1D369 /* UITableView+ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ConventionalC.m"; sourceTree = "<group>"; };
 		9852F84717067BF2007823DD /* ConventionalC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConventionalC.h; sourceTree = "<group>"; };
 		9852F84817067BF2007823DD /* ConventionalC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConventionalC.m; sourceTree = "<group>"; };
 		9852F84E17067BF2007823DD /* ConventionalC-iOSTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ConventionalC-iOSTests-Info.plist"; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				9852F85417067BF2007823DD /* UIDevice+ConventionalC.m */,
 				9800E740179B643F007187B9 /* UIImage+ConventionalC.h */,
 				9800E741179B643F007187B9 /* UIImage+ConventionalC.m */,
+				981ED38917D5587000F1D369 /* UITableView+ConventionalC.h */,
+				981ED38A17D5587000F1D369 /* UITableView+ConventionalC.m */,
 				9852F85517067BF2007823DD /* UIToolbar+ConventionalC.h */,
 				9852F85617067BF2007823DD /* UIToolbar+ConventionalC.m */,
 				9852F85717067BF2007823DD /* UIView+ConventionalC.h */,
@@ -676,6 +681,7 @@
 				9852F85A17067BF2007823DD /* UIBarButtonItem+ConventionalC.m in Sources */,
 				9852F85B17067BF2007823DD /* UIDevice+ConventionalC.m in Sources */,
 				9852F85C17067BF2007823DD /* UIToolbar+ConventionalC.m in Sources */,
+				981ED38B17D5587000F1D369 /* UITableView+ConventionalC.m in Sources */,
 				9852F85D17067BF2007823DD /* UIView+ConventionalC.m in Sources */,
 				9852F87917068502007823DD /* ConventionalC_Shared.m in Sources */,
 				9852F87B17068502007823DD /* NSArray+ConventionalC.m in Sources */,
