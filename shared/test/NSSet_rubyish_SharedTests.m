@@ -1,7 +1,7 @@
 #import "NSSet+rubyish.h"
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface NSSet_rubyish_sharedTests : SenTestCase
+@interface NSSet_rubyish_sharedTests : XCTestCase
 @end
 
 @interface NSSet_rubyish_sharedTests()

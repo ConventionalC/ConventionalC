@@ -1,5 +1,5 @@
 #import "ConventionalC.h"
 
-@implementation ConventionalC_iOS
+@implementation ConventionalC(ConventionalC_iOS)
 
 @end

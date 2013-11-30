@@ -32,12 +32,30 @@
     return [self filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id o, NSDictionary *bindings){return ![o isKindOfClass:NSNull.class];}]];
 }
 
--(void)each:(ObjectBlock)b { for(id o in self) b(o); }
+-(NSUInteger)count:(id)obj
+{
+    NSUInteger result = 0;
+    for(id o in self)
+        if([o isEqual:obj])
+            result++;
+    return result;
+}
 
--(void)eachIndex:(IndexBlock)block
+-(NSUInteger)countWithBlock:(ObjectReturnBoolBlock)block
+{
+    NSUInteger result = 0;
+    for(id o in self)
+        if(block(o))
+            result++;
+    return result;}
+
+-(NSArray*)each:(ObjectBlock)b { for(id o in self) b(o); return self;}
+
+-(NSArray*)eachIndex:(IndexBlock)block
 {
     for(NSUInteger i=0; i<self.count; i++)
         block(i);
+    return self;
 }
 
 -(void)eachIndexAndObject:(IndexAndObjectBlock)b
@@ -46,9 +64,39 @@
         b(i, [self objectAtIndex:i]);
 }
 
+-(NSUInteger)index:(id)obj
+{
+    return [self indexOfObject:obj];
+}
+
+-(NSUInteger)indexWithBlock:(ReturnBlock)block
+{
+    return [self indexOfObject:block()];
+}
+
 -(BOOL)isEmpty { return self.count == 0; }
 
+-(id)fetch:(NSUInteger)index
+{
+    return self[index];
+}
+
+-(id)fetch:(NSUInteger)index default:(id)d
+{
+    return index < self.length ? self[index] : d;
+}
+
+-(id)fetch:(NSUInteger)index defaultBlock:(IndexReturnBlock)block
+{
+    return index < self.length ? self[index] : block(index);
+}
+
 -(id)first { return self.count ? self[0] : nil; }
+
+-(NSArray*)first:(NSUInteger)n
+{
+    return [self subarrayWithRange:NSMakeRange(0, n)];
+}
 
 -(NSArray*)flattened
 {
@@ -74,6 +122,11 @@
 
 -(id)last { return self.lastObject; }
 
+-(NSArray*)last:(NSUInteger)n
+{
+    return [self subarrayWithRange:NSMakeRange(MAX(0, (long)self.length - (long)n), MIN(self.count, n))];
+}
+
 -(NSUInteger)length { return self.count; }
 
 -(NSArray*)mapped:(ObjectReturnBlock)b
@@ -84,9 +137,31 @@
     return result.copy;
 }
 
+-(NSMutableArray*)rejected:(ObjectReturnBoolBlock)block
+{
+    BOOL rejected = NO;
+    NSMutableArray* result = NSMutableArray.new;
+    if(self.count)
+        for(long i = self.length - 1; i >= 0; i--)
+        {
+            if(!block(self[i]))
+                rejected = YES;
+            else
+                [result addObject:self[i]];
+        }
+    return rejected ? result : nil;
+}
+
 -(NSArray*)reversed
 {
     return self.reverseObjectEnumerator.allObjects;
+}
+
+-(NSArray*)reverseEach:(ObjectBlock)b
+{
+    for(id o in self.reverseObjectEnumerator)
+        b(o);
+    return self;
 }
 
 -(id)sample
@@ -113,6 +188,21 @@
 }
 
 -(NSUInteger)size { return self.count; }
+
+-(id)sliced:(NSUInteger)index
+{
+    return index >= self.count ? nil : self[index];
+}
+
+-(NSArray*)sliced:(NSUInteger)start length:(NSUInteger)length
+{
+    return [self slicedRange:NSMakeRange(start, length)];
+}
+
+-(NSArray*)slicedRange:(NSRange)range
+{
+    return range.location >= self.count ? nil : [self subarrayWithRange:range];
+}
 
 -(NSArray*)sorted
 {

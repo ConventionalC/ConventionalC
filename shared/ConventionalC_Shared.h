@@ -25,6 +25,8 @@
 #import "NSObject+ConventionalC.h"
 #import "NSSet+rubyish.h"
 
-@interface ConventionalC_Shared : NSObject
+@interface ConventionalC : NSObject
+
++(NSString*)typeNameStringForProperty:(NSString*)propertyName inClass:(Class)c;
 
 @end

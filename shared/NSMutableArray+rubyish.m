@@ -45,6 +45,23 @@
     return [self mapped:^id(id o){return block(o)?o:nil;}].compacted;
 }
 
+-(NSArray*)drop:(NSUInteger)n
+{
+    [self shift:n];
+    return self;
+}
+
+-(NSArray*)dropWhile:(ObjectReturnBoolBlock)block
+{
+    int n = 0;
+    for(id o in self)
+        if(!block(o))
+            return [self drop:n];
+        else
+            n++;
+    return [self drop:self.length];
+}
+
 -(NSMutableArray*)fill:(id)object
 {
     return [self map:^id(id o){return object;}];
@@ -131,9 +148,9 @@
 
 -(NSArray*)pop:(NSUInteger)n
 {
-    NSArray* result = [self subarrayFrom:self.length - n];
-    for(int i=0; i<n; i++)
-        [self pop];
+    NSArray* result = [self subarrayWithRange:NSMakeRange(self.length - n, n)];
+
+    [self removeObjectsInRange:NSMakeRange(self.length - n, n)];
     return result;
 }
 
