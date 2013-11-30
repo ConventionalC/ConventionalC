@@ -1,7 +1,7 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "NSDate+ConventionalC.h"
 
-@interface NSDate_ConventionalC_SharedTests : SenTestCase
+@interface NSDate_ConventionalC_SharedTests : XCTestCase
 @end
 
 @implementation NSDate_ConventionalC_SharedTests
@@ -10,18 +10,19 @@
 
 -(void)testDateSecond
 {
-    STAssertEquals((int)self.date.second, 0, nil);
+    XCTAssertEqual((int)self.date.second, 0);
 }
 
 -(void)testDateMinute
 {
-    STAssertEquals((int)self.date.minute, 0, nil);
+    XCTAssertEqual((int)self.date.minute, 0);
 }
 
 -(void)testDateHour
 {
     long diff = (NSTimeZone.localTimeZone.secondsFromGMT / 60l / 60l);
-    STAssertEquals(self.date.hour, (NSInteger)(23 + diff), nil);
+    //consider possible daylight savings
+    XCTAssertTrue(self.date.hour == (NSInteger)(23 + diff) || self.date.hour == (NSInteger)(24 + diff));
 }
 
 @end

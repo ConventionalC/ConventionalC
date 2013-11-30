@@ -7,6 +7,6 @@
 #import "UIView+ConventionalC.h"
 #import "CALayer+XibConfiguration.h"
 
-@interface ConventionalC_iOS : NSObject
+@interface ConventionalC(ConventionalC_iOS)
 
 @end

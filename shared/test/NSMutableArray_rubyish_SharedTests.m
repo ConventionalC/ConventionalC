@@ -1,7 +1,7 @@
 #import "NSMutableArray+rubyish.h"
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface NSMutableArray_rubyish_SharedTests:SenTestCase
+@interface NSMutableArray_rubyish_SharedTests:XCTestCase
 @end
 
 @interface NSMutableArray_rubyish_SharedTests()
@@ -24,7 +24,7 @@
 
 -(void)testClear
 {
-    STAssertEquals(abc.clear.count, (NSUInteger)0, nil);
+    XCTAssertEqual(abc.clear.count, (NSUInteger)0);
 }
 
 -(void)testCollect
@@ -35,225 +35,225 @@
 -(void)testCompact
 {
     NSMutableArray* result = @[@"a", @"b", @"c"].mutableCopy;
-    STAssertEqualObjects(result.compact, abc, nil);
+    XCTAssertEqualObjects(result.compact, abc);
 }
 
 -(void)testConcat
 {
-    STAssertEqualObjects([abc concat:@[@"d"]], (@[@"a", @"b", @"c", @"d"]), nil);
+    XCTAssertEqualObjects([abc concat:@[@"d"]], (@[@"a", @"b", @"c", @"d"]));
 }
 
 -(void)testDelete
 {
-    STAssertEqualObjects([abc delete:@"b"], @"b", nil);
+    XCTAssertEqualObjects([abc delete:@"b"], @"b");
 }
 
 -(void)testDeleteWithBlock
 {
-    STAssertEqualObjects([abc deleteWithBlock:^id{ return @"b"; }], @"b", nil);
+    XCTAssertEqualObjects([abc deleteWithBlock:^id{ return @"b"; }], @"b");
 }
 
 -(void)testDeleteAt
 {
-    STAssertEqualObjects([abc deleteAt:1], @"b", nil);
+    XCTAssertEqualObjects([abc deleteAt:1], @"b");
 }
 
 -(void)testDeleteIf
 {
-    STAssertEqualObjects([abc deleteIf:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]), nil);
+    XCTAssertEqualObjects([abc deleteIf:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]));
 }
 
 -(void)testDrop
 {
     NSMutableArray* a = @[@(1),@(2),@(3),@(4),@(5),@(0)].mutableCopy;//a = [1, 2, 3, 4, 5, 0]
     NSArray* result = [a drop:3];
-    STAssertEqualObjects(result, (@[@(4),@(5),@(0)]), nil);
-    STAssertEqualObjects(a, (@[@(4),@(5),@(0)]), nil);
+    XCTAssertEqualObjects(result, (@[@(4),@(5),@(0)]));
+    XCTAssertEqualObjects(a, (@[@(4),@(5),@(0)]));
 }
 
 -(void)testDropWhile
 {
     NSMutableArray* a = @[@(1),@(2),@(3),@(4),@(5),@(0)].mutableCopy;//a = [1, 2, 3, 4, 5, 0]
     NSArray* result = [a dropWhile:^BOOL(NSNumber* o){return o.intValue < 3;}];//#=> [3, 4, 5, 0]
-    STAssertEqualObjects(result, (@[@(3),@(4),@(5),@(0)]), nil);
-    STAssertEqualObjects(a, (@[@(3),@(4),@(5),@(0)]), nil);
+    XCTAssertEqualObjects(result, (@[@(3),@(4),@(5),@(0)]));
+    XCTAssertEqualObjects(a, (@[@(3),@(4),@(5),@(0)]));
 }
 
 -(void)testFill
 {
-    STAssertEqualObjects([abc.mutableCopy fill:@"f"], (@[@"f",@"f",@"f"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fill:@"f" start:1], (@[@"a",@"f",@"f"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fill:@"f" start:1 length:1], (@[@"a",@"f",@"c"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fill:@"f" range:NSMakeRange(1, 1)], (@[@"a",@"f",@"c"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";}], (@[@"f",@"f",@"f"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} start:1], (@[@"a",@"f",@"f"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} start:1 length:1], (@[@"a",@"f",@"c"]), nil);
-    STAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} range:NSMakeRange(1, 1)], (@[@"a",@"f",@"c"]), nil);
+    XCTAssertEqualObjects([abc.mutableCopy fill:@"f"], (@[@"f",@"f",@"f"]));
+    XCTAssertEqualObjects([abc.mutableCopy fill:@"f" start:1], (@[@"a",@"f",@"f"]));
+    XCTAssertEqualObjects([abc.mutableCopy fill:@"f" start:1 length:1], (@[@"a",@"f",@"c"]));
+    XCTAssertEqualObjects([abc.mutableCopy fill:@"f" range:NSMakeRange(1, 1)], (@[@"a",@"f",@"c"]));
+    XCTAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";}], (@[@"f",@"f",@"f"]));
+    XCTAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} start:1], (@[@"a",@"f",@"f"]));
+    XCTAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} start:1 length:1], (@[@"a",@"f",@"c"]));
+    XCTAssertEqualObjects([abc.mutableCopy fillWithBlock:^id(NSUInteger index){return @"f";} range:NSMakeRange(1, 1)], (@[@"a",@"f",@"c"]));
 }
 
 -(void)testFlatten
 {
     NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
-    STAssertEqualObjects(source.flatten, (@[@(1),@(2),@(3),@(4),@(5)]), nil);
+    XCTAssertEqualObjects(source.flatten, (@[@(1),@(2),@(3),@(4),@(5)]));
 }
 
 -(void)testFlattenedToLevel
 {
     NSMutableArray* source = @[@(1), @(2), @[@(3), @[@(4), @(5)]]].mutableCopy;
-    STAssertEqualObjects([source flatten:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]), nil);
+    XCTAssertEqualObjects([source flatten:1], (@[@(1),@(2),@(3),@[@(4),@(5)]]));
 }
 
 -(void)testInsert
 {
-    STAssertEqualObjects([abc insertArray:@[@"n"] at:1], (@[@"a",@"n",@"b",@"c"]), nil);
+    XCTAssertEqualObjects([abc insertArray:@[@"n"] at:1], (@[@"a",@"n",@"b",@"c"]));
 }
 
 -(void)testKeepIf
 {
-    STAssertEqualObjects([nums keepIf:^BOOL(NSNumber* o){return o.intValue%2;}], (@[@(1),@(3),@(5)]), nil);
+    XCTAssertEqualObjects([nums keepIf:^BOOL(NSNumber* o){return o.intValue%2;}], (@[@(1),@(3),@(5)]));
 }
 
 -(void)testMap
 {
     NSArray* result = [abc map:(id)^(NSString *o){ return [o stringByAppendingString:o]; }];
-    STAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]), nil);
+    XCTAssertEqualObjects(result, (@[@"aa", @"bb", @"cc"]));
 }
 
 -(void)testPop
 {
     id result = abc.pop;
-    STAssertEqualObjects(abc, (@[@"a", @"b"]), nil);
-    STAssertEqualObjects(result, @"c", nil);
-    STAssertNil([(@[]).mutableCopy pop], nil);
+    XCTAssertEqualObjects(abc, (@[@"a", @"b"]));
+    XCTAssertEqualObjects(result, @"c");
+    XCTAssertNil([(@[]).mutableCopy pop]);
 }
 
 -(void)testPopN
 {
-    STAssertEqualObjects([abc pop:2], (@[@"b", @"c"]), nil);
-    STAssertEqualObjects(abc, (@[@"a"]), nil);
+    XCTAssertEqualObjects([abc pop:2], (@[@"b", @"c"]));
+    XCTAssertEqualObjects(abc, (@[@"a"]));
 }
 
 -(void)testPush
 {
     NSMutableArray* result = [abc push:@"d"];
-    STAssertEqualObjects(result, (@[@"a",@"b",@"c",@"d"]), nil);
-    STAssertEqualObjects(result, abc, @"should return itself");
+    XCTAssertEqualObjects(result, (@[@"a",@"b",@"c",@"d"]));
+    XCTAssertEqualObjects(result, abc, @"should return itself");
 }
 
 -(void)testReject
 {
-    STAssertEqualObjects([abc reject:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]), nil);
-    STAssertNil([abc reject:^BOOL(NSString* o){return YES;}], nil);
+    XCTAssertEqualObjects([abc reject:^BOOL(NSString* o){return [o isEqualToString:@"b"];}], (@[@"b"]));
+    XCTAssertNil([abc reject:^BOOL(NSString* o){return YES;}]);
 }
 
 -(void)testReplace
 {
     NSArray* replaced = @[@"replaced"];
-    STAssertEqualObjects([abc replace:replaced], replaced, nil);
+    XCTAssertEqualObjects([abc replace:replaced], replaced);
 }
 
 -(void)testReverse
 {
-    STAssertEqualObjects(abc.reverse, (@[@"c", @"b", @"a"]), nil);
-    STAssertEqualObjects(abc.reverse.reverse, abc, nil);
+    XCTAssertEqualObjects(abc.reverse, (@[@"c", @"b", @"a"]));
+    XCTAssertEqualObjects(abc.reverse.reverse, abc);
 }
 
 -(void)testRotate
 {
     NSMutableArray* a = @[@"a", @"b", @"c", @"d"].mutableCopy;
-    STAssertEqualObjects(a.rotate, (@[@"b", @"c", @"d", @"a"]), nil);
-    STAssertEqualObjects(a, (@[@"b", @"c", @"d", @"a"]), nil);
-    STAssertEqualObjects([a rotate:2], (@[@"d", @"a", @"b", @"c"]), nil);
-    STAssertEqualObjects([a rotate:-3], (@[@"a", @"b", @"c", @"d"]), nil);
+    XCTAssertEqualObjects(a.rotate, (@[@"b", @"c", @"d", @"a"]));
+    XCTAssertEqualObjects(a, (@[@"b", @"c", @"d", @"a"]));
+    XCTAssertEqualObjects([a rotate:2], (@[@"d", @"a", @"b", @"c"]));
+    XCTAssertEqualObjects([a rotate:-3], (@[@"a", @"b", @"c", @"d"]));
 }
 
 -(void)testSelect
 {
     NSArray* result = [abc select:^BOOL(id o){return [@"b" isEqual:o];}];
     NSArray* compare = @[(@"b")];
-    STAssertEqualObjects(result, compare, nil);
+    XCTAssertEqualObjects(result, compare);
 }
 
 -(void)testShift
 {
     id result = abc.shift;
-    STAssertEqualObjects(abc, (@[@"b", @"c"]), nil);
-    STAssertEqualObjects(result, @"a", nil);
-    STAssertNil([(@[]).mutableCopy shift], nil);
+    XCTAssertEqualObjects(abc, (@[@"b", @"c"]));
+    XCTAssertEqualObjects(result, @"a");
+    XCTAssertNil([(@[]).mutableCopy shift]);
 }
 
 -(void)testShiftN
 {
     id result = [abc shift:2];
-    STAssertEqualObjects(abc, (@[@"c"]), nil);
-    STAssertEqualObjects(result, (@[@"a", @"b"]), nil);
-    STAssertNil([empty shift:2], nil);
+    XCTAssertEqualObjects(abc, (@[@"c"]));
+    XCTAssertEqualObjects(result, (@[@"a", @"b"]));
+    XCTAssertNil([empty shift:2]);
 }
 
 -(void)testShuffle
 {
     NSArray* oneTo99 = [NSArray newWithSize:100 block:(id)^(int i){return @(i+1);}];
     NSArray* result = [oneTo99.mutableCopy shuffle];
-    STAssertFalse([oneTo99 isEqual:result], nil);
-    STAssertEqualObjects(result.sorted, oneTo99, nil);
+    XCTAssertFalse([oneTo99 isEqual:result]);
+    XCTAssertEqualObjects(result.sorted, oneTo99);
 }
 
 -(void)testSlice
 {
-    STAssertEqualObjects([abc slice:1], @"b", nil);//a.slice!(1)     #=> "b"
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a", "c"]
+    XCTAssertEqualObjects([abc slice:1], @"b");//a.slice!(1)     #=> "b"
+    XCTAssertEqualObjects(abc, (@[@"a", @"c"]));//a               #=> ["a", "c"]
     //not implemented: a.slice!(-1)    #=> "c"
     //not implemented: a               #=> ["a"]
-    STAssertNil([abc slice:100], nil);//a.slice!(100)   #=> nil
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a"]
+    XCTAssertNil([abc slice:100]);//a.slice!(100)   #=> nil
+    XCTAssertEqualObjects(abc, (@[@"a", @"c"]));//a               #=> ["a"]
 }
 
 -(void)testSliceRange
 {
-    STAssertEqualObjects([abc slice:1 length:1], (@[@"b"]), nil);//a.slice!(1)     #=> "b"
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a", "c"]
+    XCTAssertEqualObjects([abc slice:1 length:1], (@[@"b"]));//a.slice!(1)     #=> "b"
+    XCTAssertEqualObjects(abc, (@[@"a", @"c"]));//a               #=> ["a", "c"]
     //not implemented: a.slice!(-1)    #=> "c"
     //not implemented: a               #=> ["a"]
-    STAssertNil([abc slice:100 length:1], nil);//a.slice!(100)   #=> nil
-    STAssertEqualObjects(abc, (@[@"a", @"c"]), nil);//a               #=> ["a"]
+    XCTAssertNil([abc slice:100 length:1]);//a.slice!(100)   #=> nil
+    XCTAssertEqualObjects(abc, (@[@"a", @"c"]));//a               #=> ["a"]
 }
 
 -(void)testSort
 {
-    STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);
-    STAssertEqualObjects((abc.reverse.sort), abc, nil);
+    XCTAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc);
+    XCTAssertEqualObjects((abc.reverse.sort), abc);
 }
 
 -(void)testSortWithComparator
 {
-    STAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc, nil);
-    STAssertEqualObjects(([abc.reverse sort:^NSComparisonResult(id a, id b){return [a compare:b]; }]), abc, nil);
+    XCTAssertEqualObjects([(@[@"c", @"a", @"b"]).mutableCopy sort], abc);
+    XCTAssertEqualObjects(([abc.reverse sort:^NSComparisonResult(id a, id b){return [a compare:b]; }]), abc);
 }
 
 -(void)testSortBy
 {
     NSMutableArray* source = @[@"ccc", @"a", @"bb"].mutableCopy;
     [source sortBy:(id)^(NSString* o){return @(o.length);}];
-    STAssertEqualObjects(source, (@[@"a", @"bb", @"ccc"]), nil);
+    XCTAssertEqualObjects(source, (@[@"a", @"bb", @"ccc"]));
 }
 
 -(void)testUniq
 {
     NSMutableArray* a = @[@"a", @"a", @"b", @"b", @"c"].mutableCopy;//a = [ "a", "a", "b", "b", "c" ]
-    STAssertEqualObjects(a.uniq, abc, nil);//a.uniq!   # => ["a", "b", "c"]
+    XCTAssertEqualObjects(a.uniq, abc);//a.uniq!   # => ["a", "b", "c"]
 
     //b = [ "a", "b", "c" ]
-    STAssertNil(abc.uniq, nil);//b.uniq!   # => nil
+    XCTAssertNil(abc.uniq);//b.uniq!   # => nil
 
     NSMutableArray* c = @[@[@"student",@"sam"], @[@"student",@"george"], @[@"teacher",@"matz"]].mutableCopy; //c = [["student","sam"], ["student","george"], ["teacher","matz"]]
-    STAssertEqualObjects([c uniq:^id(id o){return [o first];}], (@[@[@"student", @"sam"], @[@"teacher", @"matz"]]), nil);//c.uniq! { |s| s.first } # => [["student", "sam"], ["teacher", "matz"]]
+    XCTAssertEqualObjects([c uniq:^id(id o){return [o first];}], (@[@[@"student", @"sam"], @[@"teacher", @"matz"]]));//c.uniq! { |s| s.first } # => [["student", "sam"], ["teacher", "matz"]]
 }
 
 -(void)testUnshift
 {
     NSMutableArray* result = [abc unshift:@"d"];
-    STAssertEqualObjects(result, (@[@"d",@"a",@"b",@"c"]), nil);
-    STAssertEqualObjects(result, abc, @"should return itself");
+    XCTAssertEqualObjects(result, (@[@"d",@"a",@"b",@"c"]));
+    XCTAssertEqualObjects(result, abc, @"should return itself");
 }
 
 @end

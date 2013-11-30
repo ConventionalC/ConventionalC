@@ -1,54 +1,54 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "NSString+rubyish.h"
 
-@interface NSString_rubyish_SharedTests : SenTestCase
+@interface NSString_rubyish_SharedTests : XCTestCase
 @end
 
 @implementation NSString_rubyish_SharedTests
 
 -(void)testCapitalized
 {
-    STAssertEqualObjects(@"ASDF".capitalized, @"Asdf", nil);
-    STAssertEqualObjects(@"aSdF".capitalized, @"Asdf", nil);
-    STAssertEqualObjects(@"asdf".capitalized, @"Asdf", nil);
-    STAssertEqualObjects(@"Asdf".capitalized, @"Asdf", nil);
+    XCTAssertEqualObjects(@"ASDF".capitalized, @"Asdf");
+    XCTAssertEqualObjects(@"aSdF".capitalized, @"Asdf");
+    XCTAssertEqualObjects(@"asdf".capitalized, @"Asdf");
+    XCTAssertEqualObjects(@"Asdf".capitalized, @"Asdf");
 }
 
 -(void)testCasecmp
 {
-    STAssertEquals((int)[@"abcdef" casecmp:@"abcde"], 1, nil);    // "abcdef".casecmp("abcde")     #=> 1
-    STAssertEquals((int)[@"aBcDeF" casecmp:@"abcdef"], 0, nil);   // "aBcDeF".casecmp("abcdef")    #=> 0
-    STAssertEquals((int)[@"abcdef" casecmp:@"abcdefg"], -1, nil); // "abcdef".casecmp("abcdefg")   #=> -1
-    STAssertEquals((int)[@"abcdef" casecmp:@"ABCDEF"], 0, nil);   // "abcdef".casecmp("ABCDEF")    #=> 0
+    XCTAssertEqual((int)[@"abcdef" casecmp:@"abcde"], 1);    // "abcdef".casecmp("abcde")     #=> 1
+    XCTAssertEqual((int)[@"aBcDeF" casecmp:@"abcdef"], 0);   // "aBcDeF".casecmp("abcdef")    #=> 0
+    XCTAssertEqual((int)[@"abcdef" casecmp:@"abcdefg"], -1); // "abcdef".casecmp("abcdefg")   #=> -1
+    XCTAssertEqual((int)[@"abcdef" casecmp:@"ABCDEF"], 0);   // "abcdef".casecmp("ABCDEF")    #=> 0
 }
 
 -(void)testChr
 {
-    STAssertEqualObjects(@"asdf".chr, @"a", nil);
-    STAssertEqualObjects(@"QWER".chr, @"Q", nil);
-    STAssertNil(@"".chr, nil);
+    XCTAssertEqualObjects(@"asdf".chr, @"a");
+    XCTAssertEqualObjects(@"QWER".chr, @"Q");
+    XCTAssertNil(@"".chr);
 }
 
 -(void)testDowncased
 {
-    STAssertEqualObjects(@"ASDF".downcased, @"asdf", nil);
-    STAssertEqualObjects(@"aSdF".downcased, @"asdf", nil);
-    STAssertEqualObjects(@"asdf".downcased, @"asdf", nil);
+    XCTAssertEqualObjects(@"ASDF".downcased, @"asdf");
+    XCTAssertEqualObjects(@"aSdF".downcased, @"asdf");
+    XCTAssertEqualObjects(@"asdf".downcased, @"asdf");
 }
 
 -(void)testEachByte
 {
     __block int count = 0;
     
-    [@"aaaa" eachByte:^(char b){STAssertEquals((int)'a', (int)b, nil); count++;}];
-    STAssertEquals(count, 4, nil);
+    [@"aaaa" eachByte:^(char b){XCTAssertEqual((int)'a', (int)b); count++;}];
+    XCTAssertEqual(count, 4);
 }
 
 -(void)testEachChar
 {
     NSMutableString* result = NSMutableString.new;
     [@"asdf" eachChar:^(unichar c){[result appendFormat:@"%c", c];}];
-    STAssertEqualObjects(result, @"asdf", nil);
+    XCTAssertEqualObjects(result, @"asdf");
 }
 
 -(void)testEachLine
@@ -57,95 +57,95 @@
     [@"asdf\nqwer\npoiu" eachLine:^(NSString *line) {
         lines++;
     }];
-    STAssertEquals(lines, 3, nil);
+    XCTAssertEqual(lines, 3);
 }
 
 -(void)testIsEmpty
 {
-    STAssertTrue(@"".isEmpty, nil);
-    STAssertFalse(@"asdf".isEmpty, nil);
-    STAssertFalse(@" ".isEmpty, nil);
+    XCTAssertTrue(@"".isEmpty);
+    XCTAssertFalse(@"asdf".isEmpty);
+    XCTAssertFalse(@" ".isEmpty);
 }
 
 -(void)testEndsWith
 {
-    STAssertTrue([@"asdfQWER" endsWith:@"QWER"], nil);
-    STAssertFalse([@"asdfQWER" endsWith:@"asdf"], nil);
+    XCTAssertTrue([@"asdfQWER" endsWith:@"QWER"]);
+    XCTAssertFalse([@"asdfQWER" endsWith:@"asdf"]);
 }
 
 -(void)testEndsWithAny
 {
-    STAssertTrue([@"asdfQWER" endsWithAny:(@[@"QWER"])], nil);
-    STAssertTrue([@"asdfQWER" endsWithAny:(@[@"asdf", @"QWER"])], nil);
-    STAssertFalse([@"asdfQWER" endsWithAny:(@[@"asdf", @"qwer"])], nil);
+    XCTAssertTrue([@"asdfQWER" endsWithAny:(@[@"QWER"])]);
+    XCTAssertTrue([@"asdfQWER" endsWithAny:(@[@"asdf", @"QWER"])]);
+    XCTAssertFalse([@"asdfQWER" endsWithAny:(@[@"asdf", @"qwer"])]);
 }
 
 -(void)testIncludes
 {
-    STAssertTrue([@"hello" includes:@"lo"], nil);
-    STAssertFalse([@"hello" includes:@"ol"], nil);
-    STAssertTrue([@"hello" includes:@"h"], nil);
+    XCTAssertTrue([@"hello" includes:@"lo"]);
+    XCTAssertFalse([@"hello" includes:@"ol"]);
+    XCTAssertTrue([@"hello" includes:@"h"]);
 }
 
 -(void)testLstripped
 {
-    STAssertEqualObjects(@"  hello  ".lstripped, @"hello  ", nil);
-    STAssertEqualObjects(@"hello".lstripped, @"hello", nil);
+    XCTAssertEqualObjects(@"  hello  ".lstripped, @"hello  ");
+    XCTAssertEqualObjects(@"hello".lstripped, @"hello");
 }
 
 -(void)testReversed
 {
-    STAssertEqualObjects(@"stressed".reversed, @"desserts", nil); //"stressed".reverse   #=> "desserts"
+    XCTAssertEqualObjects(@"stressed".reversed, @"desserts"); //"stressed".reverse   #=> "desserts"
 }
 
 -(void)testRstripped
 {
-    STAssertEqualObjects(@"  hello  ".rstripped, @"  hello", nil);
-    STAssertEqualObjects(@"hello".rstripped, @"hello", nil);
+    XCTAssertEqualObjects(@"  hello  ".rstripped, @"  hello");
+    XCTAssertEqualObjects(@"hello".rstripped, @"hello");
 }
 
 -(void)testSize
 {
-    STAssertEquals((int)@"".size,     0, nil);
-    STAssertEquals((int)@"2".size,    1, nil);
-    STAssertEquals((int)@"as".size,   2, nil);
-    STAssertEquals((int)@"E2e".size,  3, nil);
-    STAssertEquals((int)@"e!d ".size, 4, nil);
+    XCTAssertEqual((int)@"".size,     0);
+    XCTAssertEqual((int)@"2".size,    1);
+    XCTAssertEqual((int)@"as".size,   2);
+    XCTAssertEqual((int)@"E2e".size,  3);
+    XCTAssertEqual((int)@"e!d ".size, 4);
 }
 
 -(void)testStartsWith
 {
-    STAssertTrue([@"asdfQWER" startsWith:@"asdf"], nil);
-    STAssertFalse([@"asdfQWER" startsWith:@"QWER"], nil);
+    XCTAssertTrue([@"asdfQWER" startsWith:@"asdf"]);
+    XCTAssertFalse([@"asdfQWER" startsWith:@"QWER"]);
 }
 
 -(void)testStartsWithAny
 {
-    STAssertTrue([@"asdfQWER" startsWithAny:(@[@"asdf"])], nil);
-    STAssertTrue([@"asdfQWER" startsWithAny:(@[@"asdf", @"QWER"])], nil);
-    STAssertFalse([@"asdfQWER" startsWithAny:(@[@"ASDF", @"qwer"])], nil);
+    XCTAssertTrue([@"asdfQWER" startsWithAny:(@[@"asdf"])]);
+    XCTAssertTrue([@"asdfQWER" startsWithAny:(@[@"asdf", @"QWER"])]);
+    XCTAssertFalse([@"asdfQWER" startsWithAny:(@[@"ASDF", @"qwer"])]);
 }
 
 -(void)testStripped
 {
     //"    hello    ".strip   #=> "hello"
-    STAssertEqualObjects(@"    hello    ".stripped, @"hello", nil);
+    XCTAssertEqualObjects(@"    hello    ".stripped, @"hello");
     
     //"\tgoodbye\r\n".strip   #=> "goodbye"
-    STAssertEqualObjects(@"\tgoodbye\r\n".stripped, @"goodbye", nil);
+    XCTAssertEqualObjects(@"\tgoodbye\r\n".stripped, @"goodbye");
 }
 
 -(void)testSwapcased
 {
-    STAssertEqualObjects(@"Hello".swapcased, @"hELLO", nil); //"Hello".swapcase          #=> "hELLO"
-    STAssertEqualObjects(@"cYbEr_PuNk11".swapcased, @"CyBeR_pUnK11", nil); //"cYbEr_PuNk11".swapcase   #=> "CyBeR_pUnK11"
+    XCTAssertEqualObjects(@"Hello".swapcased, @"hELLO"); //"Hello".swapcase          #=> "hELLO"
+    XCTAssertEqualObjects(@"cYbEr_PuNk11".swapcased, @"CyBeR_pUnK11"); //"cYbEr_PuNk11".swapcase   #=> "CyBeR_pUnK11"
 }
 
 -(void)testUpcased
 {
-    STAssertEqualObjects(@"ASDF".upcased, @"ASDF", nil);
-    STAssertEqualObjects(@"aSdF".upcased, @"ASDF", nil);
-    STAssertEqualObjects(@"asdf".upcased, @"ASDF", nil);
+    XCTAssertEqualObjects(@"ASDF".upcased, @"ASDF");
+    XCTAssertEqualObjects(@"aSdF".upcased, @"ASDF");
+    XCTAssertEqualObjects(@"asdf".upcased, @"ASDF");
 }
 
 @end

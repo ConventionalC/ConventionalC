@@ -1,7 +1,7 @@
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "NSObject+ConventionalC.h"
 
-@interface NSObject_ConventionalC_SharedTests : SenTestCase
+@interface NSObject_ConventionalC_SharedTests : XCTestCase
 @end
 
 @interface TestObject : NSObject
@@ -15,27 +15,27 @@
 
 -(void)testPropertyNames
 {
-    STAssertEqualObjects(TestObject.new.propertyNames, (@[@"string", @"strings", @"testObjects", @"nilValue"]), nil);
+    XCTAssertEqualObjects(TestObject.new.propertyNames, (@[@"string", @"strings", @"testObjects", @"nilValue"]));
 }
 
 -(void)testAsDictionary
 {
-    STAssertEqualObjects(TestObject.new.asDictionary,
+    XCTAssertEqualObjects(TestObject.new.asDictionary,
                          (@{@"string":@"string1",
                             @"strings":@[@"string2", @"string3"],
                             @"testObjects":@[
                                 @{@"string":@"string4"},
                                 NSNull.null
                             ],
-                          }), nil);
+                          }));
 }
 
 -(void)testIsKindOfClasses
 {
-    STAssertTrue([TestObject.new isKindOfClasses:@[NSObject.class]], nil);
-    STAssertTrue([TestObject.new isKindOfClasses:@[TestObject.class]], nil);
-    STAssertFalse([TestObject.new isKindOfClasses:@[NSString.class]], nil);
-    STAssertTrue([TestObject.new isKindOfClasses:(@[NSString.class, TestObject.class])], nil);
+    XCTAssertTrue([TestObject.new isKindOfClasses:@[NSObject.class]]);
+    XCTAssertTrue([TestObject.new isKindOfClasses:@[TestObject.class]]);
+    XCTAssertFalse([TestObject.new isKindOfClasses:@[NSString.class]]);
+    XCTAssertTrue([TestObject.new isKindOfClasses:(@[NSString.class, TestObject.class])]);
 }
 
 @end
