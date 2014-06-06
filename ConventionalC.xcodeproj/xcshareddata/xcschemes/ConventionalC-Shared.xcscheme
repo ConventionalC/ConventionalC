@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "986BB03E1703E34A00248441"
-               BuildableName = "ConventionalC-SharedTests.octest"
+               BuildableName = "ConventionalC-SharedTests.xctest"
                BlueprintName = "ConventionalC-SharedTests"
                ReferencedContainer = "container:ConventionalC.xcodeproj">
             </BuildableReference>
