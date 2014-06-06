@@ -1,4 +1,4 @@
 source "http://rubygems.org"
 
-gem "bundler", "~> 1.3.4"
-gem 'cocoapods', '0.22.1'
+gem "bundler", "~> 1.6.2"
+gem 'cocoapods', '~>0.33.1'

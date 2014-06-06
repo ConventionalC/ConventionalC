@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -20,6 +20,20 @@
                ReferencedContainer = "container:ConventionalC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9852F8E61707928E007823DD"
+               BuildableName = "ConventionalC-MacTests.xctest"
+               BlueprintName = "ConventionalC-MacTests"
+               ReferencedContainer = "container:ConventionalC.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -33,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9852F8E61707928E007823DD"
-               BuildableName = "ConventionalC-MacTests.octest"
+               BuildableName = "ConventionalC-MacTests.xctest"
                BlueprintName = "ConventionalC-MacTests"
                ReferencedContainer = "container:ConventionalC.xcodeproj">
             </BuildableReference>
