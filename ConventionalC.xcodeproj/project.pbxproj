@@ -534,7 +534,7 @@
 			name = "ConventionalC-MacTests";
 			productName = "ConventionalC-MacTests";
 			productReference = 9852F8E71707928E007823DD /* ConventionalC-MacTests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		986BB0301703E34A00248441 /* ConventionalC-Shared */ = {
 			isa = PBXNativeTarget;
@@ -570,7 +570,7 @@
 			name = "ConventionalC-SharedTests";
 			productName = "ConventionalC-SharedTests";
 			productReference = 986BB03F1703E34A00248441 /* ConventionalC-SharedTests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -578,7 +578,7 @@
 		981C626716FCD04F004E9A93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = ConventionalC;
 			};
 			buildConfigurationList = 981C626A16FCD04F004E9A93 /* Build configuration list for PBXProject "ConventionalC" */;
@@ -944,6 +944,7 @@
 		9852F8F71707928E007823DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
@@ -963,6 +964,7 @@
 		9852F8F81707928E007823DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
