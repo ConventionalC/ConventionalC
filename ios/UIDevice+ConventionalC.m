@@ -15,12 +15,12 @@
 
 +(BOOL)isInLandscape
 {
-    return UIDeviceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation);
+    return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation);
 }
 
 +(BOOL)isInPortrait
 {
-    return UIDeviceOrientationIsPortrait(UIApplication.sharedApplication.statusBarOrientation);
+    return UIInterfaceOrientationIsPortrait(UIApplication.sharedApplication.statusBarOrientation);
 }
 
 @end
